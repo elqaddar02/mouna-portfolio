@@ -4,6 +4,7 @@
   "order": 3,
   "featured": true,
   "slide": true,
+  "slideImage": null,
   "slideFit": "cover",
   "placeholder": false,
   "title": {
@@ -11,15 +12,15 @@
     "en": "Écrin social"
   },
   "subtitle": {
-    "fr": "Logements collectifs et bande commerciale autour d’un cœur d’îlot partagé",
+    "fr": "Conception d'un habitat intermédiaire  autour d’un cœur d’îlot partagé",
     "en": "Collective housing and a commercial strip around a shared courtyard"
   },
   "category": "residential",
   "format": "studio",
-  "year": "",
+  "year": "2025",
   "location": {
-    "fr": "",
-    "en": ""
+    "fr": "TUNIS-LA SOUKRA",
+    "en": "TUNIS-SOUKRA"
   },
   "cover": {
     "src": "/images/projects/project-003/cover.webp",
@@ -28,6 +29,7 @@
       "en": "Aerial view of the site plan: a planted triangular block between wide roads, with the housing, a terrace café and play areas"
     }
   },
+  "thumbnail": null,
   "shortDescription": {
     "fr": "Un îlot d’habitat où les logements périphériques forment une enveloppe protectrice autour d’un cœur d’îlot dédié à la rencontre.",
     "en": "A housing block in which the perimeter dwellings form a protective envelope around a courtyard devoted to meeting and sociability."
@@ -52,97 +54,97 @@
     {
       "src": "/images/projects/project-003/plan-masse.webp",
       "imageType": "site",
-      "alt": {
-        "fr": "Vue aérienne du plan masse de l’îlot et des voies qui l’entourent",
-        "en": "Aerial site plan of the block and the surrounding roads"
-      },
       "caption": {
         "fr": "Plan masse — 1/200",
         "en": "Site plan — 1:200"
+      },
+      "alt": {
+        "fr": "Vue aérienne du plan masse de l’îlot et des voies qui l’entourent",
+        "en": "Aerial site plan of the block and the surrounding roads"
       }
     },
     {
       "src": "/images/projects/project-003/concept-board.webp",
       "imageType": "diagram",
-      "alt": {
-        "fr": "Planche de cinq diagrammes de l’îlot avec leurs légendes, de l’implantation au cœur d’îlot",
-        "en": "Board of five diagrams of the block with captions, from the layout to the courtyard"
-      },
       "caption": {
         "fr": "Écrin social — implantation, bande commerciale, enveloppe bâtie, cœur d’îlot, espaces de jeu",
         "en": "Écrin social — layout, commercial strip, built envelope, courtyard, play areas"
+      },
+      "alt": {
+        "fr": "Planche de cinq diagrammes de l’îlot avec leurs légendes, de l’implantation au cœur d’îlot",
+        "en": "Board of five diagrams of the block with captions, from the layout to the courtyard"
       }
     },
     {
       "src": "/images/projects/project-003/plan-rdc.webp",
       "imageType": "plan",
-      "alt": {
-        "fr": "Plan du rez-de-chaussée des logements",
-        "en": "Ground floor plan of the dwellings"
-      },
       "caption": {
         "fr": "Plan du rez-de-chaussée",
         "en": "Ground floor plan"
+      },
+      "alt": {
+        "fr": "Plan du rez-de-chaussée des logements",
+        "en": "Ground floor plan of the dwellings"
       }
     },
     {
       "src": "/images/projects/project-003/plan-etage.webp",
       "imageType": "plan",
-      "alt": {
-        "fr": "Plan de l’étage des logements",
-        "en": "Upper floor plan of the dwellings"
-      },
       "caption": {
         "fr": "Plan de l’étage",
         "en": "Upper floor plan"
+      },
+      "alt": {
+        "fr": "Plan de l’étage des logements",
+        "en": "Upper floor plan of the dwellings"
       }
     },
     {
       "src": "/images/projects/project-003/coupe-aa.webp",
       "imageType": "section",
-      "alt": {
-        "fr": "Coupe AA sur un logement de deux niveaux avec terrasse",
-        "en": "Section AA through a two-storey dwelling with a terrace"
-      },
       "caption": {
         "fr": "Coupe AA",
         "en": "Section AA"
+      },
+      "alt": {
+        "fr": "Coupe AA sur un logement de deux niveaux avec terrasse",
+        "en": "Section AA through a two-storey dwelling with a terrace"
       }
     },
     {
       "src": "/images/projects/project-003/coupe-bb.webp",
       "imageType": "section",
-      "alt": {
-        "fr": "Coupe BB sur un logement de deux niveaux",
-        "en": "Section BB through a two-storey dwelling"
-      },
       "caption": {
         "fr": "Coupe BB",
         "en": "Section BB"
+      },
+      "alt": {
+        "fr": "Coupe BB sur un logement de deux niveaux",
+        "en": "Section BB through a two-storey dwelling"
       }
     },
     {
       "src": "/images/projects/project-003/ambiance-1.webp",
       "imageType": "render",
-      "alt": {
-        "fr": "Vue d’ambiance : parvis pavé devant les logements, avec des passants",
-        "en": "Atmosphere view: paved forecourt in front of the housing, with passers-by"
-      },
       "caption": {
         "fr": "Croquis d’ambiance — parvis",
         "en": "Atmosphere view — forecourt"
+      },
+      "alt": {
+        "fr": "Vue d’ambiance : parvis pavé devant les logements, avec des passants",
+        "en": "Atmosphere view: paved forecourt in front of the housing, with passers-by"
       }
     },
     {
       "src": "/images/projects/project-003/ambiance-2.webp",
       "imageType": "render",
-      "alt": {
-        "fr": "Vue d’ambiance : logements de deux niveaux depuis la rue, jardin et arbres",
-        "en": "Atmosphere view: two-storey housing seen from the street, with a garden and trees"
-      },
       "caption": {
         "fr": "Croquis d’ambiance — depuis la rue",
         "en": "Atmosphere view — from the street"
+      },
+      "alt": {
+        "fr": "Vue d’ambiance : logements de deux niveaux depuis la rue, jardin et arbres",
+        "en": "Atmosphere view: two-storey housing seen from the street, with a garden and trees"
       }
     }
   ],
