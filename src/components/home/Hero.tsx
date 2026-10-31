@@ -70,11 +70,11 @@ export function Hero() {
   // Open on the project chosen as "first slide" in the editor, if it is in the slideshow.
   const [index, setIndex] = useState(() => Math.max(0, slides.findIndex((s) => s.key === profile.heroProject)))
   const [paused, setPaused] = useState(false)
-  const [hovered, setHovered] = useState(false)
   const [startX, setStartX] = useState<number | null>(null)
   const count = slides.length
   const autoplay = !reduce && count > 1
-  const playing = autoplay && !paused && !hovered
+  // keeps cycling endlessly (hovering does not stop it); only the pause button does
+  const playing = autoplay && !paused
   const current = slides[index]!
 
   const go = useCallback((delta: number) => setIndex((i) => (i + delta + count) % count), [count])
@@ -154,10 +154,6 @@ export function Hero() {
         initial={reduce ? false : { clipPath: 'inset(0% 0% 100% 0%)' }}
         animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
         transition={{ duration: 1.3, delay: 0.3, ease: EASE }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        onFocus={() => setHovered(true)}
-        onBlur={() => setHovered(false)}
         onKeyDown={onKeyDown}
       >
         <div
