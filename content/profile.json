@@ -64,9 +64,8 @@
       "en": ""
     }
   },
-  "cvUrl": "",
   "cvVideo": {
-    "file": "/videos/cv-video-placeholder.mp4",
+    "file": "/images/uploads/vid.mp4",
     "url": "",
     "poster": "/images/profile/cv-video-poster.webp",
     "caption": {
@@ -74,5 +73,6 @@
       "en": ""
     },
     "placeholder": true
-  }
+  },
+  "cvUrl": ""
 }
