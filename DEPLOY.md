@@ -42,7 +42,13 @@ The editor saves Mouna's changes to GitHub, so it needs a small login service. I
 ### 2.1 Deploy the login service
 
 1. Open <https://deploy.workers.cloudflare.com/?url=https://github.com/sveltia/sveltia-cms-auth> and follow the steps. Use the same Cloudflare account.
-2. When it's done, open **Workers & Pages** → **`sveltia-cms-auth`** and copy its URL. It looks like `https://sveltia-cms-auth.<your-subdomain>.workers.dev`.
+2. When it's done, open **Workers & Pages** → **`sveltia-cms-auth`** and copy its URL. It looks like `https://sveltia-cms-auth.<your-subdomain>.workers.dev`. This setup currently uses `https://sveltia-cms-auth.mouadelqaddar.workers.dev`.
+
+> **If the build fails with `ERR_PNPM_LOCKFILE_CONFIG_MISMATCH`:** Cloudflare's default pnpm is older than the one the project uses. The service needs no installed packages, so skip the install. In **`sveltia-cms-auth` → Settings → Builds**:
+> - Set **Deploy command** to `npx wrangler deploy`.
+> - Under the **Builds** section's *Variables and secrets*, add `SKIP_DEPENDENCY_INSTALL` = `1`.
+>
+> Then click **Retry build**.
 
 ### 2.2 Register it on GitHub
 
@@ -60,15 +66,17 @@ The editor saves Mouna's changes to GitHub, so it needs a small login service. I
 
 ### 2.3 Give the keys to the login service
 
-In Cloudflare: **Workers & Pages** → **`sveltia-cms-auth`** → **Settings** → **Variables and Secrets**. Add:
+In Cloudflare: **Workers & Pages** → **`sveltia-cms-auth`** → **Settings** → **Variables and Secrets**. Use the **runtime** section at the top level of Settings, **not** the one inside **Builds**. Build variables aren't visible to the running service, and the editor would then report *"OAuth app client ID or secret is not configured"*.
+
+Add all three as type **Secret**. Secrets survive later redeploys, while plain-text variables set in the dashboard can be removed when the service is redeployed from Git.
 
 | Name | Value | Type |
 | --- | --- | --- |
-| `GITHUB_CLIENT_ID` | Client ID from 2.2 | Text |
-| `GITHUB_CLIENT_SECRET` | Client secret from 2.2 | **Secret** (encrypted) |
-| `ALLOWED_DOMAINS` | `mouna-portfolio.pages.dev` | Text |
+| `GITHUB_CLIENT_ID` | Client ID from 2.2 | Secret |
+| `GITHUB_CLIENT_SECRET` | Client secret from 2.2 | Secret |
+| `ALLOWED_DOMAINS` | `mouna-portfolio.pages.dev` | Secret |
 
-Save and deploy. `ALLOWED_DOMAINS` makes sure only this site can use the login service. Add the custom domain there later if you get one.
+Then click **Deploy**. `ALLOWED_DOMAINS` makes sure only this site can use the login service. Add the custom domain there later if you get one.
 
 ### 2.4 Point the editor to the login service
 
