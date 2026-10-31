@@ -5,7 +5,7 @@ import { cn } from '../../lib/cn'
 import { ProjectCard } from '../projects/ProjectCard'
 import { ArrowLink } from '../ui/ArrowLink'
 import { Label } from '../ui/Label'
-import { Lines } from '../ui/MultilineHeading'
+import { SplitReveal } from '../ui/SplitReveal'
 import { Reveal } from '../ui/Reveal'
 
 /** Asymmetric editorial rhythm — cycles if more projects are featured. */
@@ -35,9 +35,7 @@ export function SelectedWorks() {
       <div className="frame grid-12 items-end gap-y-6">
         <div className="col-span-4 md:col-span-8">
           <Label index={2}>{t.home.worksLabel}</Label>
-          <h2 id="works-title" className="text-display mt-6 uppercase">
-            <Lines text={t.home.worksHeading} />
-          </h2>
+          <SplitReveal id="works-title" text={t.home.worksHeading} className="text-display mt-6 uppercase" />
         </div>
         <div className="col-span-4 flex flex-col items-start gap-4 md:col-span-4 md:items-end">
           <p className="text-label text-concrete-ink">

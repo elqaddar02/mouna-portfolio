@@ -28,7 +28,6 @@ export function Layout() {
       <Header />
       <AnimatePresence
         mode="wait"
-        initial={false}
         onExitComplete={() => window.scrollTo({ top: 0, behavior: 'instant' })}
       >
         <motion.main

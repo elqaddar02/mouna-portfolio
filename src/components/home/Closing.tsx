@@ -2,8 +2,7 @@ import { profile } from '../../data/profile'
 import { useI18n } from '../../i18n/useI18n'
 import { ArrowLink } from '../ui/ArrowLink'
 import { Label } from '../ui/Label'
-import { Lines } from '../ui/MultilineHeading'
-import { Reveal } from '../ui/Reveal'
+import { SplitReveal } from '../ui/SplitReveal'
 
 export function Closing() {
   const { t } = useI18n()
@@ -12,11 +11,7 @@ export function Closing() {
     <section aria-labelledby="closing-title" className="relative overflow-hidden bg-orange text-ink">
       <div className="frame py-20 md:py-32">
         <Label index={3}>{t.home.closingLabel}</Label>
-        <Reveal>
-          <h2 id="closing-title" className="text-mega mt-8 uppercase">
-            <Lines text={t.home.closingHeading} />
-          </h2>
-        </Reveal>
+        <SplitReveal id="closing-title" text={t.home.closingHeading} className="text-mega mt-8 uppercase" />
         <div className="mt-12 grid gap-8 border-t-2 border-ink pt-8 md:grid-cols-2">
           <p className="max-w-md text-lg leading-relaxed">{t.home.closingLead}</p>
           <div className="flex flex-wrap items-start gap-4 md:justify-end">

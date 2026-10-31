@@ -2,6 +2,7 @@ import { profile } from '../../data/profile'
 import { sortedProjects } from '../../data/projects'
 import { useI18n } from '../../i18n/useI18n'
 import { ArrowLink } from '../ui/ArrowLink'
+import { CountUp } from '../ui/CountUp'
 import { Label } from '../ui/Label'
 import { Reveal } from '../ui/Reveal'
 
@@ -10,9 +11,9 @@ export function Intro() {
   // Count published work only; template entries don't count.
   const real = sortedProjects.filter((p) => !p.placeholder)
   const stats = [
-    [String(real.length).padStart(2, '0'), t.home.statProjects],
-    [String(new Set(real.map((p) => p.category)).size).padStart(2, '0'), t.home.statCategories],
-    ['02', t.home.statLanguages],
+    [real.length, t.home.statProjects],
+    [new Set(real.map((p) => p.category)).size, t.home.statCategories],
+    [2, t.home.statLanguages],
   ] as const
 
   return (
@@ -40,7 +41,9 @@ export function Intro() {
           {stats.map(([n, label], i) => (
             <div key={label} className={i > 0 ? 'border-l-2 border-ink pl-4 md:pl-6' : ''}>
               <dt className="text-label pt-3 text-[0.68rem] text-concrete-ink">{label}</dt>
-              <dd className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold leading-none tracking-tight pb-3">{n}</dd>
+              <dd className="font-display text-[clamp(2.5rem,6vw,5rem)] font-bold leading-none tracking-tight pb-3">
+                <CountUp value={n} />
+              </dd>
             </div>
           ))}
         </dl>
