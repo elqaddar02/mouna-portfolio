@@ -67,7 +67,7 @@
   "cvVideo": {
     "file": "/images/uploads/vid.mp4",
     "url": "",
-    "poster": "",
+    "poster": "/images/profile/cv-video-poster.webp",
     "caption": {
       "fr": "",
       "en": ""
