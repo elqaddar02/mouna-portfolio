@@ -57,8 +57,8 @@
         "fr": "20XX — aujourd’hui"
       },
       "institution": {
-        "en": "School of architecture — to be added",
-        "fr": "École d’architecture — à compléter"
+        "fr": "École Nationale d’Architecture et d’Urbanisme de Tunis (ENAU)",
+        "en": "National School of Architecture and Urbanism of Tunis (ENAU)"
       },
       "programme": {
         "en": "Architecture degree — programme to be added",
@@ -175,7 +175,7 @@
   },
   "heroProject": "project-002",
   "contact": {
-    "email": "",
+    "email": "elqaddarchitecte@gmail.com",
     "linkedin": "",
     "instagram": "",
     "location": {
