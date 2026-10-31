@@ -154,6 +154,7 @@ export function buildContent(root = ROOT) {
   const location = loc(c.location, `${pf} contact.location`)
   const cvUrl = str(p.cvUrl) || null
   if (cvUrl && !existsSync(join(root, 'public', decodeURI(cvUrl)))) fail(pf, `CV file not found: public${cvUrl}`)
+  const availability = loc(p.availability, `${pf} availability`)
   const heroImage = image(p.heroImage, `${pf} heroImage`, 'render')
   const profile = {
     name: str(p.name),
@@ -180,6 +181,7 @@ export function buildContent(root = ROOT) {
     portrait: p.portrait?.src ? image(p.portrait, `${pf} portrait`, 'photo') : null,
     heroImage,
     heroProject: str(p.heroProject) || null,
+    availability: availability.en || availability.fr ? availability : null,
     contact: {
       email: str(c.email) || null,
       phone: str(c.phone) || null,

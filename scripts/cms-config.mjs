@@ -243,6 +243,7 @@ const profile = {
           required: false,
           hint: 'Le diaporama de l’accueil s’ouvre sur ce projet (choisir celui qui a la plus belle image).',
         },
+        bi('availability', 'Disponibilité (accueil)', { hint: 'Courte phrase affichée avec un point animé à côté de « Parlons d’espace », ex. « Ouverte aux stages — 2026 ». Laisser vide pour masquer.' }),
         imageObject('portrait', 'Portrait (page À propos, optionnel)', { required: false, hint: 'Si vide, la page À propos affiche le nom et le statut à la place de l’image.' }),
         {
           name: 'contact',

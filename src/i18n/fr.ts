@@ -93,7 +93,10 @@ export const fr: Dictionary = {
     closingLabel: 'Contact',
     closingHeading: 'Parlons\nd’espace.',
     closingLead: 'Disponible pour échanges, collaborations, stages et discussions autour de l’architecture.',
-    closingCta: 'Prendre contact',
+    closingCta: 'Page contact complète',
+    closingWrite: 'Écrire à Mouna',
+    closingCopy: 'Copier l’e-mail',
+    closingSchool: 'ENAU — Tunis',
   },
   works: {
     label: 'Archive',

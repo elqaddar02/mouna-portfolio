@@ -49,6 +49,10 @@
     }
   },
   "heroProject": "project-002",
+  "availability": {
+    "fr": "",
+    "en": ""
+  },
   "portrait": null,
   "contact": {
     "email": "elqaddarchitecte@gmail.com",

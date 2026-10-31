@@ -987,6 +987,27 @@
               "hint": "Le diaporama de l’accueil s’ouvre sur ce projet (choisir celui qui a la plus belle image)."
             },
             {
+              "name": "availability",
+              "label": "Disponibilité (accueil)",
+              "widget": "object",
+              "required": false,
+              "hint": "Courte phrase affichée avec un point animé à côté de « Parlons d’espace », ex. « Ouverte aux stages — 2026 ». Laisser vide pour masquer.",
+              "fields": [
+                {
+                  "name": "fr",
+                  "label": "Français",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            },
+            {
               "name": "portrait",
               "label": "Portrait (page À propos, optionnel)",
               "widget": "object",

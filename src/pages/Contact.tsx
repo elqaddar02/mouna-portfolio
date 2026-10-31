@@ -1,11 +1,11 @@
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
-import { useState } from 'react'
 import { ArrowLink } from '../components/ui/ArrowLink'
 import { ContactIcon } from '../components/ui/ContactIcon'
 import { Breakable, isExternal, useContactRows } from '../components/ui/ContactLinks'
 import { Label } from '../components/ui/Label'
 import { Lines } from '../components/ui/MultilineHeading'
 import { profile } from '../data/profile'
+import { useCopy } from '../hooks/useCopy'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useI18n } from '../i18n/useI18n'
 
@@ -13,19 +13,10 @@ export default function Contact() {
   const { t } = useI18n()
   const rows = useContactRows()
   const email = profile.contact.email
-  const [copied, setCopied] = useState(false)
+  const { copied, copy: copyText } = useCopy()
   useDocumentMeta({ title: t.meta.contactTitle, description: t.meta.contactDescription })
 
-  const copy = async () => {
-    if (!email) return
-    try {
-      await navigator.clipboard.writeText(email)
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    } catch {
-      /* clipboard unavailable — the mailto link still works */
-    }
-  }
+  const copy = () => copyText(email)
 
   return (
     <>

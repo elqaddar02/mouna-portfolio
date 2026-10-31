@@ -110,6 +110,8 @@ export interface Profile {
   heroImage: ArchImage
   /** Slug of the project the homepage slideshow opens on; null starts with the first. */
   heroProject: string | null
+  /** Short status shown beside the homepage contact heading, e.g. "Open to internships — 2026". Null hides it. */
+  availability: Localized | null
   contact: {
     /** Set to null until provided — the UI then shows a "to be added" note instead of a dead link. */
     email: string | null

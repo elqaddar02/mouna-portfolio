@@ -91,7 +91,10 @@ export const en = {
     closingLabel: 'Contact',
     closingHeading: 'Let’s talk\nspace.',
     closingLead: 'Open to conversations, collaborations, internships and exchanges about architecture.',
-    closingCta: 'Get in touch',
+    closingCta: 'Full contact page',
+    closingWrite: 'Write to Mouna',
+    closingCopy: 'Copy email',
+    closingSchool: 'ENAU — Tunis',
   },
   works: {
     label: 'Archive',
