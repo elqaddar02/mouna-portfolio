@@ -101,7 +101,7 @@ export interface SoftwareGroup {
 }
 
 export interface EducationEntry {
-  period: string
+  period: Localized
   institution: Localized
   programme: Localized
   note?: Localized

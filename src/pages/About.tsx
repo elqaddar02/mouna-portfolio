@@ -76,7 +76,7 @@ export default function About() {
         <ul>
           {profile.education.map((e, i) => (
             <li key={i} className="grid gap-2 border-b-2 border-ink py-5 first:border-t-2 md:grid-cols-[10rem_1fr_1fr] md:gap-6">
-              <span className="font-mono text-sm">{e.period}</span>
+              <span className="font-mono text-sm">{l(e.period)}</span>
               <span className="font-display text-xl font-semibold leading-tight">{l(e.institution)}</span>
               <span className="text-concrete-ink">
                 {l(e.programme)}

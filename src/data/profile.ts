@@ -51,12 +51,12 @@ export const profile: Profile = {
   ],
   education: [
     {
-      period: '20XX — present',
+      period: L('20XX — present', '20XX — aujourd’hui'),
       institution: L('School of architecture — to be added', 'École d’architecture — à compléter'),
       programme: L('Architecture degree — programme to be added', 'Diplôme d’architecture — cursus à compléter'),
     },
     {
-      period: '20XX',
+      period: L('20XX', '20XX'),
       institution: TBA,
       programme: L('Previous studies / diploma — to be added', 'Études / diplôme précédents — à compléter'),
     },
