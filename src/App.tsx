@@ -6,6 +6,7 @@ import { I18nProvider } from './i18n/I18nProvider'
 import Home from './pages/Home'
 
 const Works = lazy(() => import('./pages/Works'))
+const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
             <Route element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="works" element={<Works />} />
+              <Route path="works/:slug" element={<ProjectDetail />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>

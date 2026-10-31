@@ -125,6 +125,8 @@ export const en = {
   },
   project: {
     breadcrumb: 'Works',
+    breadcrumbLabel: 'Breadcrumb',
+    contents: 'Contents',
     factSheet: 'Fact sheet',
     sections: {
       overview: 'Overview',

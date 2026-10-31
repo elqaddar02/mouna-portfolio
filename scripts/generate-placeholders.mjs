@@ -57,7 +57,7 @@ function frame(w, h, bg, body, label, dark = false) {
   const fs = Math.max(14, Math.round(w / 85))
   const pad = Math.round(w * 0.03)
   const text = `VISUAL PLACEHOLDER — ${label}`
-  const boxW = text.length * fs * 0.62 + fs * 1.6
+  const boxW = text.length * fs * 0.68 + fs * 2
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${w} ${h}" width="${w}" height="${h}">
 <rect width="${w}" height="${h}" fill="${bg}"/>
 ${body}

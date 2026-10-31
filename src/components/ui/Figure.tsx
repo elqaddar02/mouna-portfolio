@@ -21,6 +21,7 @@ interface FigureProps {
   /** Index used in the "open image n" label. */
   index?: number
   reveal?: boolean
+  style?: CSSProperties
 }
 
 /**
@@ -39,6 +40,7 @@ export function Figure({
   onOpen,
   index,
   reveal = true,
+  style,
 }: FigureProps) {
   const { l, t } = useI18n()
   const reduce = useReducedMotion()
@@ -76,7 +78,7 @@ export function Figure({
   )
 
   return (
-    <figure className={cn('group/fig', className)}>
+    <figure className={cn('group/fig', className)} style={style}>
       <div className={cn('relative overflow-hidden bg-paper-2', frameClassName)} style={frameStyle}>
         {onOpen ? (
           <button

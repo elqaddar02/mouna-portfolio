@@ -127,6 +127,8 @@ export const fr: Dictionary = {
   },
   project: {
     breadcrumb: 'Projets',
+    breadcrumbLabel: 'Fil d’Ariane',
+    contents: 'Sommaire',
     factSheet: 'Fiche technique',
     sections: {
       overview: 'Présentation',
