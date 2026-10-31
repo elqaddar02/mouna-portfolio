@@ -1,12 +1,13 @@
 {
   "name": "Mouna Elqaddar",
   "role": {
-    "en": "Architecture Student",
-    "fr": "Étudiante en architecture"
+    "fr": "Étudiante en architecture",
+    "en": "Architecture Student"
   },
+  "placeholder": false,
   "shortBio": {
-    "fr": "Étudiante en architecture à l’ENAU, à Tunis, Mouna Elqaddar s’intéresse à la manière dont l’architecture rassemble : lieux culturels, équipements publics et habitat pensé autour de l’espace partagé.",
-    "en": "An architecture student at ENAU in Tunis, Mouna Elqaddar is interested in how architecture brings people together: cultural places, public institutions and housing designed around shared space."
+    "fr": "Étudiante en quatrième année d’architecture à l’ENAU Tunis, je conçois l’architecture comme une expérience humaine, où les volumes, les circulations et les espaces s’articulent pour créer des lieux vivants, fluides et propices à l’exploration.",
+    "en": "As a fourth-year architecture student at ENAU Tunis, I see architecture as a human experience, where volumes, circulation and spaces come together to create dynamic, fluid environments that invite exploration."
   },
   "longBio": [
     {
@@ -18,7 +19,6 @@
       "en": "A common thread runs through them: the route through a building, the thresholds between city and interior, and the way light, material and programme shape everyday life."
     }
   ],
-  "philosophy": [],
   "interests": [],
   "education": [
     {
@@ -33,14 +33,14 @@
       "programme": {
         "fr": "Architecture",
         "en": "Architecture"
-      }
+      },
+      "note": null
     }
   ],
+  "philosophy": [],
   "skills": [],
   "software": [],
   "languages": [],
-  "cvUrl": "",
-  "placeholder": false,
   "heroImage": {
     "src": "/images/projects/project-002/cover.webp",
     "alt": {
@@ -49,13 +49,15 @@
     }
   },
   "heroProject": "project-002",
+  "portrait": null,
   "contact": {
     "email": "elqaddarchitecte@gmail.com",
     "linkedin": "https://www.linkedin.com/",
     "instagram": "https://www.instagram.com/",
     "location": {
-      "en": "",
-      "fr": ""
+      "fr": "",
+      "en": ""
     }
-  }
+  },
+  "cvUrl": ""
 }
