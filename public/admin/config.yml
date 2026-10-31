@@ -983,6 +983,7 @@
                   "label": "LinkedIn (lien complet)",
                   "widget": "string",
                   "required": false,
+                  "hint": "Lien vers votre profil, ex. https://www.linkedin.com/in/votre-profil. Le lien actuel mène à la page d’accueil du site, à remplacer.",
                   "pattern": [
                     "^$|^https://",
                     "Le lien doit commencer par https://"
@@ -993,6 +994,7 @@
                   "label": "Instagram (lien complet)",
                   "widget": "string",
                   "required": false,
+                  "hint": "Lien vers votre profil, ex. https://www.instagram.com/votre.compte. Le lien actuel mène à la page d’accueil du site, à remplacer.",
                   "pattern": [
                     "^$|^https://",
                     "Le lien doit commencer par https://"

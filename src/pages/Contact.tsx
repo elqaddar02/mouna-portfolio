@@ -1,6 +1,7 @@
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { ArrowLink } from '../components/ui/ArrowLink'
+import { ContactIcon } from '../components/ui/ContactIcon'
 import { Breakable, useContactRows } from '../components/ui/ContactLinks'
 import { Label } from '../components/ui/Label'
 import { Lines } from '../components/ui/MultilineHeading'
@@ -53,7 +54,10 @@ export default function Contact() {
         <dl className="border-t-2 border-ink">
           {rows.map((row) => (
             <div key={row.key} className="grid gap-2 border-b-2 border-ink py-6 md:grid-cols-[14rem_1fr_auto] md:items-center md:gap-8">
-              <dt className="text-label text-concrete-ink">{t.contact[row.key]}</dt>
+              <dt className="text-label flex items-center gap-2.5 text-concrete-ink">
+                <ContactIcon kind={row.key} className="size-4 shrink-0 text-ink" />
+                {t.contact[row.key]}
+              </dt>
               <dd className="min-w-0 break-words">
                 {row.href ? (
                   <a

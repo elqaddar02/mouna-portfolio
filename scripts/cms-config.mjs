@@ -239,8 +239,8 @@ const profile = {
           hint: 'Les champs vides s’affichent « À compléter » sur le site.',
           fields: [
             { name: 'email', label: 'E-mail', widget: 'string', required: false, pattern: ['^$|^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$', 'Adresse e-mail invalide'] },
-            { name: 'linkedin', label: 'LinkedIn (lien complet)', widget: 'string', required: false, pattern: ['^$|^https://', 'Le lien doit commencer par https://'] },
-            { name: 'instagram', label: 'Instagram (lien complet)', widget: 'string', required: false, pattern: ['^$|^https://', 'Le lien doit commencer par https://'] },
+            { name: 'linkedin', label: 'LinkedIn (lien complet)', widget: 'string', required: false, hint: 'Lien vers votre profil, ex. https://www.linkedin.com/in/votre-profil. Le lien actuel mène à la page d’accueil du site, à remplacer.', pattern: ['^$|^https://', 'Le lien doit commencer par https://'] },
+            { name: 'instagram', label: 'Instagram (lien complet)', widget: 'string', required: false, hint: 'Lien vers votre profil, ex. https://www.instagram.com/votre.compte. Le lien actuel mène à la page d’accueil du site, à remplacer.', pattern: ['^$|^https://', 'Le lien doit commencer par https://'] },
             bi('location', 'Ville / pays'),
           ],
         },
