@@ -57,14 +57,17 @@ function ProjectView({ project }: { project: Project }) {
   const prev = sortedProjects[(pos - 1 + sortedProjects.length) % sortedProjects.length]!
   const next = sortedProjects[(pos + 1) % sortedProjects.length]!
 
-  const facts: [string, string][] = [
-    [t.common.number, project.number],
-    [t.common.category, t.categories[project.category]],
-    [t.common.year, project.year],
-    [t.common.location, l(project.location)],
-    [t.common.format, t.formats[project.format]],
-    ...(project.meta ?? []).map((m): [string, string] => [l(m.label), l(m.value)]),
-  ]
+  // Rows left empty in the editor are hidden rather than shown blank.
+  const facts = (
+    [
+      [t.common.number, project.number],
+      [t.common.category, t.categories[project.category]],
+      [t.common.year, project.year],
+      [t.common.location, l(project.location)],
+      [t.common.format, t.formats[project.format]],
+      ...(project.meta ?? []).map((m): [string, string] => [l(m.label), l(m.value)]),
+    ] as [string, string][]
+  ).filter(([, v]) => v)
 
   return (
     <article>

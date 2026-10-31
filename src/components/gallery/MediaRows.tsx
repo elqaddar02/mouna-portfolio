@@ -1,10 +1,12 @@
 import type { CSSProperties } from 'react'
 import type { ArchImage } from '../../data/types'
-import { cn, ratioValue } from '../../lib/cn'
+import { cn } from '../../lib/cn'
 import { Figure } from '../ui/Figure'
 
+const ratio = (img: ArchImage) => img.width / img.height
+
 /** CSS variable carrying the aspect ratio, used as flex-grow so paired images share a height. */
-const ratioVar = (img: ArchImage) => ({ '--r': ratioValue(img.aspectRatio) }) as CSSProperties
+const ratioVar = (img: ArchImage) => ({ '--r': ratio(img) }) as CSSProperties
 
 type Row = { kind: 'wide' | 'single' | 'pair'; images: ArchImage[] }
 
@@ -14,8 +16,8 @@ function composeRows(images: ArchImage[]): Row[] {
   for (let i = 0; i < images.length; i++) {
     const a = images[i]!
     const b = images[i + 1]
-    if (ratioValue(a.aspectRatio) >= 1.7) rows.push({ kind: 'wide', images: [a] })
-    else if (b && ratioValue(b.aspectRatio) < 1.7) {
+    if (ratio(a) >= 1.7) rows.push({ kind: 'wide', images: [a] })
+    else if (b && ratio(b) < 1.7) {
       rows.push({ kind: 'pair', images: [a, b] })
       i++
     } else rows.push({ kind: 'single', images: [a] })

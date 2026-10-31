@@ -1,0 +1,192 @@
+{
+  "name": "Mouna Elqaddar",
+  "role": {
+    "en": "Architecture Student",
+    "fr": "Étudiante en architecture"
+  },
+  "shortBio": {
+    "en": "Placeholder biography. One or two sentences on how Mouna approaches architecture — the questions, places and materials that drive the work.",
+    "fr": "Biographie provisoire. Une ou deux phrases sur l’approche de Mouna — les questions, les lieux et les matières qui animent son travail."
+  },
+  "longBio": [
+    {
+      "en": "Placeholder. Introduce Mouna’s path into architecture and the current place of study. Keep it factual and short.",
+      "fr": "Provisoire. Présenter le parcours de Mouna vers l’architecture et son école actuelle. Rester factuel et concis."
+    },
+    {
+      "en": "Placeholder. Describe what Mouna looks for in a project: the relationship between space, material, light and the people who use it.",
+      "fr": "Provisoire. Décrire ce qu’elle recherche dans un projet : la relation entre espace, matière, lumière et usagers."
+    }
+  ],
+  "philosophy": [
+    {
+      "en": "Placeholder statement. A short design principle in Mouna’s own words.",
+      "fr": "Énoncé provisoire. Un principe de conception court, avec les mots de Mouna."
+    },
+    {
+      "en": "Placeholder statement. A second principle — for example about context, material or the human scale.",
+      "fr": "Énoncé provisoire. Un second principe — par exemple sur le contexte, la matière ou l’échelle humaine."
+    },
+    {
+      "en": "Placeholder statement. A third principle about process: drawing, model-making or research.",
+      "fr": "Énoncé provisoire. Un troisième principe sur le processus : dessin, maquette ou recherche."
+    }
+  ],
+  "interests": [
+    {
+      "en": "Interest 01 — to be defined",
+      "fr": "Intérêt 01 — à définir"
+    },
+    {
+      "en": "Interest 02 — to be defined",
+      "fr": "Intérêt 02 — à définir"
+    },
+    {
+      "en": "Interest 03 — to be defined",
+      "fr": "Intérêt 03 — à définir"
+    },
+    {
+      "en": "Interest 04 — to be defined",
+      "fr": "Intérêt 04 — à définir"
+    }
+  ],
+  "education": [
+    {
+      "period": {
+        "en": "20XX — present",
+        "fr": "20XX — aujourd’hui"
+      },
+      "institution": {
+        "en": "School of architecture — to be added",
+        "fr": "École d’architecture — à compléter"
+      },
+      "programme": {
+        "en": "Architecture degree — programme to be added",
+        "fr": "Diplôme d’architecture — cursus à compléter"
+      }
+    },
+    {
+      "period": {
+        "en": "20XX",
+        "fr": "20XX"
+      },
+      "institution": {
+        "en": "To be added",
+        "fr": "À compléter"
+      },
+      "programme": {
+        "en": "Previous studies / diploma — to be added",
+        "fr": "Études / diplôme précédents — à compléter"
+      }
+    }
+  ],
+  "skills": [
+    {
+      "en": "Skill — to be added",
+      "fr": "Compétence — à compléter"
+    },
+    {
+      "en": "Skill — to be added",
+      "fr": "Compétence — à compléter"
+    },
+    {
+      "en": "Skill — to be added",
+      "fr": "Compétence — à compléter"
+    },
+    {
+      "en": "Skill — to be added",
+      "fr": "Compétence — à compléter"
+    }
+  ],
+  "software": [
+    {
+      "category": {
+        "en": "CAD & technical drawing",
+        "fr": "DAO & dessin technique"
+      },
+      "tools": []
+    },
+    {
+      "category": {
+        "en": "3D modelling",
+        "fr": "Modélisation 3D"
+      },
+      "tools": []
+    },
+    {
+      "category": {
+        "en": "Rendering",
+        "fr": "Rendu"
+      },
+      "tools": []
+    },
+    {
+      "category": {
+        "en": "Graphic design",
+        "fr": "Graphisme"
+      },
+      "tools": []
+    },
+    {
+      "category": {
+        "en": "BIM",
+        "fr": "BIM"
+      },
+      "tools": []
+    }
+  ],
+  "languages": [
+    {
+      "name": {
+        "en": "English",
+        "fr": "Anglais"
+      },
+      "level": {
+        "en": "To be added",
+        "fr": "À compléter"
+      }
+    },
+    {
+      "name": {
+        "en": "French",
+        "fr": "Français"
+      },
+      "level": {
+        "en": "To be added",
+        "fr": "À compléter"
+      }
+    }
+  ],
+  "cvUrl": "",
+  "placeholder": true,
+  "portrait": {
+    "src": "/images/profile/portrait.svg",
+    "alt": {
+      "en": "Portrait of Mouna Elqaddar (placeholder)",
+      "fr": "Portrait de Mouna Elqaddar (provisoire)"
+    }
+  },
+  "heroImage": {
+    "src": "/images/profile/hero.svg",
+    "alt": {
+      "en": "Featured architectural image (placeholder)",
+      "fr": "Image architecturale principale (provisoire)"
+    }
+  },
+  "heroImageWide": {
+    "src": "/images/profile/hero-wide.svg",
+    "alt": {
+      "en": "Featured architectural image (placeholder)",
+      "fr": "Image architecturale principale (provisoire)"
+    }
+  },
+  "contact": {
+    "email": "",
+    "linkedin": "",
+    "instagram": "",
+    "location": {
+      "en": "",
+      "fr": ""
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "slug": "concept-05",
+  "number": "C.05",
+  "order": 5,
+  "placeholder": true,
+  "title": {
+    "en": "Experimental Diagram",
+    "fr": "Diagramme expérimental"
+  },
+  "kind": "diagram",
+  "year": "20XX",
+  "medium": {
+    "en": "Diagram & plan",
+    "fr": "Diagramme & plan"
+  },
+  "description": {
+    "en": "Placeholder. Describe the question behind this exploration, the medium used and what it revealed. Two or three sentences.",
+    "fr": "Provisoire. Décrire la question à l’origine de cette exploration, le médium employé et ce qu’elle a révélé. Deux ou trois phrases."
+  },
+  "images": [
+    {
+      "src": "/images/concepts/concept-05/01.svg",
+      "imageType": "diagram",
+      "alt": {
+        "en": "Experimental diagram (placeholder)",
+        "fr": "Diagramme expérimental (provisoire)"
+      },
+      "caption": {
+        "en": "Relational diagram.",
+        "fr": "Diagramme relationnel."
+      }
+    },
+    {
+      "src": "/images/concepts/concept-05/02.svg",
+      "imageType": "plan",
+      "alt": {
+        "en": "Plan study (placeholder)",
+        "fr": "Étude en plan (provisoire)"
+      },
+      "caption": {
+        "en": "Plan study.",
+        "fr": "Étude en plan."
+      }
+    }
+  ]
+}

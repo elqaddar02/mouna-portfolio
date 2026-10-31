@@ -4,10 +4,11 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "content": "node scripts/content.mjs",
+    "dev": "npm run content && vite",
+    "build": "npm run content && tsc -b && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -b",
+    "typecheck": "npm run content && tsc -b",
     "placeholders": "node scripts/generate-placeholders.mjs"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "@vitejs/plugin-react": "^6.1.2",
+    "image-size": "^2.0.4",
     "tailwindcss": "^4.3.3",
     "typescript": "5.9",
     "vite": "^8.3.5"

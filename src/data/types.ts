@@ -22,8 +22,6 @@ export type ImageType =
   | 'elevation'
   | 'drawing'
 
-export type AspectRatio = '16:9' | '21:9' | '3:2' | '4:3' | '1:1' | '4:5' | '3:4' | '2:3'
-
 export interface ArchImage {
   src: string
   /** Optional responsive sources, e.g. "img-800.webp 800w, img-1600.webp 1600w". */
@@ -31,12 +29,9 @@ export interface ArchImage {
   alt: Localized
   caption?: Localized
   imageType: ImageType
-  aspectRatio: AspectRatio
-  /** Intrinsic pixel size — prevents layout shift. */
+  /** Intrinsic pixel size, measured at build time by scripts/content.mjs — prevents layout shift. */
   width: number
   height: number
-  /** True while the file is a generated visual placeholder, not original work. */
-  placeholder?: boolean
 }
 
 export interface MetaEntry {

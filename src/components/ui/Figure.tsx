@@ -46,7 +46,7 @@ export function Figure({
   const reduce = useReducedMotion()
   const animate = reveal && !reduce && !priority
   const frameStyle: CSSProperties | undefined =
-    aspect === null ? undefined : { aspectRatio: aspect ?? image.aspectRatio.replace(':', ' / ') }
+    aspect === null ? undefined : { aspectRatio: aspect ?? `${image.width} / ${image.height}` }
 
   const img = (
     <img
