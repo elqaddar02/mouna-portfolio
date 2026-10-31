@@ -7,8 +7,8 @@
     "branch": "main",
     "base_url": "https://sveltia-cms-auth.mouadelqaddar.workers.dev"
   },
-  "site_url": "https://mouna-elqaddar.pages.dev",
-  "display_url": "https://mouna-elqaddar.pages.dev",
+  "site_url": "https://mouna-portfolio.pages.dev",
+  "display_url": "https://mouna-portfolio.pages.dev",
   "app_title": "M/E. — Éditeur du portfolio",
   "logo_url": "/favicon.svg",
   "media_folder": "/public/images/uploads",

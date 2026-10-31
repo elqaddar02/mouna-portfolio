@@ -4,6 +4,6 @@
  * and the editor's "view site" link. Update it if the Cloudflare Pages project
  * gets another name, or when a custom domain is added (then run `npm run cms-config`).
  */
-export const SITE_URL = 'https://mouna-elqaddar.pages.dev'
+export const SITE_URL = 'https://mouna-portfolio.pages.dev'
 
 export const SITE_NAME = 'Mouna Elqaddar — Architecture'

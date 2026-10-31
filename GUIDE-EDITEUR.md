@@ -6,7 +6,7 @@ Ce guide explique comment modifier le portfolio sans toucher au code : ajouter u
 
 ## 1. Se connecter
 
-1. Ouvrir **`https://mouna-elqaddar.pages.dev/admin/`** (l’adresse peut changer si un nom de domaine est ajouté).
+1. Ouvrir **`https://mouna-portfolio.pages.dev/admin/`** (l’adresse peut changer si un nom de domaine est ajouté).
 2. Cliquer sur **Sign in with GitHub** et se connecter avec votre compte GitHub.
 3. Trois rubriques s’affichent à gauche :
    - **Projets académiques** : les projets de la page « Projets »

@@ -7,8 +7,8 @@ One-time setup, about 15–20 minutes. Everything here is on free plans. You'll 
 
 At the end you'll have:
 
-- the site at **`https://mouna-elqaddar.pages.dev`**, rebuilt automatically after every change
-- the editor at **`https://mouna-elqaddar.pages.dev/admin/`**, where Mouna logs in with GitHub
+- the site at **`https://mouna-portfolio.pages.dev`**, rebuilt automatically after every change
+- the editor at **`https://mouna-portfolio.pages.dev/admin/`**, where Mouna logs in with GitHub
 
 ---
 
@@ -20,7 +20,7 @@ At the end you'll have:
 
    | Setting | Value |
    | --- | --- |
-   | Project name | `mouna-elqaddar` → gives `mouna-elqaddar.pages.dev` |
+   | Project name | `mouna-portfolio` → gives `mouna-portfolio.pages.dev` |
    | Production branch | `main` |
    | Framework preset | `None` |
    | Build command | `npm run build` |
@@ -29,7 +29,7 @@ At the end you'll have:
 
 4. Click **Save and Deploy**. The first build takes a couple of minutes.
 
-> If the name `mouna-elqaddar` is already taken, Cloudflare gives a different `*.pages.dev` address. Tell me the address (or set it in `src/config/site.ts` and run `npm run cms-config`) so the meta tags, sitemap and editor point to the right place.
+> If the name is already taken, Cloudflare gives a different `*.pages.dev` address. Tell me the address (or set it in `src/config/site.ts` and run `npm run cms-config`) so the meta tags, sitemap and editor point to the right place.
 
 From now on, **every change pushed to `main` is deployed automatically**, including every save in the editor. If a build fails, for example because of an invalid content edit, Cloudflare keeps the previous version online.
 
@@ -52,7 +52,7 @@ The editor saves Mouna's changes to GitHub, so it needs a small login service. I
    | Field | Value |
    | --- | --- |
    | Application name | `Mouna portfolio editor` |
-   | Homepage URL | `https://mouna-elqaddar.pages.dev` |
+   | Homepage URL | `https://mouna-portfolio.pages.dev` |
    | Authorization callback URL | `<worker URL from 2.1>/callback` |
 
 3. Click **Register application**, then **Generate a new client secret**.
@@ -66,7 +66,7 @@ In Cloudflare: **Workers & Pages** → **`sveltia-cms-auth`** → **Settings** �
 | --- | --- | --- |
 | `GITHUB_CLIENT_ID` | Client ID from 2.2 | Text |
 | `GITHUB_CLIENT_SECRET` | Client secret from 2.2 | **Secret** (encrypted) |
-| `ALLOWED_DOMAINS` | `mouna-elqaddar.pages.dev` | Text |
+| `ALLOWED_DOMAINS` | `mouna-portfolio.pages.dev` | Text |
 
 Save and deploy. `ALLOWED_DOMAINS` makes sure only this site can use the login service. Add the custom domain there later if you get one.
 
@@ -84,7 +84,7 @@ Save and deploy. `ALLOWED_DOMAINS` makes sure only this site can use the login s
 1. Mouna creates a free GitHub account if she doesn't have one: <https://github.com/signup>.
 2. In the repository: **Settings** → **Collaborators** → **Add people** → her GitHub username.
 3. She accepts the invitation from her email.
-4. She opens `https://mouna-elqaddar.pages.dev/admin/`, clicks **Sign in with GitHub**, and she's in.
+4. She opens `https://mouna-portfolio.pages.dev/admin/`, clicks **Sign in with GitHub**, and she's in.
 
 Her guide, in French: [`GUIDE-EDITEUR.md`](GUIDE-EDITEUR.md).
 
