@@ -12,7 +12,7 @@ export interface I18nValue {
   setLang: (lang: Lang) => void
   /** UI dictionary for the current language. */
   t: Dictionary
-  /** Picks the current language from a bilingual content value. */
+  /** Picks the current language from a bilingual content value, falling back to whichever language is filled in. */
   l: (value: Localized) => string
 }
 
@@ -45,7 +45,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   }, [lang])
 
   const value = useMemo<I18nValue>(
-    () => ({ lang, setLang, t: DICTIONARIES[lang], l: (v) => v[lang] || v.en }),
+    () => ({ lang, setLang, t: DICTIONARIES[lang], l: (v) => v[lang] || v.en || v.fr }),
     [lang, setLang],
   )
 

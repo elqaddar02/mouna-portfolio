@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "content": "node scripts/content.mjs",
+    "content": "node scripts/content.mjs && node scripts/cms-config.mjs",
     "dev": "npm run content && vite",
     "build": "npm run content && tsc -b && vite build",
     "preview": "vite preview",
