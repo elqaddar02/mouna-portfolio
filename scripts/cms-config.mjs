@@ -22,7 +22,7 @@ import { fr } from '../src/i18n/fr.ts'
 const REPO = 'elqaddar02/mouna-portfolio'
 const BRANCH = 'main'
 /** URL of the Sveltia CMS Authenticator worker on Cloudflare (see DEPLOY.md, step 3). */
-const AUTH_BASE_URL = 'https://sveltia-cms-auth.REPLACE-ME.workers.dev'
+const AUTH_BASE_URL = 'https://sveltia-cms-auth.mouadelqaddar.workers.dev'
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const OUT = join(ROOT, 'public', 'admin', 'config.yml')

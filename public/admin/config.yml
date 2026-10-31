@@ -5,7 +5,7 @@
     "name": "github",
     "repo": "elqaddar02/mouna-portfolio",
     "branch": "main",
-    "base_url": "https://sveltia-cms-auth.REPLACE-ME.workers.dev"
+    "base_url": "https://sveltia-cms-auth.mouadelqaddar.workers.dev"
   },
   "site_url": "https://mouna-elqaddar.pages.dev",
   "display_url": "https://mouna-elqaddar.pages.dev",

@@ -74,7 +74,7 @@ Save and deploy. `ALLOWED_DOMAINS` makes sure only this site can use the login s
 
 **Send me the worker URL from 2.1** and I'll update the configuration. Or do it yourself:
 
-1. In `scripts/cms-config.mjs`, set `AUTH_BASE_URL` to the worker URL.
+1. In `scripts/cms-config.mjs`, set `AUTH_BASE_URL` to the worker URL (currently `https://sveltia-cms-auth.mouadelqaddar.workers.dev`).
 2. Run `npm run cms-config`, commit and push.
 
 ---
