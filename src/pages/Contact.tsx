@@ -55,7 +55,7 @@ export default function Contact() {
             <div key={row.key} className="grid gap-2 border-b-2 border-ink py-6 md:grid-cols-[14rem_1fr_auto] md:items-center md:gap-8">
               <dt className="text-label text-concrete-ink">{t.contact[row.key]}</dt>
               <dd className="min-w-0 break-words">
-                {row.value && row.href ? (
+                {row.href ? (
                   <a
                     href={row.href}
                     className="group inline-flex max-w-full items-center gap-3 text-headline hover:text-orange-deep max-md:text-[clamp(1.1rem,5.4vw,2rem)]"
@@ -67,10 +67,8 @@ export default function Contact() {
                     </span>
                     <ArrowUpRight className="size-[0.7em] shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
                   </a>
-                ) : row.value ? (
-                  <span className="text-headline">{row.value}</span>
                 ) : (
-                  <span className="text-title text-concrete-ink">{t.contact.notProvided}</span>
+                  <span className="text-headline">{row.value}</span>
                 )}
               </dd>
               <dd>
@@ -87,18 +85,16 @@ export default function Contact() {
               </dd>
             </div>
           ))}
-          <div className="grid gap-2 border-b-2 border-ink py-6 md:grid-cols-[14rem_1fr_auto] md:items-center md:gap-8">
-            <dt className="text-label text-concrete-ink">{t.contact.cv}</dt>
-            <dd>
-              {profile.cvUrl ? (
+          {profile.cvUrl && (
+            <div className="grid gap-2 border-b-2 border-ink py-6 md:grid-cols-[14rem_1fr_auto] md:items-center md:gap-8">
+              <dt className="text-label text-concrete-ink">{t.contact.cv}</dt>
+              <dd>
                 <ArrowLink to={profile.cvUrl} download>
                   {t.contact.cvDownload}
                 </ArrowLink>
-              ) : (
-                <span className="text-title text-concrete-ink">{t.contact.notProvided}</span>
-              )}
-            </dd>
-          </div>
+              </dd>
+            </div>
+          )}
         </dl>
       </section>
     </>

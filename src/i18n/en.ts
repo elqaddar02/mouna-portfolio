@@ -160,7 +160,6 @@ export const en = {
     instagram: 'Instagram',
     location: 'Location',
     cv: 'CV',
-    notProvided: 'To be added',
     writeCta: 'Write an email',
     copy: 'Copy',
     copied: 'Copied',

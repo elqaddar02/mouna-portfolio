@@ -161,7 +161,6 @@ export const fr: Dictionary = {
     instagram: 'Instagram',
     location: 'Lieu',
     cv: 'CV',
-    notProvided: 'À compléter',
     writeCta: 'Écrire un e-mail',
     copy: 'Copier',
     copied: 'Copié',
