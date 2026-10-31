@@ -74,7 +74,7 @@ Conseils :
 
 - la **biographie** (courte pour l’accueil, longue pour « À propos »)
 - les **intérêts**, la **formation**, la **démarche**, les **compétences**, les **logiciels** et les **langues**
-- l’**image principale** de l’accueil et le **portrait**
+- l’**image principale** de l’accueil et le **portrait** (optionnel : sans portrait, la page À propos affiche le nom et le statut)
 - les **contacts** : e-mail, liens complets LinkedIn / Instagram (commençant par `https://`), ville
 - le **CV** en PDF
 

@@ -98,7 +98,8 @@ export interface Profile {
   skills: Localized[]
   software: SoftwareGroup[]
   languages: LanguageSkill[]
-  portrait: ArchImage
+  /** Optional portrait for the About page; null shows the name and role instead. */
+  portrait: ArchImage | null
   /** Large homepage image (landscape). */
   heroImage: ArchImage
   /** Slug of the project the homepage image opens; null for no link. */

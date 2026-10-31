@@ -63,11 +63,11 @@ src/data/generated/content.json  (git-ignored) → src/data/{projects,profile}.t
 ```
 public/images/
   projects/     project images (editor uploads land here)
-  profile/      portrait (the homepage image is a project render)
+  profile/      optional portrait (the homepage image is a project render)
 public/cv/      CV PDF (editor uploads land here)
 ```
 
-Use original images only. The portrait placeholder can be regenerated with `npm run placeholders`.
+Use original images only.
 
 ### Interface text
 
@@ -87,7 +87,7 @@ Add the value to `ENUMS` in `scripts/content.mjs`, to the matching type in `src/
 
 ```
 content/         CMS-editable JSON (projects, profile)
-scripts/         content.mjs (validate + build content) · cms-config.mjs · generate-placeholders.mjs · generate-social.cjs
+scripts/         content.mjs (validate + build content) · cms-config.mjs · generate-social.cjs · brand/ (logo build)
 public/admin/    editor (index.html + generated config.yml)
 src/
   config/        site URL (single source), navigation

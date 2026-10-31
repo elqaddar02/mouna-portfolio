@@ -26,7 +26,7 @@ function AboutSection({ id, n, title, children }: { id: string; n: number; title
 export default function About() {
   const { t, l } = useI18n()
   const s = t.about.sections
-  useDocumentMeta({ title: t.meta.aboutTitle, description: t.meta.aboutDescription, image: profile.portrait.src })
+  useDocumentMeta({ title: t.meta.aboutTitle, description: t.meta.aboutDescription, image: profile.portrait?.src })
 
   return (
     <>
@@ -41,12 +41,25 @@ export default function About() {
 
         <div id="intro" className="frame grid-12 gap-y-10 pb-16 pt-6 md:pb-24">
           <div className="col-span-4 md:col-span-5">
-            <div className="border-2 border-ink">
-              <Figure image={profile.portrait} priority sizes="(min-width: 768px) 40vw, 100vw" />
-            </div>
-            <p className="text-label mt-3 text-[0.68rem] text-concrete-ink">
-              {profile.name} — {l(profile.role)}
-            </p>
+            {profile.portrait ? (
+              <>
+                <div className="border-2 border-ink">
+                  <Figure image={profile.portrait} priority sizes="(min-width: 768px) 40vw, 100vw" />
+                </div>
+                <p className="text-label mt-3 text-[0.68rem] text-concrete-ink">
+                  {profile.name} — {l(profile.role)}
+                </p>
+              </>
+            ) : (
+              // Without a portrait, the name and role carry the column.
+              <div className="border-t-2 border-ink pt-5">
+                <p className="text-headline">{profile.name}</p>
+                <p className="text-label mt-4 flex items-center gap-2.5 text-[0.72rem]">
+                  <span aria-hidden="true" className="size-2.5 bg-orange" />
+                  {l(profile.role)}
+                </p>
+              </div>
+            )}
           </div>
           <div className="col-span-4 md:col-span-6 md:col-start-7">
             <Label index={1}>{s.intro}</Label>

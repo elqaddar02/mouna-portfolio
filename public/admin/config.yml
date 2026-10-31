@@ -926,15 +926,16 @@
             },
             {
               "name": "portrait",
-              "label": "Portrait (page À propos)",
+              "label": "Portrait (page À propos, optionnel)",
               "widget": "object",
-              "required": true,
+              "required": false,
+              "hint": "Si vide, la page À propos affiche le nom et le statut à la place de l’image.",
               "fields": [
                 {
                   "name": "src",
                   "label": "Image",
                   "widget": "image",
-                  "required": true,
+                  "required": false,
                   "choose_url": false
                 },
                 {

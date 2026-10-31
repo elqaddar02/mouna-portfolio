@@ -173,7 +173,7 @@ export function buildContent(root = ROOT) {
       name: loc(l?.name, `${pf} languages[${i + 1}].name`),
       level: loc(l?.level, `${pf} languages[${i + 1}].level`),
     })),
-    portrait: image(p.portrait, `${pf} portrait`, 'photo'),
+    portrait: p.portrait?.src ? image(p.portrait, `${pf} portrait`, 'photo') : null,
     heroImage,
     heroProject: str(p.heroProject) || null,
     contact: {

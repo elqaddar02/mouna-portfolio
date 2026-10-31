@@ -9,7 +9,6 @@
     "build": "npm run content && tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "npm run content && tsc -b",
-    "placeholders": "node scripts/generate-placeholders.mjs",
     "cms-config": "node scripts/cms-config.mjs"
   },
   "dependencies": {

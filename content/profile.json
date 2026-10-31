@@ -159,13 +159,6 @@
   ],
   "cvUrl": "",
   "placeholder": true,
-  "portrait": {
-    "src": "/images/profile/portrait.svg",
-    "alt": {
-      "en": "Portrait of Mouna Elqaddar (placeholder)",
-      "fr": "Portrait de Mouna Elqaddar (provisoire)"
-    }
-  },
   "heroImage": {
     "src": "/images/projects/project-002/cover.webp",
     "alt": {

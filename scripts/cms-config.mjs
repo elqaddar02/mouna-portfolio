@@ -230,7 +230,7 @@ const profile = {
           required: false,
           hint: 'Un clic sur l’image principale ouvre ce projet ; son numéro et son titre s’affichent en légende.',
         },
-        imageObject('portrait', 'Portrait (page À propos)'),
+        imageObject('portrait', 'Portrait (page À propos, optionnel)', { required: false, hint: 'Si vide, la page À propos affiche le nom et le statut à la place de l’image.' }),
         {
           name: 'contact',
           label: 'Contact',
