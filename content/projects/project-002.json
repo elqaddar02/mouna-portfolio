@@ -3,21 +3,21 @@
   "number": "002",
   "order": 2,
   "featured": true,
-  "placeholder": true,
+  "placeholder": false,
   "title": {
-    "fr": "Projet 02",
-    "en": "Project 02"
+    "fr": "Bibliothèque nationale de Tunis",
+    "en": "National Library of Tunis"
   },
   "subtitle": {
-    "fr": "Provisoire — remplacer par le titre et la commande du projet",
-    "en": "Placeholder — replace with the project title and brief"
+    "fr": "",
+    "en": ""
   },
   "category": "cultural",
   "format": "studio",
-  "year": "20XX",
+  "year": "",
   "location": {
-    "fr": "À compléter",
-    "en": "To be added"
+    "fr": "Tunis",
+    "en": "Tunis"
   },
   "cover": {
     "src": "/images/projects/project-002/cover.webp",
@@ -27,180 +27,36 @@
     }
   },
   "shortDescription": {
-    "fr": "Résumé provisoire. En deux lignes, décrire le programme, le contexte et l’idée architecturale centrale.",
-    "en": "Placeholder summary. In two lines, describe the brief, the programme and the central architectural idea."
+    "fr": "",
+    "en": ""
   },
   "fullDescription": {
-    "fr": "Présentation provisoire. Introduire le projet : la commande, le site, le programme et la question à laquelle le projet cherche à répondre. Un ou deux paragraphes courts suffisent.",
-    "en": "Placeholder overview. Introduce the project: the brief, the site, the programme and the question the design sets out to answer. Keep it to one or two short paragraphs."
+    "fr": "",
+    "en": ""
   },
   "architecturalConcept": {
-    "fr": "Concept provisoire. Expliquer l’idée génératrice — la stratégie spatiale, matérielle ou formelle qui organise le projet — et sa réponse à la commande.",
-    "en": "Placeholder concept. Explain the generating idea — the spatial, material or formal strategy that organises the project — and how it responds to the brief."
+    "fr": "",
+    "en": ""
   },
   "siteAnalysis": {
-    "fr": "Analyse de site provisoire. Résumer le contexte : orientation, climat, topographie, accès, tissu urbain, contraintes et potentiels identifiés.",
-    "en": "Placeholder site analysis. Summarise the context: orientation, climate, topography, access, urban fabric and the constraints or opportunities identified."
+    "fr": "",
+    "en": ""
   },
   "designProcess": {
-    "fr": "Développement provisoire. Décrire l’évolution du projet — des premières esquisses et maquettes à la proposition finale — et les décisions clés.",
-    "en": "Placeholder design development. Describe how the scheme evolved — from first sketches and models to the final proposal — and the key decisions along the way."
+    "fr": "",
+    "en": ""
   },
   "images": [
     {
-      "src": "/images/projects/project-002/site.svg",
-      "imageType": "site",
-      "caption": {
-        "fr": "Analyse de site — courbes de niveau, accès et limite de parcelle.",
-        "en": "Site analysis — contours, access and plot boundary."
-      },
-      "alt": {
-        "fr": "Analyse de site (provisoire)",
-        "en": "Site analysis drawing (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/concept-diagram.svg",
-      "imageType": "diagram",
-      "caption": {
-        "fr": "Diagramme conceptuel — relations programmatiques.",
-        "en": "Concept diagram — programme relationships."
-      },
-      "alt": {
-        "fr": "Diagramme conceptuel (provisoire)",
-        "en": "Concept diagram (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/sketch-01.svg",
-      "imageType": "sketch",
-      "caption": {
-        "fr": "Croquis de perspective initial.",
-        "en": "Early perspective sketch."
-      },
-      "alt": {
-        "fr": "Croquis en perspective (provisoire)",
-        "en": "Perspective sketch (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/sketch-02.svg",
-      "imageType": "sketch",
-      "caption": {
-        "fr": "Croquis de recherche.",
-        "en": "Process sketch."
-      },
-      "alt": {
-        "fr": "Croquis de recherche (provisoire)",
-        "en": "Process sketch (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/model-01.svg",
-      "imageType": "model",
-      "caption": {
-        "fr": "Maquette de volumétrie.",
-        "en": "Massing model."
-      },
-      "alt": {
-        "fr": "Maquette de volumétrie (provisoire)",
-        "en": "Physical massing model (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/model-02.svg",
-      "imageType": "model",
-      "caption": {
-        "fr": "Maquette de site.",
-        "en": "Site model."
-      },
-      "alt": {
-        "fr": "Maquette de site (provisoire)",
-        "en": "Physical site model (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/render-01.svg",
+      "src": "/images/projects/project-002/cover.webp",
       "imageType": "render",
-      "caption": {
-        "fr": "Visualisation extérieure finale.",
-        "en": "Final exterior visualisation."
-      },
       "alt": {
-        "fr": "Visualisation extérieure (provisoire)",
-        "en": "Exterior visualisation (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/render-02.svg",
-      "imageType": "render",
-      "caption": {
-        "fr": "Visualisation intérieure finale.",
-        "en": "Final interior visualisation."
+        "fr": "Visualisation d’un bâtiment en pierre claire aux volumes décalés, avec des façades vitrées voilées de lames verticales couleur cuivre, sur une grande place ; l’enseigne indique « المكتبة الوطنية تونس »",
+        "en": "Visualisation of a pale stone building of offset volumes, its glazed façades veiled by copper-coloured vertical fins, on a wide public square; the sign reads “المكتبة الوطنية تونس” (National Library, Tunis)"
       },
-      "alt": {
-        "fr": "Visualisation intérieure (provisoire)",
-        "en": "Interior visualisation (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/plan-ground.svg",
-      "imageType": "plan",
       "caption": {
-        "fr": "Plan du rez-de-chaussée — 1:200.",
-        "en": "Ground floor plan — 1:200."
-      },
-      "alt": {
-        "fr": "Plan du rez-de-chaussée (provisoire)",
-        "en": "Ground floor plan (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/plan-upper.svg",
-      "imageType": "plan",
-      "caption": {
-        "fr": "Plan d’étage — 1:200.",
-        "en": "Upper floor plan — 1:200."
-      },
-      "alt": {
-        "fr": "Plan d’étage (provisoire)",
-        "en": "Upper floor plan (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/section.svg",
-      "imageType": "section",
-      "caption": {
-        "fr": "Coupe longitudinale AA.",
-        "en": "Longitudinal section AA."
-      },
-      "alt": {
-        "fr": "Coupe longitudinale (provisoire)",
-        "en": "Longitudinal section (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/elevation.svg",
-      "imageType": "elevation",
-      "caption": {
-        "fr": "Façade principale.",
-        "en": "Main elevation."
-      },
-      "alt": {
-        "fr": "Façade principale (provisoire)",
-        "en": "Main elevation (placeholder)"
-      }
-    },
-    {
-      "src": "/images/projects/project-002/detail.svg",
-      "imageType": "drawing",
-      "caption": {
-        "fr": "Détail de paroi — 1:20.",
-        "en": "Wall build-up detail — 1:20."
-      },
-      "alt": {
-        "fr": "Détail constructif (provisoire)",
-        "en": "Construction detail (placeholder)"
+        "fr": "Vue depuis la place",
+        "en": "View from the square"
       }
     }
   ],
@@ -213,56 +69,6 @@
       "value": {
         "fr": "École Nationale d’Architecture et d’Urbanisme de Tunis (ENAU)",
         "en": "National School of Architecture and Urbanism of Tunis (ENAU)"
-      }
-    },
-    {
-      "label": {
-        "fr": "Atelier / Cours",
-        "en": "Studio / Course"
-      },
-      "value": {
-        "fr": "À compléter",
-        "en": "To be added"
-      }
-    },
-    {
-      "label": {
-        "fr": "Encadrant(s)",
-        "en": "Tutor(s)"
-      },
-      "value": {
-        "fr": "À compléter",
-        "en": "To be added"
-      }
-    },
-    {
-      "label": {
-        "fr": "Programme",
-        "en": "Programme"
-      },
-      "value": {
-        "fr": "À compléter",
-        "en": "To be added"
-      }
-    },
-    {
-      "label": {
-        "fr": "Surface du site",
-        "en": "Site area"
-      },
-      "value": {
-        "fr": "À compléter",
-        "en": "To be added"
-      }
-    },
-    {
-      "label": {
-        "fr": "Durée",
-        "en": "Duration"
-      },
-      "value": {
-        "fr": "À compléter",
-        "en": "To be added"
       }
     }
   ]

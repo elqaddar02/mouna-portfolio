@@ -59,7 +59,9 @@ export function ProjectCard({ project, aspect, imageKind = 'cover', className, h
           </span>
         </div>
         <H className="text-title mt-2 transition-colors group-hover:text-orange-deep">{l(project.title)}</H>
-        <p className="mt-2 line-clamp-2 max-w-md text-[0.95rem] text-concrete-ink">{l(project.shortDescription)}</p>
+        {l(project.shortDescription) && (
+          <p className="mt-2 line-clamp-2 max-w-md text-[0.95rem] text-concrete-ink">{l(project.shortDescription)}</p>
+        )}
         {project.placeholder && <PlaceholderBadge className="mt-3" />}
       </Link>
     </article>

@@ -87,7 +87,7 @@ function ProjectView({ project }: { project: Project }) {
             <h1 className={cn('mt-3 uppercase', l(project.title).length > 24 ? 'text-display-long' : 'text-display')}>
               {l(project.title)}
             </h1>
-            <p className="text-lead mt-5 max-w-3xl text-concrete-ink">{l(project.subtitle)}</p>
+            {l(project.subtitle) && <p className="text-lead mt-5 max-w-3xl text-concrete-ink">{l(project.subtitle)}</p>}
           </div>
           <div className="col-span-4 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
             <span className="text-label border-2 border-ink bg-ink px-2.5 py-1 text-[0.68rem] text-paper">
