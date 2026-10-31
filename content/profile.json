@@ -65,14 +65,14 @@
     }
   },
   "cvVideo": {
-    "file": "/videos/video-cv.mp4",
+    "file": "/videos/856.mp4",
     "url": "",
-    "poster": "/images/profile/video-cv-poster.webp",
+    "poster": "/images/profile/cv-video-poster.webp",
     "caption": {
       "fr": "",
       "en": ""
     },
-    "placeholder": false
+    "placeholder": true
   },
   "cvUrl": ""
 }
