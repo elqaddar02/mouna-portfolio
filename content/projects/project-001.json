@@ -3,263 +3,214 @@
   "number": "001",
   "order": 1,
   "featured": true,
-  "placeholder": true,
+  "placeholder": false,
   "title": {
     "en": "Project 01",
     "fr": "Projet 01"
   },
   "subtitle": {
-    "en": "Placeholder — replace with the project title and brief",
-    "fr": "Provisoire — remplacer par le titre et la commande du projet"
+    "en": "A cultural building of exhibitions and workshops for handwriting, typography and calligraphy",
+    "fr": "Un équipement culturel d’expositions et d’ateliers d’écriture manuscrite, de typographie et de calligraphie"
   },
-  "category": "residential",
+  "category": "cultural",
   "format": "studio",
-  "year": "20XX",
+  "year": "",
   "location": {
-    "en": "To be added",
-    "fr": "À compléter"
+    "en": "Tunisia",
+    "fr": "Tunisie"
   },
   "cover": {
-    "src": "/images/projects/project-001/cover.svg",
+    "src": "/images/projects/project-001/cover.webp",
     "alt": {
-      "en": "Project cover image (placeholder)",
-      "fr": "Image de couverture (provisoire)"
-    }
-  },
-  "thumbnail": {
-    "src": "/images/projects/project-001/thumb.svg",
-    "alt": {
-      "en": "Project thumbnail (placeholder)",
-      "fr": "Vignette du projet (provisoire)"
+      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards",
+      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées"
     }
   },
   "shortDescription": {
-    "en": "Placeholder summary. In two lines, describe the brief, the programme and the central architectural idea.",
-    "fr": "Résumé provisoire. En deux lignes, décrire le programme, le contexte et l’idée architecturale centrale."
+    "en": "A cultural building read like a sentence: a continuous mass is incised and fragmented into three volumes, linked by a ramp and a footbridge.",
+    "fr": "Un équipement culturel qui se lit comme une phrase : une masse continue, incisée puis fragmentée en trois volumes reliés par une rampe et une passerelle."
   },
   "fullDescription": {
-    "en": "Placeholder overview. Introduce the project: the brief, the site, the programme and the question the design sets out to answer. Keep it to one or two short paragraphs.",
-    "fr": "Présentation provisoire. Introduire le projet : la commande, le site, le programme et la question à laquelle le projet cherche à répondre. Un ou deux paragraphes courts suffisent."
+    "en": "The project brings together permanent and temporary exhibition spaces, participatory workshops — handwriting, typography, calligraphy and a digital workshop —, archives, a cultural café and a shop. It is organised in three volumes over a basement, a ground floor and an upper floor.",
+    "fr": "Le projet réunit des espaces d’exposition permanente et temporaire, des ateliers participatifs — écriture manuscrite, typographie, calligraphie et atelier numérique —, des archives, un café culturel et une boutique. Il s’organise en trois volumes, sur un sous-sol, un rez-de-chaussée et un étage."
   },
   "architecturalConcept": {
-    "en": "Placeholder concept. Explain the generating idea — the spatial, material or formal strategy that organises the project — and how it responds to the brief.",
-    "fr": "Concept provisoire. Expliquer l’idée génératrice — la stratégie spatiale, matérielle ou formelle qui organise le projet — et sa réponse à la commande."
+    "en": "The project starts from a continuous trace. Interrupted by pauses, the trace becomes discontinuous: spaces, pauses and punctuation structure meaning, and discontinuity becomes architecture. The continuous mass is incised — voids and fault lines — then fragmented into distinct volumes. From continuous to fragmented, the cuts create inhabited interstices: the project reads like a sentence made of words and pauses.",
+    "fr": "Le projet part d’une trace continue. Interrompue par des pauses, la trace devient discontinue : les espaces, pauses et ponctuations structurent le sens, et la discontinuité devient architecture. La masse continue est incisée — vides et failles — puis fragmentée en volumes distincts. Du continu au fragmenté, les coupures créent des interstices habités : le projet se lit comme une phrase composée de mots et de respirations."
   },
   "siteAnalysis": {
-    "en": "Placeholder site analysis. Summarise the context: orientation, climate, topography, access, urban fabric and the constraints or opportunities identified.",
-    "fr": "Analyse de site provisoire. Résumer le contexte : orientation, climat, topographie, accès, tissu urbain, contraintes et potentiels identifiés."
+    "en": "",
+    "fr": ""
   },
   "designProcess": {
-    "en": "Placeholder design development. Describe how the scheme evolved — from first sketches and models to the final proposal — and the key decisions along the way.",
-    "fr": "Développement provisoire. Décrire l’évolution du projet — des premières esquisses et maquettes à la proposition finale — et les décisions clés."
+    "en": "The route links the fragmented volumes: a gently sloping ramp and a footbridge carry the visitor from one entity to the next. Meaning arises from the link between fragmented entities.",
+    "fr": "Le parcours relie les volumes fragmentés : une rampe au dénivelé progressif et une passerelle de franchissement conduisent le visiteur d’une entité à l’autre. Le sens naît de la liaison entre des entités fragmentées."
   },
   "images": [
     {
-      "src": "/images/projects/project-001/site.svg",
+      "src": "/images/projects/project-001/plan-masse.webp",
       "imageType": "site",
       "alt": {
-        "en": "Site analysis drawing (placeholder)",
-        "fr": "Analyse de site (provisoire)"
+        "en": "Site plan showing the three faceted volumes, landscaping, parking and the adjacent street",
+        "fr": "Plan masse montrant les trois volumes facettés, les aménagements paysagers, le stationnement et la rue"
       },
       "caption": {
-        "en": "Site analysis — contours, access and plot boundary.",
-        "fr": "Analyse de site — courbes de niveau, accès et limite de parcelle."
+        "en": "Site plan",
+        "fr": "Plan masse"
       }
     },
     {
-      "src": "/images/projects/project-001/concept-diagram.svg",
+      "src": "/images/projects/project-001/concept-trace.webp",
       "imageType": "diagram",
       "alt": {
-        "en": "Concept diagram (placeholder)",
-        "fr": "Diagramme conceptuel (provisoire)"
+        "en": "Diagram: a continuous line becomes a continuous volume; a line with pauses becomes volumes separated by voids and fault lines",
+        "fr": "Diagramme : une trace continue devient un volume continu ; une trace ponctuée de pauses devient des volumes séparés par des vides et des failles"
       },
       "caption": {
-        "en": "Concept diagram — programme relationships.",
-        "fr": "Diagramme conceptuel — relations programmatiques."
+        "en": "Continuity of the trace → discontinuity and pause",
+        "fr": "Continuité de la trace → discontinuité et respiration"
       }
     },
     {
-      "src": "/images/projects/project-001/sketch-01.svg",
-      "imageType": "sketch",
+      "src": "/images/projects/project-001/concept-fragmentation.webp",
+      "imageType": "diagram",
       "alt": {
-        "en": "Perspective sketch (placeholder)",
-        "fr": "Croquis en perspective (provisoire)"
+        "en": "Four-step massing diagram: continuous mass, incisions, fragmentation, final composition",
+        "fr": "Diagramme de volumétrie en quatre étapes : masse continue, incisions, fragmentation, composition finale"
       },
       "caption": {
-        "en": "Early perspective sketch.",
-        "fr": "Croquis de perspective initial."
+        "en": "Continuous mass, incisions, fragmentation, final composition",
+        "fr": "Masse continue, incisions, fragmentation, composition finale"
       }
     },
     {
-      "src": "/images/projects/project-001/sketch-02.svg",
-      "imageType": "sketch",
+      "src": "/images/projects/project-001/concept-programme.webp",
+      "imageType": "diagram",
       "alt": {
-        "en": "Process sketch (placeholder)",
-        "fr": "Croquis de recherche (provisoire)"
+        "en": "Programme bubble diagram and axonometric of the volumes coloured by function",
+        "fr": "Diagramme des proximités fonctionnelles et axonométrie des volumes colorés par fonction"
       },
       "caption": {
-        "en": "Process sketch.",
-        "fr": "Croquis de recherche."
+        "en": "Programme and functional relationships",
+        "fr": "Programme et proximités fonctionnelles"
       }
     },
     {
-      "src": "/images/projects/project-001/model-01.svg",
-      "imageType": "model",
+      "src": "/images/projects/project-001/concept-liaison.webp",
+      "imageType": "diagram",
       "alt": {
-        "en": "Physical massing model (placeholder)",
-        "fr": "Maquette de volumétrie (provisoire)"
+        "en": "Diagram of the route through three volumes linked by a ramp and a footbridge",
+        "fr": "Diagramme du parcours à travers trois volumes reliés par une rampe et une passerelle"
       },
       "caption": {
-        "en": "Massing model.",
-        "fr": "Maquette de volumétrie."
+        "en": "Link, route, meaning: ramp and footbridge",
+        "fr": "Liaison, parcours, sens : rampe et passerelle"
       }
     },
     {
-      "src": "/images/projects/project-001/model-02.svg",
-      "imageType": "model",
-      "alt": {
-        "en": "Physical site model (placeholder)",
-        "fr": "Maquette de site (provisoire)"
-      },
-      "caption": {
-        "en": "Site model.",
-        "fr": "Maquette de site."
-      }
-    },
-    {
-      "src": "/images/projects/project-001/render-01.svg",
-      "imageType": "render",
-      "alt": {
-        "en": "Exterior visualisation (placeholder)",
-        "fr": "Visualisation extérieure (provisoire)"
-      },
-      "caption": {
-        "en": "Final exterior visualisation.",
-        "fr": "Visualisation extérieure finale."
-      }
-    },
-    {
-      "src": "/images/projects/project-001/render-02.svg",
-      "imageType": "render",
-      "alt": {
-        "en": "Interior visualisation (placeholder)",
-        "fr": "Visualisation intérieure (provisoire)"
-      },
-      "caption": {
-        "en": "Final interior visualisation.",
-        "fr": "Visualisation intérieure finale."
-      }
-    },
-    {
-      "src": "/images/projects/project-001/plan-ground.svg",
+      "src": "/images/projects/project-001/plan-sous-sol.webp",
       "imageType": "plan",
       "alt": {
-        "en": "Ground floor plan (placeholder)",
-        "fr": "Plan du rez-de-chaussée (provisoire)"
+        "en": "Basement floor plan",
+        "fr": "Plan du sous-sol"
       },
       "caption": {
-        "en": "Ground floor plan — 1:200.",
-        "fr": "Plan du rez-de-chaussée — 1:200."
+        "en": "Basement plan",
+        "fr": "Plan du sous-sol"
       }
     },
     {
-      "src": "/images/projects/project-001/plan-upper.svg",
+      "src": "/images/projects/project-001/plan-rdc.webp",
       "imageType": "plan",
       "alt": {
-        "en": "Upper floor plan (placeholder)",
-        "fr": "Plan d’étage (provisoire)"
+        "en": "Ground floor plan with exhibitions, workshops, reception, shop and cultural café",
+        "fr": "Plan du rez-de-chaussée avec expositions, ateliers, accueil, boutique et café culturel"
       },
       "caption": {
-        "en": "Upper floor plan — 1:200.",
-        "fr": "Plan d’étage — 1:200."
+        "en": "Ground floor plan",
+        "fr": "Plan du rez-de-chaussée"
       }
     },
     {
-      "src": "/images/projects/project-001/section.svg",
+      "src": "/images/projects/project-001/plan-etage-1.webp",
+      "imageType": "plan",
+      "alt": {
+        "en": "First floor plan with administration, digital workshop and VR space",
+        "fr": "Plan de l’étage 1 avec administration, atelier numérique et espace VR"
+      },
+      "caption": {
+        "en": "First floor plan",
+        "fr": "Plan de l’étage 1"
+      }
+    },
+    {
+      "src": "/images/projects/project-001/coupe-aa.webp",
       "imageType": "section",
       "alt": {
-        "en": "Longitudinal section (placeholder)",
-        "fr": "Coupe longitudinale (provisoire)"
+        "en": "Section A-A through the three volumes and the basement",
+        "fr": "Coupe A-A à travers les trois volumes et le sous-sol"
       },
       "caption": {
-        "en": "Longitudinal section AA.",
-        "fr": "Coupe longitudinale AA."
+        "en": "Section A-A",
+        "fr": "Coupe A-A"
       }
     },
     {
-      "src": "/images/projects/project-001/elevation.svg",
+      "src": "/images/projects/project-001/coupe-bb.webp",
+      "imageType": "section",
+      "alt": {
+        "en": "Section B-B",
+        "fr": "Coupe B-B"
+      },
+      "caption": {
+        "en": "Section B-B",
+        "fr": "Coupe B-B"
+      }
+    },
+    {
+      "src": "/images/projects/project-001/facade.webp",
       "imageType": "elevation",
       "alt": {
-        "en": "Main elevation (placeholder)",
-        "fr": "Façade principale (provisoire)"
+        "en": "Rendered elevation of the faceted volumes with glazed openings under folded roofs",
+        "fr": "Façade rendue des volumes facettés, avec leurs baies vitrées sous les toitures pliées"
       },
       "caption": {
-        "en": "Main elevation.",
-        "fr": "Façade principale."
+        "en": "Elevation",
+        "fr": "Façade"
       }
     },
     {
-      "src": "/images/projects/project-001/detail.svg",
-      "imageType": "drawing",
+      "src": "/images/projects/project-001/render-aerial.webp",
+      "imageType": "render",
       "alt": {
-        "en": "Construction detail (placeholder)",
-        "fr": "Détail constructif (provisoire)"
+        "en": "Aerial visualisation of the three volumes around landscaped courtyards",
+        "fr": "Vue aérienne des trois volumes autour des cours paysagées"
       },
       "caption": {
-        "en": "Wall build-up detail — 1:20.",
-        "fr": "Détail de paroi — 1:20."
+        "en": "Aerial view",
+        "fr": "Vue aérienne"
       }
     }
   ],
   "meta": [
     {
       "label": {
-        "en": "Studio / Course",
-        "fr": "Atelier / Cours"
-      },
-      "value": {
-        "en": "To be added",
-        "fr": "À compléter"
-      }
-    },
-    {
-      "label": {
-        "en": "Tutor(s)",
-        "fr": "Encadrant(s)"
-      },
-      "value": {
-        "en": "To be added",
-        "fr": "À compléter"
-      }
-    },
-    {
-      "label": {
         "en": "Programme",
         "fr": "Programme"
       },
       "value": {
-        "en": "To be added",
-        "fr": "À compléter"
+        "en": "Permanent and temporary exhibitions, workshops, archives, cultural café, shop, administration",
+        "fr": "Expositions permanente et temporaire, ateliers, archives, café culturel, boutique, administration"
       }
     },
     {
       "label": {
-        "en": "Site area",
-        "fr": "Surface du site"
+        "en": "Levels",
+        "fr": "Niveaux"
       },
       "value": {
-        "en": "To be added",
-        "fr": "À compléter"
-      }
-    },
-    {
-      "label": {
-        "en": "Duration",
-        "fr": "Durée"
-      },
-      "value": {
-        "en": "To be added",
-        "fr": "À compléter"
+        "en": "Basement, ground floor, first floor",
+        "fr": "Sous-sol, rez-de-chaussée, étage"
       }
     }
   ]

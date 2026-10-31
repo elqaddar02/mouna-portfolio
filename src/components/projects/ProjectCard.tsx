@@ -46,7 +46,13 @@ export function ProjectCard({ project, aspect, imageKind = 'cover', className, h
 
         <div className="mt-4 flex flex-wrap items-center justify-between gap-2">
           <p className="text-label text-[0.7rem] text-concrete-ink">
-            {t.categories[project.category]} <span aria-hidden="true">·</span> {project.year}
+            {t.categories[project.category]}
+            {project.year && (
+              <>
+                {' '}
+                <span aria-hidden="true">·</span> {project.year}
+              </>
+            )}
           </p>
           <span className="text-label border-2 border-ink px-2 py-0.5 text-[0.65rem]">
             {t.formats[project.format]}
