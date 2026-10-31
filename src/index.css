@@ -6,7 +6,8 @@
   --color-paper-2: #e7e4db;
   --color-ink: #171717;
   --color-orange: #f15a24;
-  --color-orange-deep: #c9461a;
+  /* Accent for text on paper: 4.8:1 contrast (bright orange is 2.9:1 there). */
+  --color-orange-deep: #b93f14;
   --color-concrete: #b8b5ad;
   /* Darker concrete for small text on paper (≥ 4.5:1 contrast). */
   --color-concrete-ink: #5f5c56;

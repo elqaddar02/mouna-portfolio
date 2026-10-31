@@ -24,7 +24,7 @@ export function ProjectNav({ prev, next }: { prev: Project; next: Project }) {
           {dir === 'next' && <Icon className="size-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />}
         </span>
         <span>
-          <span className="text-label block text-orange">{p.number}</span>
+          <span className="text-label block text-orange-deep group-hover:text-orange">{p.number}</span>
           <span className="text-headline mt-2 block">{l(p.title)}</span>
         </span>
       </Link>

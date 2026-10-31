@@ -1,5 +1,5 @@
 import { AnimatePresence, motion, useMotionValueEvent, useReducedMotion, useScroll } from 'motion/react'
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { NAV_ITEMS } from '../../config/nav'
 import { useI18n } from '../../i18n/useI18n'
@@ -22,6 +22,12 @@ export function Header() {
     setHidden(y > 240 && y > prev && !open)
   })
 
+  // Stable so the menu's scroll-lock / focus effect runs once per opening, not on every header render.
+  const closeMenu = useCallback(() => {
+    setOpen(false)
+    toggleRef.current?.focus()
+  }, [])
+
   // Close the menu whenever the route changes.
   useEffect(() => setOpen(false), [pathname])
 
@@ -29,12 +35,15 @@ export function Header() {
     <>
       <motion.header
         className="fixed inset-x-0 top-0 z-40 border-b-2 border-ink bg-paper"
+        // Keyboard users must never tab into a hidden header.
+        onFocusCapture={() => setHidden(false)}
         animate={{ y: hidden && !reduce ? '-100%' : '0%' }}
         transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="frame flex h-header items-center justify-between gap-6">
-          <Link to="/" aria-label={t.nav.homeLink} className="shrink-0">
+          <Link to="/" className="shrink-0">
             <Logo />
+            <span className="sr-only"> — {t.nav.homeLink}</span>
           </Link>
 
           <nav aria-label={t.nav.primary} className="hidden lg:block">
@@ -80,7 +89,6 @@ export function Header() {
               className="text-label border-2 border-ink px-3 py-1.5 text-[0.72rem] hover:bg-ink hover:text-paper lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-menu"
-              aria-label={t.nav.openMenu}
               onClick={() => setOpen(true)}
             >
               {t.nav.menu}
@@ -90,7 +98,7 @@ export function Header() {
       </motion.header>
 
       <AnimatePresence>
-        {open && <MobileMenu onClose={() => { setOpen(false); toggleRef.current?.focus() }} />}
+        {open && <MobileMenu onClose={closeMenu} />}
       </AnimatePresence>
     </>
   )
@@ -142,8 +150,9 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className="frame flex h-header shrink-0 items-center justify-between border-b-2 border-paper/20">
-        <Link to="/" aria-label={t.nav.homeLink}>
+        <Link to="/">
           <Logo inverse />
+          <span className="sr-only"> — {t.nav.homeLink}</span>
         </Link>
         <button
           type="button"

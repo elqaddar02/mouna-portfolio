@@ -1,5 +1,5 @@
 import { LANGS } from '../../data/types'
-import { fmt, useI18n } from '../../i18n/useI18n'
+import { useI18n } from '../../i18n/useI18n'
 import { cn } from '../../lib/cn'
 
 const NAMES = { en: 'English', fr: 'Français' } as const
@@ -17,7 +17,6 @@ export function LanguageSwitcher({ className, inverse = false }: { className?: s
             lang={code}
             onClick={() => setLang(code)}
             aria-pressed={active}
-            aria-label={active ? NAMES[code] : fmt(t.nav.switchTo, { lang: NAMES[code] })}
             className={cn(
               'text-label min-w-10 px-2.5 py-1.5 text-[0.72rem] transition-colors',
               active
@@ -30,6 +29,7 @@ export function LanguageSwitcher({ className, inverse = false }: { className?: s
             )}
           >
             {code.toUpperCase()}
+            <span className="sr-only"> — {NAMES[code]}</span>
           </button>
         )
       })}

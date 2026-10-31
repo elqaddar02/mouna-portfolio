@@ -20,7 +20,7 @@ export function Footer() {
           </p>
         </div>
 
-        <nav aria-label={t.nav.primary} className="col-span-2 md:col-span-3">
+        <nav aria-label={t.nav.footer} className="col-span-2 md:col-span-3">
           <ul className="space-y-2">
             {NAV_ITEMS.map((item) => (
               <li key={item.to}>

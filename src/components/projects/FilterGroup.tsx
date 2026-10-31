@@ -40,7 +40,7 @@ export function FilterGroup({ label, allLabel, options, value, onChange }: Filte
             onClick={() => onChange(value === o.value ? null : o.value)}
             className={chip(value === o.value)}
           >
-            {o.label} <span className="opacity-60">({o.count})</span>
+            {o.label} <span>({o.count})</span>
           </button>
         ))}
       </div>

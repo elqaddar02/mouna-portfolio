@@ -80,7 +80,7 @@ function ProjectView({ project }: { project: Project }) {
         </nav>
         <div className="mt-8 grid-12 items-end gap-y-6">
           <div className="col-span-4 md:col-span-9">
-            <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-none text-orange">{project.number}</p>
+            <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-none text-orange-deep">{project.number}</p>
             <h1 className="text-display mt-3 uppercase">{l(project.title)}</h1>
             <p className="text-lead mt-5 max-w-3xl text-concrete-ink">{l(project.subtitle)}</p>
           </div>
