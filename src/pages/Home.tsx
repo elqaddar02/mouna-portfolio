@@ -1,6 +1,7 @@
 import { Closing } from '../components/home/Closing'
 import { Hero } from '../components/home/Hero'
 import { Intro } from '../components/home/Intro'
+import { Marquee } from '../components/home/Marquee'
 import { SelectedWorks } from '../components/home/SelectedWorks'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useI18n } from '../i18n/useI18n'
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <ScrollProgress />
       <Hero />
+      <Marquee />
       <Intro />
       <SelectedWorks />
       <Closing />

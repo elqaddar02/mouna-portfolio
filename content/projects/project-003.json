@@ -3,6 +3,8 @@
   "number": "003",
   "order": 3,
   "featured": true,
+  "slide": true,
+  "slideFit": "cover",
   "placeholder": false,
   "title": {
     "fr": "Écrin social",

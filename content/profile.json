@@ -5,10 +5,19 @@
     "fr": "Étudiante en architecture"
   },
   "shortBio": {
-    "fr": "",
-    "en": ""
+    "fr": "Étudiante en architecture à l’ENAU, à Tunis, Mouna Elqaddar s’intéresse à la manière dont l’architecture rassemble : lieux culturels, équipements publics et habitat pensé autour de l’espace partagé.",
+    "en": "An architecture student at ENAU in Tunis, Mouna Elqaddar is interested in how architecture brings people together: cultural places, public institutions and housing designed around shared space."
   },
-  "longBio": [],
+  "longBio": [
+    {
+      "fr": "Ses projets traversent les échelles : un équipement culturel qui se lit comme une phrase faite de volumes fragmentés, une bibliothèque nationale organisée comme une suite verticale d’espaces de lecture, et un îlot d’habitat qui enveloppe un cœur d’îlot dédié à la rencontre.",
+      "en": "The projects move across scales: a cultural building that reads like a sentence of fragmented volumes, a national library organised as a vertical sequence of reading spaces, and a housing block wrapped around a courtyard devoted to meeting."
+    },
+    {
+      "fr": "Un même fil les relie : le parcours à travers le bâtiment, les seuils entre la ville et l’intérieur, et la façon dont la lumière, la matière et le programme façonnent la vie quotidienne.",
+      "en": "A common thread runs through them: the route through a building, the thresholds between city and interior, and the way light, material and programme shape everyday life."
+    }
+  ],
   "philosophy": [],
   "interests": [],
   "education": [

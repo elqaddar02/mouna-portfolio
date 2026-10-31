@@ -77,10 +77,72 @@
         },
         {
           "name": "featured",
-          "label": "Afficher sur la page d’accueil",
+          "label": "Afficher dans « Projets choisis » (accueil)",
           "widget": "boolean",
           "required": false,
           "default": true
+        },
+        {
+          "name": "slide",
+          "label": "Afficher dans le diaporama (accueil)",
+          "widget": "boolean",
+          "required": false,
+          "default": true,
+          "hint": "Le diaporama en haut de l’accueil suit l’« Ordre d’affichage »."
+        },
+        {
+          "name": "slideImage",
+          "label": "Image du diaporama (optionnelle)",
+          "widget": "object",
+          "required": false,
+          "hint": "Grand rendu horizontal. Si vide, la couverture est utilisée.",
+          "fields": [
+            {
+              "name": "src",
+              "label": "Image",
+              "widget": "image",
+              "required": false,
+              "choose_url": false
+            },
+            {
+              "name": "alt",
+              "label": "Description de l’image",
+              "widget": "object",
+              "required": false,
+              "hint": "Décrire ce que montre l’image, pour les personnes malvoyantes et le référencement.",
+              "fields": [
+                {
+                  "name": "fr",
+                  "label": "Français",
+                  "widget": "string",
+                  "required": false
+                },
+                {
+                  "name": "en",
+                  "label": "English",
+                  "widget": "string",
+                  "required": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "slideFit",
+          "label": "Cadrage dans le diaporama",
+          "widget": "select",
+          "required": false,
+          "default": "cover",
+          "options": [
+            {
+              "value": "cover",
+              "label": "Remplir le cadre (rendus et photos)"
+            },
+            {
+              "value": "contain",
+              "label": "Image entière sur fond blanc (images détourées)"
+            }
+          ]
         },
         {
           "name": "placeholder",
@@ -872,10 +934,10 @@
             },
             {
               "name": "heroImage",
-              "label": "Image principale (accueil)",
+              "label": "Image de secours (accueil)",
               "widget": "object",
               "required": true,
-              "hint": "Grande image horizontale en haut de l’accueil — choisir le meilleur rendu.",
+              "hint": "Utilisée seulement si aucun projet n’est coché « Afficher dans le diaporama ».",
               "fields": [
                 {
                   "name": "src",
@@ -909,7 +971,7 @@
             },
             {
               "name": "heroProject",
-              "label": "Projet lié à l’image principale",
+              "label": "Premier projet du diaporama",
               "widget": "relation",
               "collection": "projects",
               "value_field": "slug",
@@ -922,7 +984,7 @@
                 "slug"
               ],
               "required": false,
-              "hint": "Un clic sur l’image principale ouvre ce projet ; son numéro et son titre s’affichent en légende."
+              "hint": "Le diaporama de l’accueil s’ouvre sur ce projet (choisir celui qui a la plus belle image)."
             },
             {
               "name": "portrait",

@@ -64,6 +64,12 @@ export interface Project {
   /** Extra fact-sheet rows (studio, tutor, programme, area…). */
   meta?: MetaEntry[]
   featured: boolean
+  /** Shown in the homepage slideshow. */
+  slide: boolean
+  /** Slideshow image; defaults to the cover. */
+  slideImage: ArchImage
+  /** 'cover' fills the frame; 'contain' shows the whole image on white (for cut-out renders). */
+  slideFit: 'cover' | 'contain'
   order: number
   /** True while the entry is template content awaiting real information. */
   placeholder?: boolean
@@ -102,7 +108,7 @@ export interface Profile {
   portrait: ArchImage | null
   /** Large homepage image (landscape). */
   heroImage: ArchImage
-  /** Slug of the project the homepage image opens; null for no link. */
+  /** Slug of the project the homepage slideshow opens on; null starts with the first. */
   heroProject: string | null
   contact: {
     /** Set to null until provided — the UI then shows a "to be added" note instead of a dead link. */

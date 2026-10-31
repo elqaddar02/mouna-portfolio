@@ -3,6 +3,8 @@
   "number": "001",
   "order": 1,
   "featured": true,
+  "slide": true,
+  "slideFit": "contain",
   "placeholder": false,
   "title": {
     "fr": "L’écriture dans l’ère du dynamisme participatif et évolutif",

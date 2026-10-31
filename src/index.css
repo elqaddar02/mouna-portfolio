@@ -177,6 +177,46 @@
   }
 }
 
+/* Homepage name in its band: one line from tablet up. */
+@utility text-name {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 13vw, 4.5rem);
+  line-height: 0.88;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+  @media (width >= 48rem) {
+    font-size: clamp(3.5rem, 7.4vw, 8rem);
+  }
+}
+
+/* Slideshow progress bar and moving strip. */
+@keyframes slide-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+.animate-slide-progress {
+  animation-name: slide-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+}
+
 @keyframes scroll-line {
   0% {
     transform: scaleY(0);

@@ -21,6 +21,7 @@ import { imageSize } from 'image-size'
 export const ENUMS = {
   category: ['residential', 'cultural', 'public', 'urban', 'interior', 'experimental'],
   format: ['studio', 'competition', 'workshop', 'thesis'],
+  slideFit: ['cover', 'contain'],
   imageType: ['cover', 'render', 'photo', 'site', 'sketch', 'diagram', 'model', 'plan', 'section', 'elevation', 'drawing'],
 }
 
@@ -127,6 +128,9 @@ export function buildContent(root = ROOT) {
       location: loc(d.location, `${file} location`),
       coverImage: cover,
       thumbnailImage: thumb,
+      slide: d.slide === true,
+      slideImage: d.slideImage?.src ? image(d.slideImage, `${file} slideImage`, 'render') : cover,
+      slideFit: oneOf(d.slideFit ?? 'cover', ENUMS.slideFit, `${file} slideFit`),
       shortDescription: loc(d.shortDescription, `${file} shortDescription`),
       fullDescription: loc(d.fullDescription, `${file} fullDescription`),
       architecturalConcept: loc(d.architecturalConcept, `${file} architecturalConcept`),
