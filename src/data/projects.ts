@@ -1,5 +1,5 @@
 /**
- * PROJECT ARCHIVE — academic projects only (personal work lives in concepts).
+ * PROJECT ARCHIVE — Mouna's academic projects.
  *
  * Content is edited in /content/projects/*.json, through the editor at /admin
  * or by hand, and compiled by scripts/content.mjs. No component needs to change

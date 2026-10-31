@@ -8,9 +8,8 @@ Ce guide explique comment modifier le portfolio sans toucher au code : ajouter u
 
 1. Ouvrir **`https://mouna-portfolio.pages.dev/admin/`** (l’adresse peut changer si un nom de domaine est ajouté).
 2. Cliquer sur **Sign in with GitHub** et se connecter avec votre compte GitHub.
-3. Trois rubriques s’affichent à gauche :
+3. Deux rubriques s’affichent à gauche :
    - **Projets académiques** : les projets de la page « Projets »
-   - **Concepts personnels** : les explorations personnelles de la page « Concepts »
    - **Profil & contact** : la biographie, la formation, les logiciels, les contacts et le CV
 
 ---
@@ -69,13 +68,7 @@ Conseils :
 
 ---
 
-## 5. Concepts personnels
-
-Même principe que les projets, pour le travail **personnel** (hors université). Il faut au moins une image : la première est la plus grande, et la deuxième se superpose à elle.
-
----
-
-## 6. Profil & contact
+## 5. Profil & contact
 
 **Profil & contact** → **Profil, biographie et contact**. On y modifie :
 
@@ -89,7 +82,7 @@ Un champ de contact vide s’affiche « À compléter » sur le site, jamais com
 
 ---
 
-## 7. Supprimer ou masquer
+## 6. Supprimer ou masquer
 
 - **Masquer de l’accueil :** décocher « Afficher sur la page d’accueil ».
 - **Supprimer un projet :** l’ouvrir, puis choisir **Delete** (Supprimer) dans le menu de l’éditeur.

@@ -22,7 +22,6 @@ export const ENUMS = {
   category: ['residential', 'cultural', 'public', 'urban', 'interior', 'experimental'],
   format: ['studio', 'competition', 'workshop', 'thesis'],
   imageType: ['cover', 'render', 'photo', 'site', 'sketch', 'diagram', 'model', 'plan', 'section', 'elevation', 'drawing'],
-  conceptKind: ['form', 'space', 'material', 'sketch', 'proposal', 'diagram'],
 }
 
 /** Image types shown in the "drawings" part of a project; everything else is gallery. */
@@ -144,27 +143,6 @@ export function buildContent(root = ROOT) {
     }
   })
 
-  /* ── Concepts ── */
-  const conceptSlugs = new Set()
-  const concepts = listJson(join(root, 'content', 'concepts')).map(({ file, data: d }) => {
-    const slug = slugOf(d.slug, file, conceptSlugs)
-    const imgs = images(d.images, `${file} images`)
-    if (!imgs.length) fail(file, 'needs at least one image')
-    return {
-      id: slug,
-      slug,
-      number: str(d.number),
-      title: loc(d.title, `${file} title`, true),
-      kind: oneOf(d.kind, ENUMS.conceptKind, `${file} kind`),
-      year: str(d.year),
-      medium: loc(d.medium, `${file} medium`),
-      description: loc(d.description, `${file} description`),
-      images: imgs,
-      order: Number.isFinite(Number(d.order)) ? Number(d.order) : 999,
-      placeholder: d.placeholder === true,
-    }
-  })
-
   /* ── Profile ── */
   const pf = 'content/profile.json'
   const p = readJson(join(root, pf)) ?? {}
@@ -215,7 +193,7 @@ export function buildContent(root = ROOT) {
     err.contentErrors = errors
     throw err
   }
-  return { projects, concepts, profile }
+  return { projects, profile }
 }
 
 export function writeContent(root = ROOT) {
@@ -229,8 +207,8 @@ export function writeContent(root = ROOT) {
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
-    const { projects, concepts } = writeContent()
-    console.log(`content: ${projects.length} projects, ${concepts.length} concepts → src/data/generated/content.json`)
+    const { projects } = writeContent()
+    console.log(`content: ${projects.length} projects → src/data/generated/content.json`)
   } catch (e) {
     console.error(`\n✖ ${e.message}\n`)
     process.exit(1)

@@ -25,7 +25,6 @@ Only the **name** and **role** are real. Everything else is clearly marked templ
 | What | Where | How it shows on the site |
 | --- | --- | --- |
 | Projects 001–003 (academic) | `content/projects/*.json` | Real content; year, tutors and some texts still to be added (empty fields are hidden) |
-| Concepts C.01–C.06 (personal) | `content/concepts/*.json` | "Placeholder" badge |
 | Biography, education, skills, software, languages | `content/profile.json` | "To be added" |
 | Email, LinkedIn, Instagram, location, CV | `content/profile.json` → `contact`, `cvUrl` | "To be added" (no dead links) |
 | All images | `public/images/**` | SVG drawings stamped **VISUAL PLACEHOLDER** |
@@ -38,15 +37,14 @@ Unticking **"Contenu provisoire"** in the editor (`placeholder: false`) removes 
 
 ```
 content/                      ← edited at /admin, or by hand
-  projects/<slug>.json          academic projects only (personal work goes to concepts)
-  concepts/<slug>.json
+  projects/<slug>.json          academic projects
   profile.json
         │
         ▼  scripts/content.mjs  (runs before dev and build)
         │    · validates everything (allowed categories, formats, image types, slugs, files exist)
         │    · measures every image, so editors never enter pixel sizes
         ▼
-src/data/generated/content.json  (git-ignored) → src/data/{projects,concepts,profile}.ts → pages
+src/data/generated/content.json  (git-ignored) → src/data/{projects,profile}.ts → pages
 ```
 
 - **Invalid content fails the build** with a readable list of problems. On Cloudflare the previous version stays online, so a bad edit never breaks the site.
@@ -65,13 +63,11 @@ src/data/generated/content.json  (git-ignored) → src/data/{projects,concepts,p
 ```
 public/images/
   projects/     project images (editor uploads land here)
-  concepts/     concept images
-  profile/      hero, portrait
-  sketches/  drawings/   spare folders
+  profile/      portrait (the homepage image is a project render)
 public/cv/      CV PDF (editor uploads land here)
 ```
 
-Use original images only. Placeholders can be regenerated with `npm run placeholders`.
+Use original images only. The portrait placeholder can be regenerated with `npm run placeholders`.
 
 ### Interface text
 
@@ -90,21 +86,21 @@ Add the value to `ENUMS` in `scripts/content.mjs`, to the matching type in `src/
 ## Structure
 
 ```
-content/         CMS-editable JSON (projects, concepts, profile)
+content/         CMS-editable JSON (projects, profile)
 scripts/         content.mjs (validate + build content) · cms-config.mjs · generate-placeholders.mjs · generate-social.cjs
 public/admin/    editor (index.html + generated config.yml)
 src/
   config/        site URL (single source), navigation
-  data/          types.ts · projects.ts · concepts.ts · profile.ts (typed views of the generated content)
+  data/          types.ts · projects.ts · profile.ts (typed views of the generated content)
   i18n/          provider, en/fr dictionaries
   hooks/         useDocumentMeta (title/SEO), useLightbox
   components/
     layout/      Header (mobile menu, language switch), Footer, Layout (page transitions)
-    home/        Hero, Intro, SelectedWorks, ConceptsTeaser, Closing
+    home/        Hero, Intro, SelectedWorks, Closing
     projects/    ProjectCard, FilterGroup, ProjectIndex, ProjectNav
     gallery/     Lightbox, MediaRows
     ui/          Figure, Reveal, Label, ArrowLink, TitleBlock, PlaceholderBadge…
-  pages/         Home · Works · ProjectDetail · Concepts · About · Contact · NotFound (lazy-loaded)
+  pages/         Home · Works · ProjectDetail · About · Contact · NotFound (lazy-loaded)
 ```
 
 **Design tokens** (`src/index.css`): paper `#F1EFE8`, ink `#171717`, orange `#F15A24` (large or decorative uses, and on dark backgrounds), orange-deep `#B93F14` (orange text on paper, WCAG AA), concrete `#B8B5AD`. Type: Space Grotesk (display), Inter (body), IBM Plex Mono (annotations).

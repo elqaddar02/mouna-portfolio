@@ -6,7 +6,7 @@ export type Localized = Record<Lang, string>
 
 export type ProjectCategory = 'residential' | 'cultural' | 'public' | 'urban' | 'interior' | 'experimental'
 
-/** The kind of academic brief the project answered. Personal work belongs in concepts. */
+/** The kind of academic brief the project answered. */
 export type ProjectFormat = 'studio' | 'competition' | 'workshop' | 'thesis'
 
 export type ImageType =
@@ -66,22 +66,6 @@ export interface Project {
   featured: boolean
   order: number
   /** True while the entry is template content awaiting real information. */
-  placeholder?: boolean
-}
-
-export type ConceptKind = 'form' | 'space' | 'material' | 'sketch' | 'proposal' | 'diagram'
-
-export interface Concept {
-  id: string
-  slug: string
-  number: string
-  title: Localized
-  kind: ConceptKind
-  year: string
-  medium: Localized
-  description: Localized
-  images: ArchImage[]
-  order: number
   placeholder?: boolean
 }
 

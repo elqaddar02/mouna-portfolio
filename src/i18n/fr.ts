@@ -8,8 +8,6 @@ export const fr: Dictionary = {
       'Portfolio d’architecture de Mouna Elqaddar, étudiante en architecture — projets académiques, dessins et explorations spatiales.',
     worksTitle: 'Projets',
     worksDescription: 'Archive des projets d’architecture académiques de Mouna Elqaddar — ateliers, workshops et concours.',
-    conceptsTitle: 'Concepts',
-    conceptsDescription: 'Concepts architecturaux personnels, expérimentations spatiales et études de matière de Mouna Elqaddar.',
     aboutTitle: 'À propos',
     aboutDescription: 'À propos de Mouna Elqaddar — formation, démarche, compétences et logiciels.',
     contactTitle: 'Contact',
@@ -19,7 +17,6 @@ export const fr: Dictionary = {
   nav: {
     home: 'Accueil',
     works: 'Projets',
-    concepts: 'Concepts',
     about: 'À propos',
     contact: 'Contact',
     menu: 'Menu',
@@ -64,14 +61,6 @@ export const fr: Dictionary = {
     competition: 'Concours',
     workshop: 'Workshop',
     thesis: 'Projet de fin d’études',
-  },
-  conceptKinds: {
-    form: 'Forme abstraite',
-    space: 'Expérimentation spatiale',
-    material: 'Étude de matière',
-    sketch: 'Croquis',
-    proposal: 'Proposition non construite',
-    diagram: 'Diagramme expérimental',
   },
   sheet: {
     sheet: 'Planche',
@@ -147,17 +136,6 @@ export const fr: Dictionary = {
     next: 'Image suivante',
     counter: '{i} / {n}',
     hint: 'Flèches ou balayage pour naviguer · Échap pour fermer',
-  },
-  concepts: {
-    label: 'Travail personnel',
-    heading: 'Concepts',
-    lead:
-      'Un espace dédié à la recherche personnelle : formes abstraites, expérimentations spatiales, études de matière, croquis et propositions non construites.',
-    disclaimer:
-      'Tout le contenu de cette page relève du travail personnel — distinct des projets académiques présentés dans Projets.',
-    medium: 'Médium',
-    kind: 'Type',
-    selfInitiated: 'Initiative personnelle',
   },
   about: {
     label: 'Profil',

@@ -6,8 +6,6 @@ export const en = {
       'Architecture portfolio of Mouna Elqaddar, architecture student — academic projects, drawings and spatial explorations.',
     worksTitle: 'Works',
     worksDescription: 'Archive of academic architecture projects by Mouna Elqaddar — design studios, workshops and competitions.',
-    conceptsTitle: 'Concepts',
-    conceptsDescription: 'Personal architectural concepts, spatial experiments and material studies by Mouna Elqaddar.',
     aboutTitle: 'About',
     aboutDescription: 'About Mouna Elqaddar — education, design approach, skills and software.',
     contactTitle: 'Contact',
@@ -17,7 +15,6 @@ export const en = {
   nav: {
     home: 'Home',
     works: 'Works',
-    concepts: 'Concepts',
     about: 'About',
     contact: 'Contact',
     menu: 'Menu',
@@ -62,14 +59,6 @@ export const en = {
     competition: 'Competition',
     workshop: 'Workshop',
     thesis: 'Thesis',
-  },
-  conceptKinds: {
-    form: 'Abstract form',
-    space: 'Spatial experiment',
-    material: 'Material study',
-    sketch: 'Sketches',
-    proposal: 'Unbuilt proposal',
-    diagram: 'Experimental diagram',
   },
   sheet: {
     sheet: 'Sheet',
@@ -145,17 +134,6 @@ export const en = {
     next: 'Next image',
     counter: '{i} / {n}',
     hint: 'Use arrow keys or swipe to navigate · Esc to close',
-  },
-  concepts: {
-    label: 'Personal work',
-    heading: 'Concepts',
-    lead:
-      'A separate space for self-initiated research: abstract forms, spatial experiments, material studies, sketches and unbuilt proposals.',
-    disclaimer:
-      'Everything on this page is personal, self-initiated work — distinct from the academic projects presented in Works.',
-    medium: 'Medium',
-    kind: 'Type',
-    selfInitiated: 'Self-initiated',
   },
   about: {
     label: 'Profile',

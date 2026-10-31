@@ -395,22 +395,7 @@ function write(path, kind, ratio, label) {
   count++
 }
 
-/* All projects now use real images; placeholders remain only for the concepts. Keep in sync with content/concepts. */
-const CONCEPT_SET = [
-  ['concept-01', [['01', 'sketch', '3:4'], ['02', 'diagram', '1:1']]],
-  ['concept-02', [['01', 'model', '4:5'], ['02', 'model', '3:2']]],
-  ['concept-03', [['01', 'drawing', '1:1'], ['02', 'section', '21:9']]],
-  ['concept-04', [['01', 'render', '16:9'], ['02', 'sketch', '4:3']]],
-  ['concept-05', [['01', 'diagram', '4:3'], ['02', 'plan', '1:1']]],
-  ['concept-06', [['01', 'site', '3:2'], ['02', 'sketch', '2:3']]],
-]
-for (const [id, imgs] of CONCEPT_SET)
-  for (const [n, kind, ratio] of imgs) write(`concepts/${id}/${n}.svg`, kind, ratio, `${id.toUpperCase()} · ${kind.toUpperCase()}`)
-
-write('profile/hero.svg', 'render', '4:5', 'HERO IMAGE')
-write('profile/hero-wide.svg', 'render', '16:9', 'HERO IMAGE')
+/* Projects use real images; only the About-page portrait still needs a placeholder. */
 write('profile/portrait.svg', 'portrait', '4:5', 'PORTRAIT')
-write('sketches/studio-sketch.svg', 'sketch', '3:2', 'SKETCH')
-write('drawings/studio-section.svg', 'section', '21:9', 'DRAWING')
 
 console.log(`Generated ${count} placeholder SVGs in public/images`)

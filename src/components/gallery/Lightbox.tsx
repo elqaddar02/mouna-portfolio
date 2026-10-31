@@ -11,7 +11,7 @@ interface LightboxProps {
   index: number | null
   onIndexChange: (index: number) => void
   onClose: () => void
-  /** Optional prefix per image for captions (e.g. a concept number). */
+  /** Optional prefix per image for captions (e.g. a figure number). */
   captionPrefix?: (image: ArchImage) => string | undefined
 }
 

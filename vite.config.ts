@@ -34,7 +34,7 @@ function content(): Plugin {
       server.watcher.on('unlink', rebuild)
     },
     generateBundle() {
-      const paths = ['/', '/works', '/concepts', '/about', '/contact', ...slugs.map((s) => `/works/${s}`)]
+      const paths = ['/', '/works', '/about', '/contact', ...slugs.map((s) => `/works/${s}`)]
       const urls = paths.map((p) => `  <url><loc>${SITE_URL}${p}</loc></url>`).join('\n')
       this.emitFile({
         type: 'asset',
