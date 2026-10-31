@@ -1,3 +1,4 @@
+import { motion, useReducedMotion } from 'motion/react'
 import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { MediaRows } from '../components/gallery/MediaRows'
@@ -7,6 +8,8 @@ import { Figure } from '../components/ui/Figure'
 import { Label } from '../components/ui/Label'
 import { PlaceholderBadge } from '../components/ui/PlaceholderBadge'
 import { Reveal } from '../components/ui/Reveal'
+import { ScrollProgress } from '../components/ui/ScrollProgress'
+import { SplitReveal } from '../components/ui/SplitReveal'
 import { getProject, sortedProjects } from '../data/projects'
 import type { ImageType, Localized, Project } from '../data/types'
 import type { Dictionary } from '../i18n/en'
@@ -14,6 +17,8 @@ import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useLightbox } from '../hooks/useLightbox'
 import { fmt, useI18n } from '../i18n/useI18n'
 import { cn } from '../lib/cn'
+
+const EASE = [0.22, 1, 0.36, 1] as const
 
 type SectionKey = keyof Dictionary['project']['sections']
 
@@ -45,6 +50,20 @@ function ProjectView({ project }: { project: Project }) {
     image: project.coverImage.src,
   })
 
+  const reduce = useReducedMotion()
+  const rise = (delay: number) =>
+    reduce ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay, ease: EASE } }
+  /** Fades and slides in once, when scrolled into view. */
+  const inView = (delay: number, offset = 16, axis: 'x' | 'y' = 'y') =>
+    reduce
+      ? {}
+      : {
+          initial: { opacity: 0, [axis]: offset },
+          whileInView: { opacity: 1, [axis]: 0 },
+          viewport: { once: true, margin: '0px 0px -8% 0px' },
+          transition: { duration: 0.7, delay, ease: EASE },
+        }
+
   const images = useMemo(() => [project.coverImage, ...project.gallery, ...project.drawings], [project])
   const { open, indexOf, lightbox } = useLightbox(images)
 
@@ -72,6 +91,7 @@ function ProjectView({ project }: { project: Project }) {
 
   return (
     <article>
+      <ScrollProgress />
       {/* Title */}
       <header className="frame pb-10 pt-8 md:pb-14 md:pt-12">
         <nav aria-label={t.project.breadcrumbLabel} className="text-label flex items-center gap-2 text-[0.72rem]">
@@ -83,25 +103,40 @@ function ProjectView({ project }: { project: Project }) {
         </nav>
         <div className="mt-8 grid-12 items-end gap-y-6">
           <div className="col-span-4 md:col-span-9">
-            <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-none text-orange-deep">{project.number}</p>
-            <h1 className={cn('mt-3 uppercase', l(project.title).length > 24 ? 'text-display-long' : 'text-display')}>
-              {l(project.title)}
-            </h1>
-            {l(project.subtitle) && <p className="text-lead mt-5 max-w-3xl text-concrete-ink">{l(project.subtitle)}</p>}
+            <motion.p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-none text-orange-deep" {...rise(0)}>
+              {project.number}
+            </motion.p>
+            <SplitReveal
+              as="h1"
+              trigger="mount"
+              delay={0.1}
+              text={l(project.title)}
+              className={cn('mt-3 uppercase', l(project.title).length > 24 ? 'text-display-long' : 'text-display')}
+            />
+            {l(project.subtitle) && (
+              <motion.p className="text-lead mt-5 max-w-3xl text-concrete-ink" {...rise(0.4)}>
+                {l(project.subtitle)}
+              </motion.p>
+            )}
           </div>
-          <div className="col-span-4 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
+          <motion.div className="col-span-4 flex flex-wrap gap-2 md:col-span-3 md:justify-end" {...rise(0.5)}>
             <span className="text-label border-2 border-ink bg-ink px-2.5 py-1 text-[0.68rem] text-paper">
               {t.formats[project.format]}
             </span>
             <span className="text-label border-2 border-ink px-2.5 py-1 text-[0.68rem]">{t.categories[project.category]}</span>
             {project.placeholder && <PlaceholderBadge long />}
-          </div>
+          </motion.div>
         </div>
       </header>
 
       {/* Cover */}
       <div className="frame">
-        <div className="border-2 border-ink">
+        <motion.div
+          className="border-2 border-ink"
+          initial={reduce ? false : { clipPath: 'inset(0% 0% 100% 0%)' }}
+          animate={{ clipPath: 'inset(0% 0% 0% 0%)' }}
+          transition={{ duration: 1.2, delay: 0.3, ease: EASE }}
+        >
           <Figure
             image={project.coverImage}
             aspect={null}
@@ -111,7 +146,7 @@ function ProjectView({ project }: { project: Project }) {
             index={0}
             onOpen={() => open(0)}
           />
-        </div>
+        </motion.div>
       </div>
 
       {/* Fact sheet + contents */}
@@ -121,23 +156,23 @@ function ProjectView({ project }: { project: Project }) {
             <span id="facts-title">{t.project.factSheet}</span>
           </Label>
           <dl className="grid grid-cols-2 border-l-2 border-t-2 border-ink lg:grid-cols-3">
-            {facts.map(([k, v]) => (
-              <div key={k} className="border-b-2 border-r-2 border-ink p-3 md:p-4">
+            {facts.map(([k, v], i) => (
+              <motion.div key={k} className="border-b-2 border-r-2 border-ink p-3 md:p-4" {...inView(i * 0.06)}>
                 <dt className="text-label text-[0.62rem] text-concrete-ink">{k}</dt>
                 <dd className="mt-1 font-display text-[1.05rem] font-medium leading-snug">{v}</dd>
-              </div>
+              </motion.div>
             ))}
           </dl>
         </div>
         <nav aria-label={t.project.contents} className="col-span-4 md:col-span-3 md:col-start-10">
           <ol className="space-y-1.5 border-l-2 border-ink pl-4">
             {sections.map((s, i) => (
-              <li key={s.key}>
+              <motion.li key={s.key} {...inView(0.2 + i * 0.05, -12)}>
                 <a href={`#${s.key}`} className="text-label flex gap-3 text-[0.7rem] hover:text-orange-deep">
                   <span className="text-concrete-ink">{String(i + 1).padStart(2, '0')}</span>
                   {t.project.sections[s.key]}
                 </a>
-              </li>
+              </motion.li>
             ))}
           </ol>
         </nav>
@@ -145,12 +180,21 @@ function ProjectView({ project }: { project: Project }) {
 
       {/* Sections */}
       {sections.map((s, i) => (
-        <section key={s.key} id={s.key} aria-labelledby={`${s.key}-title`} className="frame grid-12 gap-y-8 border-t-2 border-ink py-14 md:py-20">
+        <section key={s.key} id={s.key} aria-labelledby={`${s.key}-title`} className="frame grid-12 relative gap-y-8 py-14 md:py-20">
+          {/* the section rule draws itself across the page */}
+          <motion.span
+            aria-hidden="true"
+            className="absolute inset-x-0 top-0 h-[2px] origin-left bg-ink"
+            initial={reduce ? false : { scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true, margin: '0px 0px -10% 0px' }}
+            transition={{ duration: 1.1, ease: EASE }}
+          />
           <header className="col-span-4 md:col-span-3">
             <div className="md:sticky md:top-24">
-              <p className="text-outline font-display text-[clamp(3rem,6vw,5.5rem)] font-bold leading-none">
+              <motion.p className="text-outline font-display text-[clamp(3rem,6vw,5.5rem)] font-bold leading-none" {...inView(0.15, -24, 'x')}>
                 {String(i + 1).padStart(2, '0')}
-              </p>
+              </motion.p>
               <h2 id={`${s.key}-title`} className="text-label mt-4 text-[0.8rem]">
                 {t.project.sections[s.key]}
               </h2>
@@ -176,7 +220,9 @@ function ProjectView({ project }: { project: Project }) {
         </section>
       ))}
 
-      <ProjectNav prev={prev} next={next} />
+      <Reveal>
+        <ProjectNav prev={prev} next={next} />
+      </Reveal>
       {lightbox}
     </article>
   )
