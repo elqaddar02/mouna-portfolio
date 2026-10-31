@@ -20,7 +20,8 @@ function FeatureRow({ project, flip }: { project: Project; flip: boolean }) {
   const { t, l } = useI18n()
   const reduce = useReducedMotion()
   const href = `/works/${project.slug}`
-  const cover = project.coverImage
+  // same framing as the homepage slideshow (a dedicated slide image when one is set)
+  const cover = project.slideImage
   const second = secondaryImage(project)
   const contain = project.slideFit === 'contain'
   const meta = [t.categories[project.category], t.formats[project.format], project.year].filter(Boolean).join(' · ')

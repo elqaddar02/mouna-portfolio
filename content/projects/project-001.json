@@ -4,7 +4,14 @@
   "order": 1,
   "featured": true,
   "slide": true,
-  "slideFit": "contain",
+  "slideImage": {
+    "src": "/images/projects/project-001/slide.webp",
+    "alt": {
+      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards",
+      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées"
+    }
+  },
+  "slideFit": "cover",
   "placeholder": false,
   "title": {
     "fr": "L’écriture dans l’ère du dynamisme participatif et évolutif",
