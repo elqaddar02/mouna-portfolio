@@ -93,6 +93,22 @@ export interface LanguageSkill {
   level: Localized
 }
 
+export interface VideoEmbed {
+  provider: 'youtube' | 'vimeo'
+  id: string
+  /** Vimeo privacy hash for unlisted videos. */
+  hash?: string
+}
+
+/** Video CV: an uploaded file or a YouTube/Vimeo link (the link wins when both are set). */
+export interface CvVideo {
+  file: string | null
+  embed: VideoEmbed | null
+  poster: ArchImage | null
+  caption: Localized | null
+  placeholder: boolean
+}
+
 export interface Profile {
   name: string
   role: Localized
@@ -122,5 +138,7 @@ export interface Profile {
   }
   /** Path to a PDF in /public, e.g. "/cv/mouna-elqaddar-cv.pdf". Null hides the download link. */
   cvUrl: string | null
+  /** Shown in the homepage introduction; null hides it. */
+  cvVideo: CvVideo | null
   placeholder?: boolean
 }

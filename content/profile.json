@@ -64,5 +64,15 @@
       "en": ""
     }
   },
-  "cvUrl": ""
+  "cvUrl": "",
+  "cvVideo": {
+    "file": "/videos/cv-video-placeholder.mp4",
+    "url": "",
+    "poster": "/images/profile/cv-video-poster.webp",
+    "caption": {
+      "fr": "",
+      "en": ""
+    },
+    "placeholder": true
+  }
 }

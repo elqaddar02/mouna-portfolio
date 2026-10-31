@@ -267,6 +267,27 @@ const profile = {
           ],
         },
         {
+          name: 'cvVideo',
+          label: 'CV vidéo (accueil, section Introduction)',
+          widget: 'object',
+          required: false,
+          hint: 'Deux possibilités : téléverser un fichier MP4 (25 Mo maximum, limite de l’hébergeur) ou coller un lien YouTube (vidéo « non répertoriée ») ou Vimeo — conseillé pour une vidéo plus lourde. Si un lien est rempli, il remplace le fichier. Laisser les deux vides pour masquer la vidéo.',
+          fields: [
+            { name: 'file', label: 'Fichier vidéo (MP4, 25 Mo max.)', widget: 'file', required: false, accept: 'video/mp4,video/webm', choose_url: false, media_folder: '/public/videos', public_folder: '/videos' },
+            {
+              name: 'url',
+              label: 'Ou lien YouTube / Vimeo',
+              widget: 'string',
+              required: false,
+              hint: 'ex. https://youtu.be/xxxxxxxxxxx ou https://vimeo.com/123456789',
+              pattern: ['^$|^https://(www\\.|m\\.)?(youtube\\.com|youtu\\.be|vimeo\\.com)/', 'Lien YouTube ou Vimeo attendu (commençant par https://)'],
+            },
+            { name: 'poster', label: 'Image d’aperçu (optionnelle)', widget: 'image', required: false, choose_url: false, hint: 'Affichée avant la lecture. Si vide : miniature YouTube, sinon fond brun.' },
+            bi('caption', 'Légende (optionnelle)', { hint: 'ex. « Présentation — 1 min 30 »' }),
+            { name: 'placeholder', label: 'Vidéo provisoire', widget: 'boolean', required: false, default: false, hint: 'À décocher quand la vraie vidéo est en ligne (retire l’étiquette « Provisoire »).' },
+          ],
+        },
+        {
           name: 'cvUrl',
           label: 'CV (PDF)',
           widget: 'file',

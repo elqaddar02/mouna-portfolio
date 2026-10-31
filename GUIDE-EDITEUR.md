@@ -82,6 +82,17 @@ Un champ de contact vide s’affiche « À compléter » sur le site, jamais com
 
 ---
 
+### CV vidéo
+
+Dans **Profil & contact → CV vidéo** (affiché sur l’accueil, section Introduction) :
+
+- **Fichier vidéo** : un MP4 de **25 Mo maximum** (limite de l’hébergeur). Au-delà, la publication est refusée et le site reste tel quel. Pour réduire une vidéo : HandBrake (gratuit), préréglage « Fast 720p30 ».
+- **Ou lien YouTube / Vimeo** : conseillé pour une vidéo plus longue. Sur YouTube, choisir la visibilité « Non répertoriée ». Si un lien est rempli, il remplace le fichier.
+- **Image d’aperçu** (optionnelle) : affichée avant la lecture.
+- **Vidéo provisoire** : à décocher quand la vraie vidéo est en ligne.
+
+Pour masquer la vidéo, vider le fichier et le lien.
+
 ## 6. Supprimer ou masquer
 
 - **Masquer de l’accueil :** décocher « Afficher sur la page d’accueil ».

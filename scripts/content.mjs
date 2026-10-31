@@ -12,7 +12,7 @@
  *
  * Usage: node scripts/content.mjs
  */
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { imageSize } from 'image-size'
@@ -23,6 +23,34 @@ export const ENUMS = {
   format: ['studio', 'competition', 'workshop', 'thesis'],
   slideFit: ['cover', 'contain'],
   imageType: ['cover', 'render', 'photo', 'site', 'sketch', 'diagram', 'model', 'plan', 'section', 'elevation', 'drawing'],
+}
+
+/** Cloudflare Pages refuses any single file above 25 MiB. */
+const MAX_FILE_BYTES = 25 * 1024 * 1024
+
+/** Reads a YouTube or Vimeo address; null when it is neither. */
+export function parseVideoUrl(raw) {
+  let u
+  try {
+    u = new URL(raw)
+  } catch {
+    return null
+  }
+  const host = u.hostname.replace(/^(www\.|m\.)/, '')
+  const parts = u.pathname.split('/').filter(Boolean)
+  if (host === 'youtu.be' && parts[0]) return { provider: 'youtube', id: parts[0] }
+  if (host === 'youtube.com' || host === 'youtube-nocookie.com') {
+    const id = u.searchParams.get('v') || (['shorts', 'embed', 'live'].includes(parts[0]) ? parts[1] : null)
+    return id && /^[\w-]{6,}$/.test(id) ? { provider: 'youtube', id } : null
+  }
+  if (host === 'vimeo.com' || host === 'player.vimeo.com') {
+    const nums = parts.filter((x) => /^\d+$/.test(x))
+    if (!nums[0]) return null
+    const after = parts[parts.indexOf(nums[0]) + 1]
+    const hash = u.searchParams.get('h') || (after && /^[0-9a-f]+$/i.test(after) ? after : undefined)
+    return { provider: 'vimeo', id: nums[0], ...(hash ? { hash } : {}) }
+  }
+  return null
 }
 
 /** Image types shown in the "drawings" part of a project; everything else is gallery. */
@@ -155,6 +183,29 @@ export function buildContent(root = ROOT) {
   const cvUrl = str(p.cvUrl) || null
   if (cvUrl && !existsSync(join(root, 'public', decodeURI(cvUrl)))) fail(pf, `CV file not found: public${cvUrl}`)
   const availability = loc(p.availability, `${pf} availability`)
+  const v = p.cvVideo ?? {}
+  const vFile = str(v.file)
+  const vUrl = str(v.url)
+  let cvVideo = null
+  if (vFile || vUrl) {
+    const embed = vUrl ? parseVideoUrl(vUrl) : null
+    if (vUrl && !embed) fail(`${pf} cvVideo.url`, `"${vUrl}" is not a YouTube or Vimeo link`)
+    if (vFile && !vUrl) {
+      const file = join(root, 'public', decodeURI(vFile))
+      if (!/\.(mp4|webm|m4v|mov)$/i.test(vFile)) fail(`${pf} cvVideo.file`, `"${vFile}" must be an MP4 or WebM video`)
+      else if (!existsSync(file)) fail(`${pf} cvVideo.file`, `file not found: public${vFile}`)
+      else if (statSync(file).size > MAX_FILE_BYTES)
+        fail(`${pf} cvVideo.file`, `video is ${(statSync(file).size / 1048576).toFixed(1)} MB — the host accepts 25 MB at most. Compress it, or use a YouTube / Vimeo link instead`)
+    }
+    const caption = loc(v.caption, `${pf} cvVideo.caption`)
+    cvVideo = {
+      file: vUrl ? null : vFile,
+      embed,
+      poster: str(v.poster) ? image({ src: v.poster }, `${pf} cvVideo.poster`, 'photo') : null,
+      caption: caption.en || caption.fr ? caption : null,
+      placeholder: v.placeholder === true,
+    }
+  }
   const heroImage = image(p.heroImage, `${pf} heroImage`, 'render')
   const profile = {
     name: str(p.name),
@@ -190,6 +241,7 @@ export function buildContent(root = ROOT) {
       location: location.en || location.fr ? location : null,
     },
     cvUrl,
+    cvVideo,
     placeholder: p.placeholder === true,
   }
   if (!profile.name) fail(pf, 'name is required')
