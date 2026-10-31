@@ -150,7 +150,10 @@
     {
       "src": "/images/projects/project-002/screenshot-2026-10-31-020948.webp",
       "imageType": "plan",
-      "caption": null,
+      "caption": {
+        "fr": "Diagramme fonctionnel",
+        "en": "Functional Diagram"
+      },
       "alt": null
     },
     {
