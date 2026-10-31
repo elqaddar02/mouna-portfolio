@@ -12,12 +12,11 @@ import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { fmt, useI18n } from '../i18n/useI18n'
 import { cn } from '../lib/cn'
 
-type FilterKey = 'category' | 'format' | 'origin'
+type FilterKey = 'category' | 'format'
 
 const FIELD: Record<FilterKey, (p: Project) => string> = {
   category: (p) => p.category,
   format: (p) => p.format,
-  origin: (p) => p.projectType,
 }
 
 /** Grid rhythm — alternating wide/narrow spans and proportions. */
@@ -36,7 +35,6 @@ export default function Works() {
   const active: Record<FilterKey, string | null> = {
     category: params.get('category'),
     format: params.get('format'),
-    origin: params.get('origin'),
   }
   const view = params.get('view') === 'index' ? 'index' : 'grid'
 
@@ -58,7 +56,6 @@ export default function Works() {
     return {
       category: build('category', (v) => t.categories[v as Project['category']]),
       format: build('format', (v) => t.formats[v as Project['format']]),
-      origin: build('origin', (v) => t.origins[v as Project['projectType']]),
     }
   }, [t, params])
 
@@ -112,13 +109,6 @@ export default function Works() {
             options={options.format}
             value={active.format}
             onChange={(v) => update('format', v)}
-          />
-          <FilterGroup
-            label={t.works.filterOrigin}
-            allLabel={t.works.all}
-            options={options.origin}
-            value={active.origin}
-            onChange={(v) => update('origin', v)}
           />
         </div>
         <div className="frame flex flex-wrap items-center justify-between gap-4 border-t-2 border-ink py-3">

@@ -62,7 +62,6 @@ function ProjectView({ project }: { project: Project }) {
     [t.common.category, t.categories[project.category]],
     [t.common.year, project.year],
     [t.common.location, l(project.location)],
-    [t.common.origin, t.origins[project.projectType]],
     [t.common.format, t.formats[project.format]],
     ...(project.meta ?? []).map((m): [string, string] => [l(m.label), l(m.value)]),
   ]
@@ -86,7 +85,7 @@ function ProjectView({ project }: { project: Project }) {
           </div>
           <div className="col-span-4 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
             <span className="text-label border-2 border-ink bg-ink px-2.5 py-1 text-[0.68rem] text-paper">
-              {t.origins[project.projectType]}
+              {t.formats[project.format]}
             </span>
             <span className="text-label border-2 border-ink px-2.5 py-1 text-[0.68rem]">{t.categories[project.category]}</span>
             {project.placeholder && <PlaceholderBadge long />}

@@ -6,11 +6,8 @@ export type Localized = Record<Lang, string>
 
 export type ProjectCategory = 'residential' | 'cultural' | 'public' | 'urban' | 'interior' | 'experimental'
 
-/** Origin of the work — university studio or self-initiated. */
-export type ProjectOrigin = 'academic' | 'personal'
-
-/** The kind of brief the project answered. */
-export type ProjectFormat = 'studio' | 'competition' | 'workshop' | 'thesis' | 'self-initiated'
+/** The kind of academic brief the project answered. Personal work belongs in concepts. */
+export type ProjectFormat = 'studio' | 'competition' | 'workshop' | 'thesis'
 
 export type ImageType =
   | 'cover'
@@ -57,7 +54,6 @@ export interface Project {
   category: ProjectCategory
   year: string
   location: Localized
-  projectType: ProjectOrigin
   format: ProjectFormat
   coverImage: ArchImage
   thumbnailImage: ArchImage

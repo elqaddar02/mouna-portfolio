@@ -13,7 +13,7 @@ const TBA = L('To be added', 'À compléter')
 
 export const profile: Profile = {
   name: 'Mouna Elqaddar',
-  role: L('Architecture Student', 'Élève architecte'),
+  role: L('Architecture Student', 'Étudiante en architecture'),
 
   shortBio: L(
     'Placeholder biography. One or two sentences on how Mouna approaches architecture — the questions, places and materials that drive the work.',

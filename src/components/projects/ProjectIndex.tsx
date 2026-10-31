@@ -40,8 +40,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
             <th scope="col" className={`${th} w-16`}>{t.works.colNo}</th>
             <th scope="col" className={th}>{t.works.colTitle}</th>
             <th scope="col" className={`${th} hidden md:table-cell`}>{t.common.category}</th>
-            <th scope="col" className={`${th} hidden lg:table-cell`}>{t.common.format}</th>
-            <th scope="col" className={`${th} hidden sm:table-cell`}>{t.common.origin}</th>
+            <th scope="col" className={`${th} hidden sm:table-cell`}>{t.common.format}</th>
             <th scope="col" className={`${th} w-20 text-right`}>{t.common.year}</th>
           </tr>
         </thead>
@@ -64,9 +63,8 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
                 </Link>
               </td>
               <td className="hidden py-5 pr-4 text-sm md:table-cell">{t.categories[p.category]}</td>
-              <td className="hidden py-5 pr-4 text-sm lg:table-cell">{t.formats[p.format]}</td>
               <td className="hidden py-5 pr-4 sm:table-cell">
-                <span className="text-label border-2 border-current px-2 py-0.5 text-[0.62rem]">{t.origins[p.projectType]}</span>
+                <span className="text-label border-2 border-current px-2 py-0.5 text-[0.62rem]">{t.formats[p.format]}</span>
               </td>
               <td className="py-5 text-right font-mono text-sm">{p.year}</td>
             </tr>

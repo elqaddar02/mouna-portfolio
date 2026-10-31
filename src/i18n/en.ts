@@ -5,7 +5,7 @@ export const en = {
     homeDescription:
       'Architecture portfolio of Mouna Elqaddar, architecture student — university projects, personal concepts and spatial explorations.',
     worksTitle: 'Works',
-    worksDescription: 'Archive of architectural projects by Mouna Elqaddar — academic and personal work.',
+    worksDescription: 'Archive of academic architecture projects by Mouna Elqaddar — design studios, workshops and competitions.',
     conceptsTitle: 'Concepts',
     conceptsDescription: 'Personal architectural concepts, spatial experiments and material studies by Mouna Elqaddar.',
     aboutTitle: 'About',
@@ -42,7 +42,6 @@ export const en = {
     category: 'Category',
     year: 'Year',
     location: 'Location',
-    origin: 'Origin',
     format: 'Format',
     projects: 'projects',
     project: 'project',
@@ -63,11 +62,6 @@ export const en = {
     competition: 'Competition',
     workshop: 'Workshop',
     thesis: 'Thesis',
-    'self-initiated': 'Self-initiated',
-  },
-  origins: {
-    academic: 'Academic',
-    personal: 'Personal',
   },
   conceptKinds: {
     form: 'Abstract form',
@@ -107,11 +101,10 @@ export const en = {
   works: {
     label: 'Archive',
     heading: 'Works',
-    lead: 'University projects and personal architectural work. Filter by category, format or origin.',
+    lead: 'Academic projects — design studios, workshops and competitions. Filter by category or format.',
     filters: 'Filters',
     filterCategory: 'Category',
     filterFormat: 'Format',
-    filterOrigin: 'Origin',
     all: 'All',
     reset: 'Reset filters',
     results: '{n} of {total} projects',

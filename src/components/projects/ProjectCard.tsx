@@ -49,7 +49,7 @@ export function ProjectCard({ project, aspect, imageKind = 'cover', className, h
             {t.categories[project.category]} <span aria-hidden="true">·</span> {project.year}
           </p>
           <span className="text-label border-2 border-ink px-2 py-0.5 text-[0.65rem]">
-            {t.origins[project.projectType]}
+            {t.formats[project.format]}
           </span>
         </div>
         <H className="text-title mt-2 transition-colors group-hover:text-orange-deep">{l(project.title)}</H>

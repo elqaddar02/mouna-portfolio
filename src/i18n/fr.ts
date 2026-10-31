@@ -5,9 +5,9 @@ export const fr: Dictionary = {
   meta: {
     siteTitle: 'Mouna Elqaddar — Architecture',
     homeDescription:
-      'Portfolio d’architecture de Mouna Elqaddar, élève architecte — projets universitaires, concepts personnels et explorations spatiales.',
+      'Portfolio d’architecture de Mouna Elqaddar, étudiante en architecture — projets universitaires, concepts personnels et explorations spatiales.',
     worksTitle: 'Projets',
-    worksDescription: 'Archive des projets d’architecture de Mouna Elqaddar — travaux académiques et personnels.',
+    worksDescription: 'Archive des projets d’architecture académiques de Mouna Elqaddar — ateliers, workshops et concours.',
     conceptsTitle: 'Concepts',
     conceptsDescription: 'Concepts architecturaux personnels, expérimentations spatiales et études de matière de Mouna Elqaddar.',
     aboutTitle: 'À propos',
@@ -44,7 +44,6 @@ export const fr: Dictionary = {
     category: 'Catégorie',
     year: 'Année',
     location: 'Lieu',
-    origin: 'Origine',
     format: 'Format',
     projects: 'projets',
     project: 'projet',
@@ -65,11 +64,6 @@ export const fr: Dictionary = {
     competition: 'Concours',
     workshop: 'Workshop',
     thesis: 'Projet de fin d’études',
-    'self-initiated': 'Initiative personnelle',
-  },
-  origins: {
-    academic: 'Académique',
-    personal: 'Personnel',
   },
   conceptKinds: {
     form: 'Forme abstraite',
@@ -86,7 +80,7 @@ export const fr: Dictionary = {
     rev: 'Ind.',
   },
   home: {
-    heroRole: 'Élève architecte',
+    heroRole: 'Étudiante en architecture',
     heroTagline1: 'Concevoir l’espace.',
     heroTagline2: 'Explorer la forme.',
     heroLead: 'Une exploration visuelle de l’architecture, de la matière, de l’espace et de l’expérience humaine.',
@@ -109,11 +103,10 @@ export const fr: Dictionary = {
   works: {
     label: 'Archive',
     heading: 'Projets',
-    lead: 'Projets universitaires et travaux personnels. Filtrer par catégorie, format ou origine.',
+    lead: 'Projets académiques — ateliers de projet, workshops et concours. Filtrer par catégorie ou format.',
     filters: 'Filtres',
     filterCategory: 'Catégorie',
     filterFormat: 'Format',
-    filterOrigin: 'Origine',
     all: 'Tous',
     reset: 'Réinitialiser',
     results: '{n} projets sur {total}',
