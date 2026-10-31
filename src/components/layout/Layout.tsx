@@ -14,7 +14,7 @@ function FrozenOutlet() {
 
 export function Layout() {
   const { t } = useI18n()
-  const { pathname, hash } = useLocation()
+  const { pathname } = useLocation()
   const reduce = useReducedMotion()
 
   return (
@@ -29,9 +29,7 @@ export function Layout() {
       <AnimatePresence
         mode="wait"
         initial={false}
-        onExitComplete={() => {
-          if (!hash) window.scrollTo({ top: 0, behavior: 'instant' })
-        }}
+        onExitComplete={() => window.scrollTo({ top: 0, behavior: 'instant' })}
       >
         <motion.main
           key={pathname}
