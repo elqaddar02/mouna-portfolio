@@ -3,263 +3,176 @@
   "number": "003",
   "order": 3,
   "featured": true,
-  "placeholder": true,
+  "placeholder": false,
   "title": {
-    "en": "Project 03",
-    "fr": "Projet 03"
+    "fr": "Écrin social",
+    "en": "Écrin social"
   },
   "subtitle": {
-    "en": "Placeholder — replace with the project title and brief",
-    "fr": "Provisoire — remplacer par le titre et la commande du projet"
+    "fr": "Logements collectifs et bande commerciale autour d’un cœur d’îlot partagé",
+    "en": "Collective housing and a commercial strip around a shared courtyard"
   },
-  "category": "urban",
-  "format": "workshop",
-  "year": "20XX",
+  "category": "residential",
+  "format": "studio",
+  "year": "",
   "location": {
-    "en": "To be added",
-    "fr": "À compléter"
+    "fr": "",
+    "en": ""
   },
   "cover": {
-    "src": "/images/projects/project-003/cover.svg",
+    "src": "/images/projects/project-003/cover.webp",
     "alt": {
-      "en": "Project cover image (placeholder)",
-      "fr": "Image de couverture (provisoire)"
-    }
-  },
-  "thumbnail": {
-    "src": "/images/projects/project-003/thumb.svg",
-    "alt": {
-      "en": "Project thumbnail (placeholder)",
-      "fr": "Vignette du projet (provisoire)"
+      "fr": "Vue aérienne du plan masse : îlot triangulaire planté entre de grandes voies, avec les logements, un café en terrasse et des aires de jeu",
+      "en": "Aerial view of the site plan: a planted triangular block between wide roads, with the housing, a terrace café and play areas"
     }
   },
   "shortDescription": {
-    "en": "Placeholder summary. In two lines, describe the brief, the programme and the central architectural idea.",
-    "fr": "Résumé provisoire. En deux lignes, décrire le programme, le contexte et l’idée architecturale centrale."
+    "fr": "Un îlot d’habitat où les logements périphériques forment une enveloppe protectrice autour d’un cœur d’îlot dédié à la rencontre.",
+    "en": "A housing block in which the perimeter dwellings form a protective envelope around a courtyard devoted to meeting and sociability."
   },
   "fullDescription": {
-    "en": "Placeholder overview. Introduce the project: the brief, the site, the programme and the question the design sets out to answer. Keep it to one or two short paragraphs.",
-    "fr": "Présentation provisoire. Introduire le projet : la commande, le site, le programme et la question à laquelle le projet cherche à répondre. Un ou deux paragraphes courts suffisent."
+    "fr": "Le projet compose un îlot d’habitat : une bande commerciale tournée vers la voie rapide, des logements collectifs en périphérie et, au centre, un cœur d’îlot réservé aux espaces de rencontre et de jeu.",
+    "en": "The project shapes a housing block: a commercial strip facing the main road, collective housing along the perimeter and, at its centre, a courtyard reserved for meeting and play spaces."
   },
   "architecturalConcept": {
-    "en": "Placeholder concept. Explain the generating idea — the spatial, material or formal strategy that organises the project — and how it responds to the brief.",
-    "fr": "Concept provisoire. Expliquer l’idée génératrice — la stratégie spatiale, matérielle ou formelle qui organise le projet — et sa réponse à la commande."
+    "fr": "L’implantation répond à la voie rapide en orientant les fonctions actives vers l’espace urbain. La bande commerciale constitue une interface entre la ville et l’habitat. Les logements périphériques forment une enveloppe bâtie protectrice. Le cœur d’îlot concentre les espaces de rencontre et de sociabilité. Les espaces de jeu sont implantés dans la zone la plus calme du site.",
+    "en": "The layout responds to the main road by turning the active functions towards the urban space. The commercial strip forms an interface between the city and the housing. The perimeter dwellings form a protective built envelope. The courtyard gathers the spaces for meeting and sociability. The play areas are placed in the quietest part of the site."
   },
   "siteAnalysis": {
-    "en": "Placeholder site analysis. Summarise the context: orientation, climate, topography, access, urban fabric and the constraints or opportunities identified.",
-    "fr": "Analyse de site provisoire. Résumer le contexte : orientation, climat, topographie, accès, tissu urbain, contraintes et potentiels identifiés."
+    "fr": "",
+    "en": ""
   },
   "designProcess": {
-    "en": "Placeholder design development. Describe how the scheme evolved — from first sketches and models to the final proposal — and the key decisions along the way.",
-    "fr": "Développement provisoire. Décrire l’évolution du projet — des premières esquisses et maquettes à la proposition finale — et les décisions clés."
+    "fr": "",
+    "en": ""
   },
   "images": [
     {
-      "src": "/images/projects/project-003/site.svg",
+      "src": "/images/projects/project-003/plan-masse.webp",
       "imageType": "site",
       "alt": {
-        "en": "Site analysis drawing (placeholder)",
-        "fr": "Analyse de site (provisoire)"
+        "fr": "Vue aérienne du plan masse de l’îlot et des voies qui l’entourent",
+        "en": "Aerial site plan of the block and the surrounding roads"
       },
       "caption": {
-        "en": "Site analysis — contours, access and plot boundary.",
-        "fr": "Analyse de site — courbes de niveau, accès et limite de parcelle."
+        "fr": "Plan masse — 1/200",
+        "en": "Site plan — 1:200"
       }
     },
     {
-      "src": "/images/projects/project-003/concept-diagram.svg",
+      "src": "/images/projects/project-003/concept-board.webp",
       "imageType": "diagram",
       "alt": {
-        "en": "Concept diagram (placeholder)",
-        "fr": "Diagramme conceptuel (provisoire)"
+        "fr": "Planche de cinq diagrammes de l’îlot avec leurs légendes, de l’implantation au cœur d’îlot",
+        "en": "Board of five diagrams of the block with captions, from the layout to the courtyard"
       },
       "caption": {
-        "en": "Concept diagram — programme relationships.",
-        "fr": "Diagramme conceptuel — relations programmatiques."
+        "fr": "Écrin social — implantation, bande commerciale, enveloppe bâtie, cœur d’îlot, espaces de jeu",
+        "en": "Écrin social — layout, commercial strip, built envelope, courtyard, play areas"
       }
     },
     {
-      "src": "/images/projects/project-003/sketch-01.svg",
-      "imageType": "sketch",
-      "alt": {
-        "en": "Perspective sketch (placeholder)",
-        "fr": "Croquis en perspective (provisoire)"
-      },
-      "caption": {
-        "en": "Early perspective sketch.",
-        "fr": "Croquis de perspective initial."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/sketch-02.svg",
-      "imageType": "sketch",
-      "alt": {
-        "en": "Process sketch (placeholder)",
-        "fr": "Croquis de recherche (provisoire)"
-      },
-      "caption": {
-        "en": "Process sketch.",
-        "fr": "Croquis de recherche."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/model-01.svg",
-      "imageType": "model",
-      "alt": {
-        "en": "Physical massing model (placeholder)",
-        "fr": "Maquette de volumétrie (provisoire)"
-      },
-      "caption": {
-        "en": "Massing model.",
-        "fr": "Maquette de volumétrie."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/model-02.svg",
-      "imageType": "model",
-      "alt": {
-        "en": "Physical site model (placeholder)",
-        "fr": "Maquette de site (provisoire)"
-      },
-      "caption": {
-        "en": "Site model.",
-        "fr": "Maquette de site."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/render-01.svg",
-      "imageType": "render",
-      "alt": {
-        "en": "Exterior visualisation (placeholder)",
-        "fr": "Visualisation extérieure (provisoire)"
-      },
-      "caption": {
-        "en": "Final exterior visualisation.",
-        "fr": "Visualisation extérieure finale."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/render-02.svg",
-      "imageType": "render",
-      "alt": {
-        "en": "Interior visualisation (placeholder)",
-        "fr": "Visualisation intérieure (provisoire)"
-      },
-      "caption": {
-        "en": "Final interior visualisation.",
-        "fr": "Visualisation intérieure finale."
-      }
-    },
-    {
-      "src": "/images/projects/project-003/plan-ground.svg",
+      "src": "/images/projects/project-003/plan-rdc.webp",
       "imageType": "plan",
       "alt": {
-        "en": "Ground floor plan (placeholder)",
-        "fr": "Plan du rez-de-chaussée (provisoire)"
+        "fr": "Plan du rez-de-chaussée des logements",
+        "en": "Ground floor plan of the dwellings"
       },
       "caption": {
-        "en": "Ground floor plan — 1:200.",
-        "fr": "Plan du rez-de-chaussée — 1:200."
+        "fr": "Plan du rez-de-chaussée",
+        "en": "Ground floor plan"
       }
     },
     {
-      "src": "/images/projects/project-003/plan-upper.svg",
+      "src": "/images/projects/project-003/plan-etage.webp",
       "imageType": "plan",
       "alt": {
-        "en": "Upper floor plan (placeholder)",
-        "fr": "Plan d’étage (provisoire)"
+        "fr": "Plan de l’étage des logements",
+        "en": "Upper floor plan of the dwellings"
       },
       "caption": {
-        "en": "Upper floor plan — 1:200.",
-        "fr": "Plan d’étage — 1:200."
+        "fr": "Plan de l’étage",
+        "en": "Upper floor plan"
       }
     },
     {
-      "src": "/images/projects/project-003/section.svg",
+      "src": "/images/projects/project-003/coupe-aa.webp",
       "imageType": "section",
       "alt": {
-        "en": "Longitudinal section (placeholder)",
-        "fr": "Coupe longitudinale (provisoire)"
+        "fr": "Coupe AA sur un logement de deux niveaux avec terrasse",
+        "en": "Section AA through a two-storey dwelling with a terrace"
       },
       "caption": {
-        "en": "Longitudinal section AA.",
-        "fr": "Coupe longitudinale AA."
+        "fr": "Coupe AA",
+        "en": "Section AA"
       }
     },
     {
-      "src": "/images/projects/project-003/elevation.svg",
-      "imageType": "elevation",
+      "src": "/images/projects/project-003/coupe-bb.webp",
+      "imageType": "section",
       "alt": {
-        "en": "Main elevation (placeholder)",
-        "fr": "Façade principale (provisoire)"
+        "fr": "Coupe BB sur un logement de deux niveaux",
+        "en": "Section BB through a two-storey dwelling"
       },
       "caption": {
-        "en": "Main elevation.",
-        "fr": "Façade principale."
+        "fr": "Coupe BB",
+        "en": "Section BB"
       }
     },
     {
-      "src": "/images/projects/project-003/detail.svg",
-      "imageType": "drawing",
+      "src": "/images/projects/project-003/ambiance-1.webp",
+      "imageType": "render",
       "alt": {
-        "en": "Construction detail (placeholder)",
-        "fr": "Détail constructif (provisoire)"
+        "fr": "Vue d’ambiance : parvis pavé devant les logements, avec des passants",
+        "en": "Atmosphere view: paved forecourt in front of the housing, with passers-by"
       },
       "caption": {
-        "en": "Wall build-up detail — 1:20.",
-        "fr": "Détail de paroi — 1:20."
+        "fr": "Croquis d’ambiance — parvis",
+        "en": "Atmosphere view — forecourt"
+      }
+    },
+    {
+      "src": "/images/projects/project-003/ambiance-2.webp",
+      "imageType": "render",
+      "alt": {
+        "fr": "Vue d’ambiance : logements de deux niveaux depuis la rue, jardin et arbres",
+        "en": "Atmosphere view: two-storey housing seen from the street, with a garden and trees"
+      },
+      "caption": {
+        "fr": "Croquis d’ambiance — depuis la rue",
+        "en": "Atmosphere view — from the street"
       }
     }
   ],
   "meta": [
     {
       "label": {
-        "en": "Studio / Course",
-        "fr": "Atelier / Cours"
+        "fr": "École",
+        "en": "School"
       },
       "value": {
-        "en": "To be added",
-        "fr": "À compléter"
+        "fr": "École Nationale d’Architecture et d’Urbanisme de Tunis (ENAU)",
+        "en": "National School of Architecture and Urbanism of Tunis (ENAU)"
       }
     },
     {
       "label": {
-        "en": "Tutor(s)",
-        "fr": "Encadrant(s)"
+        "fr": "Programme",
+        "en": "Programme"
       },
       "value": {
-        "en": "To be added",
-        "fr": "À compléter"
+        "fr": "Logements collectifs, bande commerciale, espaces de rencontre et de jeu",
+        "en": "Collective housing, commercial strip, meeting and play spaces"
       }
     },
     {
       "label": {
-        "en": "Programme",
-        "fr": "Programme"
+        "fr": "Niveaux",
+        "en": "Levels"
       },
       "value": {
-        "en": "To be added",
-        "fr": "À compléter"
-      }
-    },
-    {
-      "label": {
-        "en": "Site area",
-        "fr": "Surface du site"
-      },
-      "value": {
-        "en": "To be added",
-        "fr": "À compléter"
-      }
-    },
-    {
-      "label": {
-        "en": "Duration",
-        "fr": "Durée"
-      },
-      "value": {
-        "en": "To be added",
-        "fr": "À compléter"
+        "fr": "Rez-de-chaussée et étage",
+        "en": "Ground floor and upper floor"
       }
     }
   ]

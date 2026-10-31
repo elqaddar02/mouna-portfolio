@@ -413,8 +413,8 @@ const PROJECT_SET = [
   ['elevation', 'elevation', '21:9'],
   ['detail', 'drawing', '1:1'],
 ]
-// Projects 001 and 002 have real images; only the remaining template projects get placeholders.
-for (let p = 3; p <= 5; p++) {
+// Projects 001-003 have real images; only the remaining template projects get placeholders.
+for (let p = 4; p <= 5; p++) {
   const id = `project-00${p}`
   for (const [name, kind, ratio] of PROJECT_SET) write(`projects/${id}/${name}.svg`, kind, ratio, `P-00${p} · ${name.toUpperCase()}`)
 }
