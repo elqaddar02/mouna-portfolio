@@ -7,8 +7,8 @@
   "slideImage": {
     "src": "/images/projects/project-001/slide.webp",
     "alt": {
-      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards",
-      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées"
+      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées",
+      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards"
     }
   },
   "slideFit": "contain",
@@ -23,181 +23,182 @@
   },
   "category": "cultural",
   "format": "studio",
-  "year": "",
+  "year": "2025",
   "location": {
-    "en": "Tunisia",
-    "fr": "Tunisie"
+    "fr": "Tunisie",
+    "en": "Tunisia"
   },
   "cover": {
     "src": "/images/projects/project-001/cover.webp",
     "alt": {
-      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards",
-      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées"
+      "fr": "Vue aérienne de trois volumes en béton aux toitures pliées et aux façades vitrées, disposés autour de cours paysagées",
+      "en": "Aerial visualisation of three faceted concrete volumes with folded roofs and glazed fronts, set around landscaped courtyards"
     }
   },
+  "thumbnail": null,
   "shortDescription": {
-    "en": "A cultural building read like a sentence: a continuous mass is incised and fragmented into three volumes, linked by a ramp and a footbridge.",
-    "fr": "Un équipement culturel qui se lit comme une phrase : une masse continue, incisée puis fragmentée en trois volumes reliés par une rampe et une passerelle."
+    "fr": "Un équipement culturel qui se lit comme une phrase : une masse continue, incisée puis fragmentée en trois volumes reliés par une rampe et une passerelle.",
+    "en": "A cultural building read like a sentence: a continuous mass is incised and fragmented into three volumes, linked by a ramp and a footbridge."
   },
   "fullDescription": {
-    "en": "The project brings together permanent and temporary exhibition spaces, participatory workshops — handwriting, typography, calligraphy and a digital workshop —, archives, a cultural café and a shop. It is organised in three volumes over a basement, a ground floor and an upper floor.",
-    "fr": "Le projet réunit des espaces d’exposition permanente et temporaire, des ateliers participatifs — écriture manuscrite, typographie, calligraphie et atelier numérique —, des archives, un café culturel et une boutique. Il s’organise en trois volumes, sur un sous-sol, un rez-de-chaussée et un étage."
+    "fr": "Le projet réunit des espaces d’exposition permanente et temporaire, des ateliers participatifs — écriture manuscrite, typographie, calligraphie et atelier numérique —, des archives, un café culturel et une boutique. Il s’organise en trois volumes, sur un sous-sol, un rez-de-chaussée et un étage.",
+    "en": "The project brings together permanent and temporary exhibition spaces, participatory workshops — handwriting, typography, calligraphy and a digital workshop —, archives, a cultural café and a shop. It is organised in three volumes over a basement, a ground floor and an upper floor."
   },
   "architecturalConcept": {
-    "en": "The project starts from a continuous trace. Interrupted by pauses, the trace becomes discontinuous: spaces, pauses and punctuation structure meaning, and discontinuity becomes architecture. The continuous mass is incised — voids and fault lines — then fragmented into distinct volumes. From continuous to fragmented, the cuts create inhabited interstices: the project reads like a sentence made of words and pauses.",
-    "fr": "Le projet part d’une trace continue. Interrompue par des pauses, la trace devient discontinue : les espaces, pauses et ponctuations structurent le sens, et la discontinuité devient architecture. La masse continue est incisée — vides et failles — puis fragmentée en volumes distincts. Du continu au fragmenté, les coupures créent des interstices habités : le projet se lit comme une phrase composée de mots et de respirations."
+    "fr": "Le projet part d’une trace continue. Interrompue par des pauses, la trace devient discontinue : les espaces, pauses et ponctuations structurent le sens, et la discontinuité devient architecture. La masse continue est incisée — vides et failles — puis fragmentée en volumes distincts. Du continu au fragmenté, les coupures créent des interstices habités : le projet se lit comme une phrase composée de mots et de respirations.",
+    "en": "The project starts from a continuous trace. Interrupted by pauses, the trace becomes discontinuous: spaces, pauses and punctuation structure meaning, and discontinuity becomes architecture. The continuous mass is incised — voids and fault lines — then fragmented into distinct volumes. From continuous to fragmented, the cuts create inhabited interstices: the project reads like a sentence made of words and pauses."
   },
   "siteAnalysis": {
-    "en": "",
-    "fr": ""
+    "fr": "",
+    "en": ""
   },
   "designProcess": {
-    "en": "The route links the fragmented volumes: a gently sloping ramp and a footbridge carry the visitor from one entity to the next. Meaning arises from the link between fragmented entities.",
-    "fr": "Le parcours relie les volumes fragmentés : une rampe au dénivelé progressif et une passerelle de franchissement conduisent le visiteur d’une entité à l’autre. Le sens naît de la liaison entre des entités fragmentées."
+    "fr": "Le parcours relie les volumes fragmentés : une rampe au dénivelé progressif et une passerelle de franchissement conduisent le visiteur d’une entité à l’autre. Le sens naît de la liaison entre des entités fragmentées.",
+    "en": "The route links the fragmented volumes: a gently sloping ramp and a footbridge carry the visitor from one entity to the next. Meaning arises from the link between fragmented entities."
   },
   "images": [
     {
       "src": "/images/projects/project-001/plan-masse.webp",
       "imageType": "site",
-      "alt": {
-        "en": "Site plan showing the three faceted volumes, landscaping, parking and the adjacent street",
-        "fr": "Plan masse montrant les trois volumes facettés, les aménagements paysagers, le stationnement et la rue"
-      },
       "caption": {
-        "en": "Site plan",
-        "fr": "Plan masse"
+        "fr": "Plan masse",
+        "en": "Site plan"
+      },
+      "alt": {
+        "fr": "Plan masse montrant les trois volumes facettés, les aménagements paysagers, le stationnement et la rue",
+        "en": "Site plan showing the three faceted volumes, landscaping, parking and the adjacent street"
       }
     },
     {
       "src": "/images/projects/project-001/concept-trace.webp",
       "imageType": "diagram",
-      "alt": {
-        "en": "Diagram: a continuous line becomes a continuous volume; a line with pauses becomes volumes separated by voids and fault lines",
-        "fr": "Diagramme : une trace continue devient un volume continu ; une trace ponctuée de pauses devient des volumes séparés par des vides et des failles"
-      },
       "caption": {
-        "en": "Continuity of the trace → discontinuity and pause",
-        "fr": "Continuité de la trace → discontinuité et respiration"
+        "fr": "Continuité de la trace → discontinuité et respiration",
+        "en": "Continuity of the trace → discontinuity and pause"
+      },
+      "alt": {
+        "fr": "Diagramme : une trace continue devient un volume continu ; une trace ponctuée de pauses devient des volumes séparés par des vides et des failles",
+        "en": "Diagram: a continuous line becomes a continuous volume; a line with pauses becomes volumes separated by voids and fault lines"
       }
     },
     {
       "src": "/images/projects/project-001/concept-fragmentation.webp",
       "imageType": "diagram",
-      "alt": {
-        "en": "Four-step massing diagram: continuous mass, incisions, fragmentation, final composition",
-        "fr": "Diagramme de volumétrie en quatre étapes : masse continue, incisions, fragmentation, composition finale"
-      },
       "caption": {
-        "en": "Continuous mass, incisions, fragmentation, final composition",
-        "fr": "Masse continue, incisions, fragmentation, composition finale"
+        "fr": "Masse continue, incisions, fragmentation, composition finale",
+        "en": "Continuous mass, incisions, fragmentation, final composition"
+      },
+      "alt": {
+        "fr": "Diagramme de volumétrie en quatre étapes : masse continue, incisions, fragmentation, composition finale",
+        "en": "Four-step massing diagram: continuous mass, incisions, fragmentation, final composition"
       }
     },
     {
       "src": "/images/projects/project-001/concept-programme.webp",
       "imageType": "diagram",
-      "alt": {
-        "en": "Programme bubble diagram and axonometric of the volumes coloured by function",
-        "fr": "Diagramme des proximités fonctionnelles et axonométrie des volumes colorés par fonction"
-      },
       "caption": {
-        "en": "Programme and functional relationships",
-        "fr": "Programme et proximités fonctionnelles"
+        "fr": "Programme et proximités fonctionnelles",
+        "en": "Programme and functional relationships"
+      },
+      "alt": {
+        "fr": "Diagramme des proximités fonctionnelles et axonométrie des volumes colorés par fonction",
+        "en": "Programme bubble diagram and axonometric of the volumes coloured by function"
       }
     },
     {
       "src": "/images/projects/project-001/concept-liaison.webp",
       "imageType": "diagram",
-      "alt": {
-        "en": "Diagram of the route through three volumes linked by a ramp and a footbridge",
-        "fr": "Diagramme du parcours à travers trois volumes reliés par une rampe et une passerelle"
-      },
       "caption": {
-        "en": "Link, route, meaning: ramp and footbridge",
-        "fr": "Liaison, parcours, sens : rampe et passerelle"
+        "fr": "Liaison, parcours, sens : rampe et passerelle",
+        "en": "Link, route, meaning: ramp and footbridge"
+      },
+      "alt": {
+        "fr": "Diagramme du parcours à travers trois volumes reliés par une rampe et une passerelle",
+        "en": "Diagram of the route through three volumes linked by a ramp and a footbridge"
       }
     },
     {
       "src": "/images/projects/project-001/plan-sous-sol.webp",
       "imageType": "plan",
-      "alt": {
-        "en": "Basement floor plan",
-        "fr": "Plan du sous-sol"
-      },
       "caption": {
-        "en": "Basement plan",
-        "fr": "Plan du sous-sol"
+        "fr": "Plan du sous-sol",
+        "en": "Basement plan"
+      },
+      "alt": {
+        "fr": "Plan du sous-sol",
+        "en": "Basement floor plan"
       }
     },
     {
       "src": "/images/projects/project-001/plan-rdc.webp",
       "imageType": "plan",
-      "alt": {
-        "en": "Ground floor plan with exhibitions, workshops, reception, shop and cultural café",
-        "fr": "Plan du rez-de-chaussée avec expositions, ateliers, accueil, boutique et café culturel"
-      },
       "caption": {
-        "en": "Ground floor plan",
-        "fr": "Plan du rez-de-chaussée"
+        "fr": "Plan du rez-de-chaussée",
+        "en": "Ground floor plan"
+      },
+      "alt": {
+        "fr": "Plan du rez-de-chaussée avec expositions, ateliers, accueil, boutique et café culturel",
+        "en": "Ground floor plan with exhibitions, workshops, reception, shop and cultural café"
       }
     },
     {
       "src": "/images/projects/project-001/plan-etage-1.webp",
       "imageType": "plan",
-      "alt": {
-        "en": "First floor plan with administration, digital workshop and VR space",
-        "fr": "Plan de l’étage 1 avec administration, atelier numérique et espace VR"
-      },
       "caption": {
-        "en": "First floor plan",
-        "fr": "Plan de l’étage 1"
+        "fr": "Plan de l’étage 1",
+        "en": "First floor plan"
+      },
+      "alt": {
+        "fr": "Plan de l’étage 1 avec administration, atelier numérique et espace VR",
+        "en": "First floor plan with administration, digital workshop and VR space"
       }
     },
     {
       "src": "/images/projects/project-001/coupe-aa.webp",
       "imageType": "section",
-      "alt": {
-        "en": "Section A-A through the three volumes and the basement",
-        "fr": "Coupe A-A à travers les trois volumes et le sous-sol"
-      },
       "caption": {
-        "en": "Section A-A",
-        "fr": "Coupe A-A"
+        "fr": "Coupe A-A",
+        "en": "Section A-A"
+      },
+      "alt": {
+        "fr": "Coupe A-A à travers les trois volumes et le sous-sol",
+        "en": "Section A-A through the three volumes and the basement"
       }
     },
     {
       "src": "/images/projects/project-001/coupe-bb.webp",
       "imageType": "section",
-      "alt": {
-        "en": "Section B-B",
-        "fr": "Coupe B-B"
-      },
       "caption": {
-        "en": "Section B-B",
-        "fr": "Coupe B-B"
+        "fr": "Coupe B-B",
+        "en": "Section B-B"
+      },
+      "alt": {
+        "fr": "Coupe B-B",
+        "en": "Section B-B"
       }
     },
     {
       "src": "/images/projects/project-001/facade.webp",
       "imageType": "elevation",
-      "alt": {
-        "en": "Rendered elevation of the faceted volumes with glazed openings under folded roofs",
-        "fr": "Façade rendue des volumes facettés, avec leurs baies vitrées sous les toitures pliées"
-      },
       "caption": {
-        "en": "Elevation",
-        "fr": "Façade"
+        "fr": "Façade",
+        "en": "Elevation"
+      },
+      "alt": {
+        "fr": "Façade rendue des volumes facettés, avec leurs baies vitrées sous les toitures pliées",
+        "en": "Rendered elevation of the faceted volumes with glazed openings under folded roofs"
       }
     },
     {
       "src": "/images/projects/project-001/render-aerial.webp",
       "imageType": "render",
-      "alt": {
-        "en": "Aerial visualisation of the three volumes around landscaped courtyards",
-        "fr": "Vue aérienne des trois volumes autour des cours paysagées"
-      },
       "caption": {
-        "en": "Aerial view",
-        "fr": "Vue aérienne"
+        "fr": "Vue aérienne",
+        "en": "Aerial view"
+      },
+      "alt": {
+        "fr": "Vue aérienne des trois volumes autour des cours paysagées",
+        "en": "Aerial visualisation of the three volumes around landscaped courtyards"
       }
     }
   ],
@@ -214,22 +215,22 @@
     },
     {
       "label": {
-        "en": "Programme",
-        "fr": "Programme"
+        "fr": "Programme",
+        "en": "Programme"
       },
       "value": {
-        "en": "Permanent and temporary exhibitions, workshops, archives, cultural café, shop, administration",
-        "fr": "Expositions permanente et temporaire, ateliers, archives, café culturel, boutique, administration"
+        "fr": "Expositions permanente et temporaire, ateliers, archives, café culturel, boutique, administration",
+        "en": "Permanent and temporary exhibitions, workshops, archives, cultural café, shop, administration"
       }
     },
     {
       "label": {
-        "en": "Levels",
-        "fr": "Niveaux"
+        "fr": "Niveaux",
+        "en": "Levels"
       },
       "value": {
-        "en": "Basement, ground floor, first floor",
-        "fr": "Sous-sol, rez-de-chaussée, étage"
+        "fr": "Sous-sol, rez-de-chaussée, étage",
+        "en": "Basement, ground floor, first floor"
       }
     }
   ]
