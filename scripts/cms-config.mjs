@@ -154,7 +154,7 @@ const projects = {
       default: 'cover',
       options: [
         { value: 'cover', label: 'Remplir le cadre (rendus et photos)' },
-        { value: 'contain', label: 'Image entière sur fond blanc (images détourées)' },
+        { value: 'contain', label: 'Image entière, fond flouté autour (rien n’est coupé)' },
       ],
     },
     placeholderField,

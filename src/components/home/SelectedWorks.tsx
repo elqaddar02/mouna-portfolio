@@ -40,7 +40,10 @@ function FeatureRow({ project, flip }: { project: Project; flip: boolean }) {
       <motion.div className={cn('col-span-4 md:col-span-7', flip && 'md:order-2 md:col-start-6')} {...inView(0, { y: 48 })}>
         {/* duplicate of the title link, so kept out of the tab order and the accessibility tree */}
         <Link to={href} tabIndex={-1} aria-hidden="true" className="group relative block overflow-hidden border-2 border-ink">
-          <div className={cn('relative aspect-[4/3] md:aspect-[3/2]', contain ? 'bg-white' : 'bg-paper-2')}>
+          <div className="relative aspect-[4/3] overflow-hidden bg-paper-2 md:aspect-[3/2]">
+            {contain && (
+              <img src={cover.src} alt="" aria-hidden="true" className="absolute inset-0 size-full scale-110 object-cover blur-2xl brightness-90" />
+            )}
             <img
               src={cover.src}
               alt={l(cover.alt)}
@@ -50,7 +53,7 @@ function FeatureRow({ project, flip }: { project: Project; flip: boolean }) {
               decoding="async"
               className={cn(
                 'absolute inset-0 size-full transition-[transform,opacity] duration-[900ms] ease-arch group-hover:scale-[1.04]',
-                contain ? 'object-contain p-4 md:p-8' : 'object-cover',
+                contain ? 'object-contain' : 'object-cover',
                 second && 'group-hover:opacity-0 group-focus-visible:opacity-0',
               )}
             />

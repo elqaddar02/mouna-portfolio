@@ -175,11 +175,15 @@ export function Hero() {
                 aria-roledescription="slide"
                 aria-label={fmt(t.home.slideLabel, { i: i + 1, n: count })}
                 aria-hidden={!active}
-                className={cn('absolute inset-0', s.fit === 'contain' && 'bg-white')}
+                className="absolute inset-0 overflow-hidden"
                 initial={false}
                 animate={{ opacity: active ? 1 : 0 }}
                 transition={{ duration: reduce ? 0 : 1, ease: 'easeInOut' }}
               >
+                {s.fit === 'contain' && (
+                  // whole image shown; the leftover space is a blurred copy of the same image
+                  <img src={s.image.src} alt="" aria-hidden="true" className="absolute inset-0 size-full scale-110 object-cover blur-2xl brightness-90" />
+                )}
                 <motion.img
                   src={s.image.src}
                   alt={l(s.image.alt)}
@@ -188,7 +192,7 @@ export function Hero() {
                   loading={i === 0 ? 'eager' : 'lazy'}
                   fetchPriority={i === 0 ? 'high' : 'auto'}
                   draggable={false}
-                  className={cn('size-full', s.fit === 'contain' ? 'object-contain p-6 md:p-12' : 'object-cover')}
+                  className={cn('relative size-full', s.fit === 'contain' ? 'object-contain' : 'object-cover')}
                   // slow "Ken Burns" zoom while the slide is on screen
                   initial={false}
                   animate={{ scale: active && !reduce ? 1.07 : 1 }}

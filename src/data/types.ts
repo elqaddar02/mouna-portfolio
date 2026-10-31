@@ -68,7 +68,7 @@ export interface Project {
   slide: boolean
   /** Slideshow image; defaults to the cover. */
   slideImage: ArchImage
-  /** 'cover' fills the frame; 'contain' shows the whole image on white (for cut-out renders). */
+  /** 'cover' fills the frame; 'contain' shows the whole image over a blurred copy of itself. */
   slideFit: 'cover' | 'contain'
   order: number
   /** True while the entry is template content awaiting real information. */

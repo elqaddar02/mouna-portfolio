@@ -140,7 +140,7 @@
             },
             {
               "value": "contain",
-              "label": "Image entière sur fond blanc (images détourées)"
+              "label": "Image entière, fond flouté autour (rien n’est coupé)"
             }
           ]
         },
