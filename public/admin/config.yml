@@ -1041,6 +1041,17 @@
                   ]
                 },
                 {
+                  "name": "phone",
+                  "label": "Téléphone",
+                  "widget": "string",
+                  "required": false,
+                  "hint": "Format international, ex. +212 6 12 34 56 78. Laisser vide pour masquer la ligne.",
+                  "pattern": [
+                    "^$|^\\+?[0-9 ().-]{6,20}$",
+                    "Numéro invalide : chiffres, espaces et + uniquement"
+                  ]
+                },
+                {
                   "name": "linkedin",
                   "label": "LinkedIn (lien complet)",
                   "widget": "string",

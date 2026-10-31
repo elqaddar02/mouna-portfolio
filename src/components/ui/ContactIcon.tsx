@@ -1,4 +1,4 @@
-import { Mail, MapPin } from 'lucide-react'
+import { Mail, MapPin, Phone } from 'lucide-react'
 import type { SVGProps } from 'react'
 import type { ContactRow } from './ContactLinks'
 
@@ -26,7 +26,7 @@ function InstagramGlyph(props: IconProps) {
   )
 }
 
-const ICONS = { email: Mail, location: MapPin, linkedin: LinkedInGlyph, instagram: InstagramGlyph } as const
+const ICONS = { email: Mail, phone: Phone, location: MapPin, linkedin: LinkedInGlyph, instagram: InstagramGlyph } as const
 
 export function ContactIcon({ kind, className }: { kind: ContactRow['key']; className?: string }) {
   const Icon = ICONS[kind]

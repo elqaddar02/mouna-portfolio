@@ -182,6 +182,7 @@ export function buildContent(root = ROOT) {
     heroProject: str(p.heroProject) || null,
     contact: {
       email: str(c.email) || null,
+      phone: str(c.phone) || null,
       linkedin: str(c.linkedin) || null,
       instagram: str(c.instagram) || null,
       location: location.en || location.fr ? location : null,

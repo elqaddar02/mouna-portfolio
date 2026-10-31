@@ -20,17 +20,21 @@ export function Breakable({ text }: { text: string }) {
 }
 
 export interface ContactRow {
-  key: 'email' | 'linkedin' | 'instagram' | 'location'
+  key: 'email' | 'phone' | 'linkedin' | 'instagram' | 'location'
   value: string
   href: string | null
 }
 
 /** Contact rows that have a value; empty ones are left out entirely. */
+/** Social profiles open in a new tab; e-mail and phone hand over to the mail or call app. */
+export const isExternal = (row: ContactRow) => row.key === 'linkedin' || row.key === 'instagram'
+
 export function useContactRows(): ContactRow[] {
   const { l } = useI18n()
   const c = profile.contact
   const rows: (Omit<ContactRow, 'value'> & { value: string | null })[] = [
     { key: 'email', value: c.email, href: c.email ? `mailto:${c.email}` : null },
+    { key: 'phone', value: c.phone, href: c.phone ? `tel:${c.phone.replace(/[^+\d]/g, '')}` : null },
     { key: 'linkedin', value: c.linkedin?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') ?? null, href: c.linkedin },
     { key: 'instagram', value: c.instagram?.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '') ?? null, href: c.instagram },
     { key: 'location', value: c.location ? l(c.location) : null, href: null },
@@ -54,7 +58,7 @@ export function ContactLinks({ compact = false }: { compact?: boolean }) {
               <a
                 href={row.href}
                 className="underline decoration-2 underline-offset-4 hover:text-orange-deep"
-                {...(row.key !== 'email' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                {...(isExternal(row) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
                 <Breakable text={row.value} />
               </a>

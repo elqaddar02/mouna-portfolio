@@ -163,6 +163,7 @@ export const en = {
     lead:
       'For collaborations, internships, studio opportunities or simply a conversation about architecture.',
     email: 'Email',
+    phone: 'Phone',
     linkedin: 'LinkedIn',
     instagram: 'Instagram',
     location: 'Location',

@@ -113,6 +113,7 @@ export interface Profile {
   contact: {
     /** Set to null until provided — the UI then shows a "to be added" note instead of a dead link. */
     email: string | null
+    phone: string | null
     linkedin: string | null
     instagram: string | null
     location: Localized | null

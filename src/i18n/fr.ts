@@ -164,6 +164,7 @@ export const fr: Dictionary = {
     heading: 'Parlons-\nen.',
     lead: 'Pour une collaboration, un stage, une opportunité en agence ou simplement une discussion autour de l’architecture.',
     email: 'E-mail',
+    phone: 'Téléphone',
     linkedin: 'LinkedIn',
     instagram: 'Instagram',
     location: 'Lieu',

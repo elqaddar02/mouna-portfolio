@@ -2,7 +2,7 @@ import { ArrowUpRight, Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { ArrowLink } from '../components/ui/ArrowLink'
 import { ContactIcon } from '../components/ui/ContactIcon'
-import { Breakable, useContactRows } from '../components/ui/ContactLinks'
+import { Breakable, isExternal, useContactRows } from '../components/ui/ContactLinks'
 import { Label } from '../components/ui/Label'
 import { Lines } from '../components/ui/MultilineHeading'
 import { profile } from '../data/profile'
@@ -63,7 +63,7 @@ export default function Contact() {
                   <a
                     href={row.href}
                     className="group inline-flex max-w-full items-center gap-3 text-headline hover:text-orange-deep max-md:text-[clamp(1.1rem,5.4vw,2rem)]"
-                    {...(row.key !== 'email' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+                    {...(isExternal(row) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   >
                     {/* Long addresses (e-mail, profile URLs) may wrap instead of overflowing on phones. */}
                     <span className="min-w-0 [overflow-wrap:anywhere]">
