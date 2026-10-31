@@ -395,30 +395,7 @@ function write(path, kind, ratio, label) {
   count++
 }
 
-/* Must stay in sync with src/data/projects.ts and src/data/concepts.ts. */
-const PROJECT_SET = [
-  ['cover', 'cover', '16:9'],
-  ['thumb', 'render', '4:5'],
-  ['site', 'site', '3:2'],
-  ['concept-diagram', 'diagram', '1:1'],
-  ['sketch-01', 'sketch', '4:3'],
-  ['sketch-02', 'sketch', '3:4'],
-  ['model-01', 'model', '4:5'],
-  ['model-02', 'model', '3:2'],
-  ['render-01', 'render', '16:9'],
-  ['render-02', 'render', '3:4'],
-  ['plan-ground', 'plan', '4:3'],
-  ['plan-upper', 'plan', '4:3'],
-  ['section', 'section', '21:9'],
-  ['elevation', 'elevation', '21:9'],
-  ['detail', 'drawing', '1:1'],
-]
-// Projects 001-003 have real images; only the remaining template projects get placeholders.
-for (let p = 4; p <= 5; p++) {
-  const id = `project-00${p}`
-  for (const [name, kind, ratio] of PROJECT_SET) write(`projects/${id}/${name}.svg`, kind, ratio, `P-00${p} · ${name.toUpperCase()}`)
-}
-
+/* All projects now use real images; placeholders remain only for the concepts. Keep in sync with content/concepts. */
 const CONCEPT_SET = [
   ['concept-01', [['01', 'sketch', '3:4'], ['02', 'diagram', '1:1']]],
   ['concept-02', [['01', 'model', '4:5'], ['02', 'model', '3:2']]],

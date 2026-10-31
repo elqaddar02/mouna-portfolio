@@ -24,7 +24,7 @@ Only the **name** and **role** are real. Everything else is clearly marked templ
 
 | What | Where | How it shows on the site |
 | --- | --- | --- |
-| Projects 001–005 (academic) | `content/projects/*.json` | "Placeholder" badge, years shown as `20XX` |
+| Projects 001–003 (academic) | `content/projects/*.json` | Real content; year, tutors and some texts still to be added (empty fields are hidden) |
 | Concepts C.01–C.06 (personal) | `content/concepts/*.json` | "Placeholder" badge |
 | Biography, education, skills, software, languages | `content/profile.json` | "To be added" |
 | Email, LinkedIn, Instagram, location, CV | `content/profile.json` → `contact`, `cvUrl` | "To be added" (no dead links) |
