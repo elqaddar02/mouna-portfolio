@@ -13,6 +13,7 @@ import type { Dictionary } from '../i18n/en'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
 import { useLightbox } from '../hooks/useLightbox'
 import { fmt, useI18n } from '../i18n/useI18n'
+import { cn } from '../lib/cn'
 
 type SectionKey = keyof Dictionary['project']['sections']
 
@@ -83,7 +84,9 @@ function ProjectView({ project }: { project: Project }) {
         <div className="mt-8 grid-12 items-end gap-y-6">
           <div className="col-span-4 md:col-span-9">
             <p className="font-display text-[clamp(1.5rem,3vw,2.5rem)] font-bold leading-none text-orange-deep">{project.number}</p>
-            <h1 className="text-display mt-3 uppercase">{l(project.title)}</h1>
+            <h1 className={cn('mt-3 uppercase', l(project.title).length > 24 ? 'text-display-long' : 'text-display')}>
+              {l(project.title)}
+            </h1>
             <p className="text-lead mt-5 max-w-3xl text-concrete-ink">{l(project.subtitle)}</p>
           </div>
           <div className="col-span-4 flex flex-wrap gap-2 md:col-span-3 md:justify-end">
