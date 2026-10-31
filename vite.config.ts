@@ -16,6 +16,9 @@ function content(): Plugin {
     buildStart() {
       slugs = writeContent().projects.map((p) => p.slug)
     },
+    transformIndexHtml(html) {
+      return html.replaceAll('%SITE_URL%', SITE_URL)
+    },
     configureServer(server) {
       server.watcher.add(CONTENT_DIR)
       const rebuild = (file: string) => {

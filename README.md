@@ -1,16 +1,20 @@
 # M/E. — Mouna Elqaddar · Architecture Portfolio
 
-Bilingual (EN / FR) architecture portfolio built as an editorial, light-brutalist publication.
+Bilingual (EN / FR) architecture portfolio, built as an editorial, light-brutalist publication, with a built-in content editor at `/admin`.
 
-**Stack:** React 19 · Vite 8 · TypeScript (strict) · Tailwind CSS v4 · React Router 7 · Motion · Lucide.
-Front-end only: no backend, database or authentication.
+**Stack:** React 19 · Vite 8 · TypeScript (strict) · Tailwind CSS v4 · React Router 7 · Motion · Lucide · Sveltia CMS (editor).
+There is no backend or database. Content is stored as JSON files in this repository, and the site is hosted on Cloudflare Pages.
 
 ```bash
 npm install
-npm run dev        # local development
-npm run build      # type-check + production build (also emits sitemap.xml and robots.txt)
-npm run preview    # serve the production build
+npm run dev          # local development; rebuilds content when /content changes
+npm run build        # content check + type-check + production build (also sitemap.xml, robots.txt)
+npm run preview      # serve the production build
+npm run cms-config   # regenerate public/admin/config.yml after changing scripts/cms-config.mjs
 ```
+
+- **Going live:** see **[DEPLOY.md](DEPLOY.md)** (Cloudflare Pages and editor login, ~20 min, free).
+- **Editing content:** Mouna's guide, in French, is **[GUIDE-EDITEUR.md](GUIDE-EDITEUR.md)**.
 
 ---
 
@@ -20,105 +24,78 @@ Only the **name** and **role** are real. Everything else is clearly marked templ
 
 | What | Where | How it shows on the site |
 | --- | --- | --- |
-| Projects 001–005 | `src/data/projects.ts` | "Placeholder" badge, years shown as `20XX` |
-| Concepts C.01–C.06 | `src/data/concepts.ts` | "Placeholder" badge |
-| Biography, education, skills, software, languages | `src/data/profile.ts` | "To be added" |
-| Email, LinkedIn, Instagram, location, CV | `src/data/profile.ts` → `contact`, `cvUrl` | "To be added" (no dead links) |
+| Projects 001–005 (academic) | `content/projects/*.json` | "Placeholder" badge, years shown as `20XX` |
+| Concepts C.01–C.06 (personal) | `content/concepts/*.json` | "Placeholder" badge |
+| Biography, education, skills, software, languages | `content/profile.json` | "To be added" |
+| Email, LinkedIn, Instagram, location, CV | `content/profile.json` → `contact`, `cvUrl` | "To be added" (no dead links) |
 | All images | `public/images/**` | SVG drawings stamped **VISUAL PLACEHOLDER** |
-| Site domain | `src/config/site.ts` → `SITE_URL` | used in sitemap, canonical and Open Graph URLs |
 
-Remove the `placeholder: true` flag from an entry once its content is real; that also removes its badge.
+Unticking **"Contenu provisoire"** in the editor (`placeholder: false`) removes an entry's badge.
 
 ---
 
-## Editing content
+## How content works
 
-All content lives in typed data files. **No component needs to change** to add, edit or remove work.
-
-### Add a project
-
-Copy the full `project-001` object in `src/data/projects.ts` and change it:
-
-```ts
-{
-  id: 'project-006',
-  slug: 'riverside-library',          // → /works/riverside-library
-  number: '006',
-  title: { en: 'Riverside Library', fr: 'Bibliothèque des berges' },
-  category: 'cultural',               // residential | cultural | public | urban | interior | experimental
-  projectType: 'academic',            // academic | personal (the "origin" filter)
-  format: 'studio',                   // studio | competition | workshop | thesis | self-initiated
-  year: '2025',
-  featured: true,                     // shown on the homepage
-  order: 6,                           // position in the archive
-  gallery: [ /* renders, sketches, diagrams, models, site */ ],
-  drawings: [ /* plans, sections, elevations, details */ ],
-  // …text fields, each { en, fr }
-}
+```
+content/                      ← edited at /admin, or by hand
+  projects/<slug>.json          academic projects only (personal work goes to concepts)
+  concepts/<slug>.json
+  profile.json
+        │
+        ▼  scripts/content.mjs  (runs before dev and build)
+        │    · validates everything (allowed categories, formats, image types, slugs, files exist)
+        │    · measures every image, so editors never enter pixel sizes
+        ▼
+src/data/generated/content.json  (git-ignored) → src/data/{projects,concepts,profile}.ts → pages
 ```
 
-The project page builds its sections from the data: **Site analysis, Sketches & diagrams, Technical drawings, Floor plans, Sections & elevations, Physical models, Final visualisations**. Each image goes into a section by its `imageType`. Sections with no text and no images are skipped automatically.
+- **Invalid content fails the build** with a readable list of problems. On Cloudflare the previous version stays online, so a bad edit never breaks the site.
+- **Project pages are built from the data.** An image's `imageType` decides its section (Site analysis, Sketches & diagrams, Technical drawings, Floor plans, Sections & elevations, Physical models, Final visualisations). Empty sections are skipped and the numbering closes up.
+- **Bilingual fields are `{ "en": "…", "fr": "…" }`.** If one language is empty, the other is shown.
+
+### The editor (`/admin`)
+
+- `public/admin/index.html` loads Sveltia CMS (pinned version) from a CDN.
+- `public/admin/config.yml` is **generated** by `scripts/cms-config.mjs` from the same allowed values the content build checks, with the French labels from `src/i18n/fr.ts`. The editor can't offer a value the build would reject.
+- Uploaded photos are converted to WebP and capped at 2800 px.
+- Every save in the editor is a commit to `main`, and Cloudflare Pages redeploys automatically.
 
 ### Images
 
 ```
 public/images/
+  projects/     project images (editor uploads land here)
+  concepts/     concept images
   profile/      hero, portrait
-  projects/
-    project-001/  cover, thumb, site, sketches, models, renders, plans, sections…
-  concepts/
-  sketches/
-  drawings/
+  sketches/  drawings/   spare folders
+public/cv/      CV PDF (editor uploads land here)
 ```
 
-Use the `image()` helper. For real files, pass the true pixel size so the layout never shifts:
-
-```ts
-image('/images/projects/project-006/cover.webp', 'cover', '16:9',
-  { en: 'Library seen from the river at dusk', fr: 'La bibliothèque depuis la rivière au crépuscule' },
-  { en: 'Final visualisation', fr: 'Visualisation finale' },
-  { size: [2400, 1350], placeholder: false })
-```
-
-- Prefer **WebP or AVIF**, about 2400 px on the long edge for full-width images. Add a `srcSet` for several sizes.
-- `aspectRatio` controls the layout. Drawings are never cropped on project pages.
-- Write alt text that describes the image itself, in both languages.
-
-### Contact details and CV
-
-In `src/data/profile.ts`:
-
-```ts
-contact: {
-  email: 'name@example.com',
-  linkedin: 'https://www.linkedin.com/in/…',
-  instagram: 'https://www.instagram.com/…',
-  location: { en: 'City, Country', fr: 'Ville, Pays' },
-},
-cvUrl: '/cv/mouna-elqaddar-cv.pdf',   // put the PDF in public/cv/
-```
+Use original images only. Placeholders can be regenerated with `npm run placeholders`.
 
 ### Interface text
 
-UI strings live in `src/i18n/en.ts` and `src/i18n/fr.ts`. TypeScript enforces that both files have the same keys. A `\n` in a heading marks a deliberate line break.
+UI strings (navigation, buttons, headings) live in `src/i18n/en.ts` and `src/i18n/fr.ts`. TypeScript enforces that both files have the same keys. A `\n` in a heading marks a deliberate line break.
+
+### Adding a category or format
+
+Add the value to `ENUMS` in `scripts/content.mjs`, to the matching type in `src/data/types.ts`, and its labels to `src/i18n/en.ts` and `src/i18n/fr.ts`. Then run `npm run cms-config`.
 
 ### Social images
 
-`public/og-image.png` and `public/apple-touch-icon.png` are rendered with the site's fonts:
-
-```bash
-node scripts/generate-social.cjs     # needs Playwright + Chromium
-npm run placeholders                 # regenerates the SVG placeholders
-```
+`public/og-image.png` and `public/apple-touch-icon.png` are rendered with the site's fonts by `node scripts/generate-social.cjs` (needs Playwright and Chromium).
 
 ---
 
 ## Structure
 
 ```
+content/         CMS-editable JSON (projects, concepts, profile)
+scripts/         content.mjs (validate + build content) · cms-config.mjs · generate-placeholders.mjs · generate-social.cjs
+public/admin/    editor (index.html + generated config.yml)
 src/
-  config/        site URL, navigation
-  data/          types.ts · projects.ts · concepts.ts · profile.ts · images.ts
+  config/        site URL (single source), navigation
+  data/          types.ts · projects.ts · concepts.ts · profile.ts (typed views of the generated content)
   i18n/          provider, en/fr dictionaries
   hooks/         useDocumentMeta (title/SEO), useLightbox
   components/
@@ -135,10 +112,10 @@ src/
 ## Behaviour notes
 
 - The language choice is stored in `localStorage` and applied to `<html lang>`, page titles and meta tags.
-- Works filters live in the URL (`/works?category=cultural&origin=academic&view=index`), so filtered views can be shared.
+- Works shows academic projects only. Its filters (category, format, grid/index view) live in the URL, e.g. `/works?category=cultural&view=index`.
 - Gallery: arrow keys, swipe, Esc, focus trap and focus return.
 - All animation respects `prefers-reduced-motion`.
 
 ## Deployment
 
-It's a single-page app, so the host must send unknown paths to `index.html`. `public/_redirects` (Netlify) and `vercel.json` (Vercel) are included. Before going live, set `SITE_URL` in `src/config/site.ts` and the matching URLs in `index.html`.
+The site is hosted on **Cloudflare Pages**. Build command `npm run build`, output `dist`, Node 22 (see `.node-version`). Cloudflare serves the single-page app natively, so no redirect file is needed. The site address is set once, in `src/config/site.ts`. Full steps, including the editor login, are in **[DEPLOY.md](DEPLOY.md)**.
