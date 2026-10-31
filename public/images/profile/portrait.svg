@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500">
+<rect width="1200" height="1500" fill="#E7E4DB"/>
+<rect x="120" y="120" width="960" height="1200" fill="#D3D0C8" stroke="#171717" stroke-width="2"/>
+<circle cx="600" cy="570" r="192" fill="#B8B5AD" stroke="#171717" stroke-width="2"/>
+<path d="M240 1320 C 264 900, 936 900, 960 1320" fill="#B8B5AD" stroke="#171717" stroke-width="2"/>
+<line x1="120" y1="120" x2="1080" y2="1320" stroke="#171717" stroke-width="1" opacity=".3"/>
+<line x1="1080" y1="120" x2="120" y2="1320" stroke="#171717" stroke-width="1" opacity=".3"/>
+<g font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="14" letter-spacing="1">
+<rect x="36" y="1433.2" width="274.1" height="30.8" fill="#F1EFE8" stroke="#171717" stroke-width="2"/>
+<rect x="36" y="1433.2" width="8.4" height="30.8" fill="#F15A24"/>
+<text x="51.4" y="1453.5" fill="#171717">VISUAL PLACEHOLDER — PORTRAIT</text>
+<text x="1164" y="50" fill="#171717" text-anchor="end" opacity=".7">1200×1500 · REPLACE WITH ORIGINAL</text>
+</g>
+</svg>

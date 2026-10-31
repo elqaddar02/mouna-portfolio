@@ -1,0 +1,139 @@
+export type Lang = 'en' | 'fr'
+export const LANGS: readonly Lang[] = ['en', 'fr']
+
+/** A string supplied in every supported language. */
+export type Localized = Record<Lang, string>
+
+export type ProjectCategory = 'residential' | 'cultural' | 'public' | 'urban' | 'interior' | 'experimental'
+
+/** Origin of the work — university studio or self-initiated. */
+export type ProjectOrigin = 'academic' | 'personal'
+
+/** The kind of brief the project answered. */
+export type ProjectFormat = 'studio' | 'competition' | 'workshop' | 'thesis' | 'self-initiated'
+
+export type ImageType =
+  | 'cover'
+  | 'render'
+  | 'photo'
+  | 'site'
+  | 'sketch'
+  | 'diagram'
+  | 'model'
+  | 'plan'
+  | 'section'
+  | 'elevation'
+  | 'drawing'
+
+export type AspectRatio = '16:9' | '21:9' | '3:2' | '4:3' | '1:1' | '4:5' | '3:4' | '2:3'
+
+export interface ArchImage {
+  src: string
+  /** Optional responsive sources, e.g. "img-800.webp 800w, img-1600.webp 1600w". */
+  srcSet?: string
+  alt: Localized
+  caption?: Localized
+  imageType: ImageType
+  aspectRatio: AspectRatio
+  /** Intrinsic pixel size — prevents layout shift. */
+  width: number
+  height: number
+  /** True while the file is a generated visual placeholder, not original work. */
+  placeholder?: boolean
+}
+
+export interface MetaEntry {
+  label: Localized
+  value: Localized
+}
+
+export interface Project {
+  id: string
+  slug: string
+  /** Display number, e.g. "001". */
+  number: string
+  title: Localized
+  subtitle: Localized
+  category: ProjectCategory
+  year: string
+  location: Localized
+  projectType: ProjectOrigin
+  format: ProjectFormat
+  coverImage: ArchImage
+  thumbnailImage: ArchImage
+  shortDescription: Localized
+  fullDescription: Localized
+  architecturalConcept: Localized
+  siteAnalysis: Localized
+  designProcess: Localized
+  /** Renders, photos, site, sketches, diagrams and model images. */
+  gallery: ArchImage[]
+  /** Plans, sections, elevations and technical details. */
+  drawings: ArchImage[]
+  /** Extra fact-sheet rows (studio, tutor, programme, area…). */
+  meta?: MetaEntry[]
+  featured: boolean
+  order: number
+  /** True while the entry is template content awaiting real information. */
+  placeholder?: boolean
+}
+
+export type ConceptKind = 'form' | 'space' | 'material' | 'sketch' | 'proposal' | 'diagram'
+
+export interface Concept {
+  id: string
+  slug: string
+  number: string
+  title: Localized
+  kind: ConceptKind
+  year: string
+  medium: Localized
+  description: Localized
+  images: ArchImage[]
+  order: number
+  placeholder?: boolean
+}
+
+export interface SoftwareGroup {
+  category: Localized
+  /** Software names. Leave empty until confirmed. */
+  tools: string[]
+}
+
+export interface EducationEntry {
+  period: string
+  institution: Localized
+  programme: Localized
+  note?: Localized
+}
+
+export interface LanguageSkill {
+  name: Localized
+  level: Localized
+}
+
+export interface Profile {
+  name: string
+  role: Localized
+  shortBio: Localized
+  longBio: Localized[]
+  philosophy: Localized[]
+  interests: Localized[]
+  education: EducationEntry[]
+  skills: Localized[]
+  software: SoftwareGroup[]
+  languages: LanguageSkill[]
+  portrait: ArchImage
+  heroImage: ArchImage
+  heroImageWide: ArchImage
+  contact: {
+    /** Set to null until provided — the UI then shows a "to be added" note instead of a dead link. */
+    email: string | null
+    linkedin: string | null
+    instagram: string | null
+    location: Localized | null
+  }
+  /** Path to a PDF in /public, e.g. "/cv/mouna-elqaddar-cv.pdf". Null hides the download link. */
+  cvUrl: string | null
+  placeholder?: boolean
+}
