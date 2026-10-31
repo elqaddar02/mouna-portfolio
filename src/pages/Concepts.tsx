@@ -81,7 +81,7 @@ function ConceptSpread({ concept, flip, indexOf, onOpen }: SpreadProps) {
   return (
     <article id={concept.slug} aria-labelledby={`${concept.slug}-title`} className="frame grid-12 gap-y-10 border-b-2 border-ink py-16 md:py-28">
       {/* Image composition — the second image overlaps the first */}
-      <div className={cn('relative col-span-4 md:col-span-7', flip && 'md:order-2 md:col-start-6')}>
+      <div className={cn('relative col-span-4 md:col-span-6 lg:col-span-7', flip && 'md:order-2 md:col-start-7 lg:col-start-6')}>
         <div className={cn('border-2 border-ink', second && 'md:w-[82%]', flip && 'md:ml-auto')}>
           <Figure image={main} index={indexOf(main)} onOpen={() => onOpen(indexOf(main))} sizes="(min-width: 768px) 50vw, 100vw" />
         </div>
@@ -98,7 +98,7 @@ function ConceptSpread({ concept, flip, indexOf, onOpen }: SpreadProps) {
       </div>
 
       {/* Text column */}
-      <Reveal className={cn('col-span-4 flex flex-col md:col-span-4', flip ? 'md:order-1 md:col-start-1' : 'md:col-start-9')}>
+      <Reveal className={cn('col-span-4 flex flex-col md:col-span-6 lg:col-span-4', flip ? 'md:order-1 md:col-start-1' : 'md:col-start-7 lg:col-start-9')}>
         <p className="text-outline font-display text-[clamp(4.5rem,11vw,10rem)] font-bold leading-[0.8] tracking-tight">
           {concept.number}
         </p>
@@ -106,7 +106,7 @@ function ConceptSpread({ concept, flip, indexOf, onOpen }: SpreadProps) {
           <span className="text-label bg-orange px-2 py-1 text-[0.65rem]">{t.concepts.selfInitiated}</span>
           <span className="text-label border-2 border-ink px-2 py-0.5 text-[0.65rem]">{t.conceptKinds[concept.kind]}</span>
         </div>
-        <h2 id={`${concept.slug}-title`} className="text-headline mt-5">
+        <h2 id={`${concept.slug}-title`} className="text-headline mt-5 hyphens-auto break-words">
           {l(concept.title)}
         </h2>
         <dl className="mt-6 grid grid-cols-2 border-y-2 border-ink">

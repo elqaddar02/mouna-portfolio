@@ -177,3 +177,12 @@
 .animate-scroll-line {
   animation: scroll-line 2.4s var(--ease-arch) infinite;
 }
+
+/* Long words (notably in French) must never push past their column. */
+@layer base {
+  h1,
+  h2,
+  h3 {
+    overflow-wrap: break-word;
+  }
+}
