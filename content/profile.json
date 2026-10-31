@@ -167,19 +167,13 @@
     }
   },
   "heroImage": {
-    "src": "/images/profile/hero.svg",
+    "src": "/images/projects/project-002/cover.webp",
     "alt": {
-      "en": "Featured architectural image (placeholder)",
-      "fr": "Image architecturale principale (provisoire)"
+      "fr": "Visualisation d’un bâtiment en pierre claire aux volumes décalés, avec des façades vitrées voilées de lames verticales couleur cuivre, sur une grande place ; l’enseigne indique « المكتبة الوطنية تونس »",
+      "en": "Visualisation of a pale stone building of offset volumes, its glazed façades veiled by copper-coloured vertical fins, on a wide public square; the sign reads “المكتبة الوطنية تونس” (National Library, Tunis)"
     }
   },
-  "heroImageWide": {
-    "src": "/images/profile/hero-wide.svg",
-    "alt": {
-      "en": "Featured architectural image (placeholder)",
-      "fr": "Image architecturale principale (provisoire)"
-    }
-  },
+  "heroProject": "project-002",
   "contact": {
     "email": "",
     "linkedin": "",

@@ -85,6 +85,7 @@ export const fr: Dictionary = {
     heroTagline2: 'Explorer la forme.',
     heroLead: 'Une exploration visuelle de l’architecture, de la matière, de l’espace et de l’expérience humaine.',
     heroCta: 'Projets choisis',
+    heroFigure: 'Fig. 01',
     introLabel: 'Introduction',
     introLink: 'En savoir plus',
     statProjects: 'Projets académiques',

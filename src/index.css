@@ -29,6 +29,17 @@
   letter-spacing: -0.055em;
   font-weight: 700;
 }
+/* Homepage name: two lines on phones, one line from tablet up (fitted to the frame width). */
+@utility text-hero {
+  font-family: var(--font-display);
+  font-size: clamp(3.2rem, 16vw, 7rem);
+  line-height: 0.86;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+  @media (width >= 48rem) {
+    font-size: 10.8vw;
+  }
+}
 @utility text-display {
   font-family: var(--font-display);
   font-size: clamp(2.75rem, 9vw, 9.5rem);

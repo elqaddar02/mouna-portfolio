@@ -1136,7 +1136,7 @@
               "label": "Image principale (accueil)",
               "widget": "object",
               "required": true,
-              "hint": "Format vertical conseillé (4:5).",
+              "hint": "Grande image horizontale en haut de l’accueil — choisir le meilleur rendu.",
               "fields": [
                 {
                   "name": "src",
@@ -1169,40 +1169,21 @@
               ]
             },
             {
-              "name": "heroImageWide",
-              "label": "Image principale — version horizontale (optionnelle)",
-              "widget": "object",
+              "name": "heroProject",
+              "label": "Projet lié à l’image principale",
+              "widget": "relation",
+              "collection": "projects",
+              "value_field": "slug",
+              "search_fields": [
+                "slug",
+                "number"
+              ],
+              "display_fields": [
+                "number",
+                "slug"
+              ],
               "required": false,
-              "fields": [
-                {
-                  "name": "src",
-                  "label": "Image",
-                  "widget": "image",
-                  "required": false,
-                  "choose_url": false
-                },
-                {
-                  "name": "alt",
-                  "label": "Description de l’image",
-                  "widget": "object",
-                  "required": false,
-                  "hint": "Décrire ce que montre l’image, pour les personnes malvoyantes et le référencement.",
-                  "fields": [
-                    {
-                      "name": "fr",
-                      "label": "Français",
-                      "widget": "string",
-                      "required": false
-                    },
-                    {
-                      "name": "en",
-                      "label": "English",
-                      "widget": "string",
-                      "required": false
-                    }
-                  ]
-                }
-              ]
+              "hint": "Un clic sur l’image principale ouvre ce projet ; son numéro et son titre s’affichent en légende."
             },
             {
               "name": "portrait",

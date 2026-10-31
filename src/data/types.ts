@@ -115,8 +115,10 @@ export interface Profile {
   software: SoftwareGroup[]
   languages: LanguageSkill[]
   portrait: ArchImage
+  /** Large homepage image (landscape). */
   heroImage: ArchImage
-  heroImageWide: ArchImage
+  /** Slug of the project the homepage image opens; null for no link. */
+  heroProject: string | null
   contact: {
     /** Set to null until provided — the UI then shows a "to be added" note instead of a dead link. */
     email: string | null

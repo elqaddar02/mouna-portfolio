@@ -197,7 +197,7 @@ export function buildContent(root = ROOT) {
     })),
     portrait: image(p.portrait, `${pf} portrait`, 'photo'),
     heroImage,
-    heroImageWide: p.heroImageWide?.src ? image(p.heroImageWide, `${pf} heroImageWide`, 'render') : heroImage,
+    heroProject: str(p.heroProject) || null,
     contact: {
       email: str(c.email) || null,
       linkedin: str(c.linkedin) || null,
@@ -208,6 +208,7 @@ export function buildContent(root = ROOT) {
     placeholder: p.placeholder === true,
   }
   if (!profile.name) fail(pf, 'name is required')
+  if (profile.heroProject && !projectSlugs.has(profile.heroProject)) fail(pf, `heroProject "${profile.heroProject}" is not an existing project slug`)
 
   if (errors.length) {
     const err = new Error(`Content has ${errors.length} problem(s):\n  • ${errors.join('\n  • ')}`)

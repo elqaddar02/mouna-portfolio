@@ -83,6 +83,7 @@ export const en = {
     heroTagline2: 'Exploring form.',
     heroLead: 'A visual exploration of architecture, material, space, and human experience.',
     heroCta: 'Selected works',
+    heroFigure: 'Fig. 01',
     introLabel: 'Introduction',
     introLink: 'More about Mouna',
     statProjects: 'Academic projects',

@@ -3,14 +3,15 @@ import { sortedProjects } from '../../data/projects'
 import { useI18n } from '../../i18n/useI18n'
 import { ArrowLink } from '../ui/ArrowLink'
 import { Label } from '../ui/Label'
-import { PlaceholderBadge } from '../ui/PlaceholderBadge'
 import { Reveal } from '../ui/Reveal'
 
 export function Intro() {
   const { t, l } = useI18n()
+  // Count published work only; template entries don't count.
+  const real = sortedProjects.filter((p) => !p.placeholder)
   const stats = [
-    [String(sortedProjects.length).padStart(2, '0'), t.home.statProjects],
-    [String(new Set(sortedProjects.map((p) => p.category)).size).padStart(2, '0'), t.home.statCategories],
+    [String(real.length).padStart(2, '0'), t.home.statProjects],
+    [String(new Set(real.map((p) => p.category)).size).padStart(2, '0'), t.home.statCategories],
     ['02', t.home.statLanguages],
   ] as const
 
@@ -23,10 +24,10 @@ export function Intro() {
       </div>
 
       <Reveal className="col-span-4 md:col-span-9">
-        <p className="text-lead max-w-4xl">{l(profile.shortBio)}</p>
-        {profile.placeholder && <PlaceholderBadge long className="mt-5" />}
+        {/* The biography appears once Mouna's real text replaces the template. */}
+        {!profile.placeholder && <p className="text-lead mb-10 max-w-4xl">{l(profile.shortBio)}</p>}
 
-        <ul className="mt-10 flex flex-wrap gap-x-3 gap-y-2 font-mono text-sm uppercase tracking-wider">
+        <ul className="flex flex-wrap gap-x-3 gap-y-2 font-mono text-sm uppercase tracking-wider">
           {t.home.disciplines.map((d, i) => (
             <li key={d} className="flex items-center gap-3">
               {i > 0 && <span aria-hidden="true" className="text-orange">/</span>}
