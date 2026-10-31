@@ -5,7 +5,7 @@ export const fr: Dictionary = {
   meta: {
     siteTitle: 'Mouna Elqaddar — Architecture',
     homeDescription:
-      'Portfolio d’architecture de Mouna Elqaddar, étudiante en architecture — projets universitaires, concepts personnels et explorations spatiales.',
+      'Portfolio d’architecture de Mouna Elqaddar, étudiante en architecture — projets académiques, dessins et explorations spatiales.',
     worksTitle: 'Projets',
     worksDescription: 'Archive des projets d’architecture académiques de Mouna Elqaddar — ateliers, workshops et concours.',
     conceptsTitle: 'Concepts',
@@ -87,14 +87,12 @@ export const fr: Dictionary = {
     heroCta: 'Projets choisis',
     introLabel: 'Introduction',
     introLink: 'En savoir plus',
+    statProjects: 'Projets académiques',
+    statCategories: 'Catégories',
+    statLanguages: 'Langues',
     disciplines: ['Architecture', 'Matière', 'Espace', 'Expérience humaine'],
     worksLabel: 'Projets choisis',
     worksHeading: 'Projets\nchoisis',
-    conceptsLabel: 'Concepts personnels',
-    conceptsHeading: 'Au-delà\nde l’atelier',
-    conceptsLead:
-      'Des explorations personnelles — formes abstraites, expérimentations spatiales et études de matière menées en dehors du cursus universitaire.',
-    conceptsCta: 'Découvrir les concepts',
     closingLabel: 'Contact',
     closingHeading: 'Parlons\nd’espace.',
     closingLead: 'Disponible pour échanges, collaborations, stages et discussions autour de l’architecture.',

@@ -1,5 +1,4 @@
 import { Closing } from '../components/home/Closing'
-import { ConceptsTeaser } from '../components/home/ConceptsTeaser'
 import { Hero } from '../components/home/Hero'
 import { Intro } from '../components/home/Intro'
 import { SelectedWorks } from '../components/home/SelectedWorks'
@@ -14,7 +13,6 @@ export default function Home() {
       <Hero />
       <Intro />
       <SelectedWorks />
-      <ConceptsTeaser />
       <Closing />
     </>
   )

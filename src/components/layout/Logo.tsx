@@ -1,16 +1,37 @@
 import { cn } from '../../lib/cn'
 
-/** M/E. wordmark — the orange full stop is the identity's single accent. */
-export function Logo({ inverse = false, className }: { inverse?: boolean; className?: string }) {
-  return (
-    <span
-      className={cn(
-        'font-display text-[1.6rem] font-bold leading-none tracking-[-0.06em]',
-        inverse ? 'text-paper' : 'text-ink',
-        className,
-      )}
-    >
-      M<span className="mx-[0.04em] font-medium">/</span>E<span className="text-orange">.</span>
-    </span>
+/** Brand name as written in Mouna's logo. */
+export const BRAND = 'M.ELQADD’ARTchitects'
+
+interface LogoProps {
+  /** Light artwork for dark backgrounds. */
+  inverse?: boolean
+  /** Mark with lettering (footer) instead of the mark alone (header). */
+  full?: boolean
+  className?: string
+}
+
+/**
+ * Mouna's logo, redrawn in the site palette by scripts/brand/build.py:
+ * concrete M + ink line-work on paper, or dark M + paper line-work on ink.
+ */
+export function Logo({ inverse = false, full = false, className }: LogoProps) {
+  const variant = inverse ? 'dark' : 'light'
+  return full ? (
+    <img
+      src={`/brand/logo-${variant}.webp`}
+      alt={BRAND}
+      width={760}
+      height={625}
+      className={cn('h-auto w-56', className)}
+    />
+  ) : (
+    <img
+      src={`/brand/mark-${variant}.webp`}
+      alt={BRAND}
+      width={206}
+      height={176}
+      className={cn('h-12 w-auto', className)}
+    />
   )
 }

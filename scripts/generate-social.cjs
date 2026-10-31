@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Renders public/og-image.png (1200×630) and public/apple-touch-icon.png (180×180)
+ * Renders public/og-image.png (1200×630) with the site's fonts and Mouna's logo.
+ * (Icons are produced by scripts/brand/build.py.)
  * with the site's own fonts. Requires Playwright with Chromium available:
  *   node scripts/generate-social.cjs
  */
@@ -29,24 +30,18 @@ h1 { font-size: 150px; line-height: .84; letter-spacing: -.055em; font-weight: 7
 .dot { color: #F15A24; }
 .bottom { margin-top: auto; display: flex; justify-content: space-between; align-items: end; }
 .tag { font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; text-transform: uppercase; }
-.logo { font-size: 56px; font-weight: 700; letter-spacing: -.06em; }
+.logo { height: 150px; display: block; }
 </style></head><body>
 <div class="top mono"><span>(A-000) Portfolio</span><span>Architecture Student</span><span>EN / FR</span></div>
 <h1>MOUNA<br>ELQADDAR<span class="dot">.</span></h1>
-<div class="bottom"><div class="tag">Designing spaces.<br><span style="color:#5F5C56">Exploring form.</span></div><div class="logo">M/E<span class="dot">.</span></div></div>
+<div class="bottom"><div class="tag">Designing spaces.<br><span style="color:#5F5C56">Exploring form.</span></div><img class="logo" src="${pathToFileURL(join(root, 'public', 'brand', 'logo-light.png')).href}" alt=""></div>
 </body></html>`
 
-const icon = `<html><head><style>${css}
-body { width: 180px; height: 180px; background: #171717; color: #F1EFE8; display: grid; place-items: center; }
-.logo { font-size: 74px; font-weight: 700; letter-spacing: -.06em; }
-.dot { color: #F15A24; }
-</style></head><body><div class="logo">M/E<span class="dot">.</span></div></body></html>`
 
 ;(async () => {
   const browser = await chromium.launch()
   for (const [html, w, h, out] of [
     [og, 1200, 630, 'og-image.png'],
-    [icon, 180, 180, 'apple-touch-icon.png'],
   ]) {
     const page = await browser.newPage({ viewport: { width: w, height: h } })
     // Loaded from a file (not setContent) so the file:// font URLs are allowed.

@@ -285,8 +285,8 @@ const config = {
   backend: { name: 'github', repo: REPO, branch: BRANCH, base_url: AUTH_BASE_URL },
   site_url: SITE_URL,
   display_url: SITE_URL,
-  app_title: 'M/E. — Éditeur du portfolio',
-  logo_url: '/favicon.svg',
+  app_title: 'M.ELQADD’ARTchitects — Éditeur du portfolio',
+  logo_url: '/brand/icon-512.png',
   media_folder: '/public/images/uploads',
   public_folder: '/images/uploads',
   media_libraries: {

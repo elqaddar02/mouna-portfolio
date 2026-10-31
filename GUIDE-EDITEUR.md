@@ -1,4 +1,4 @@
-# Guide de l’éditeur — portfolio M/E.
+# Guide de l’éditeur — portfolio M.ELQADD’ARTchitects
 
 Ce guide explique comment modifier le portfolio sans toucher au code : ajouter un projet, changer un texte ou remplacer une image.
 

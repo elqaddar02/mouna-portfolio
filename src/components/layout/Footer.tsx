@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="border-t-2 border-ink bg-paper">
       <div className="frame grid-12 gap-y-10 py-12 md:py-16">
         <div className="col-span-4 md:col-span-5">
-          <Logo className="text-[3rem]" />
+          <Logo full />
           <p className="mt-4 max-w-xs text-sm text-concrete-ink">
             {profile.name} — {l(profile.role)}
           </p>

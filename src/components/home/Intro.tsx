@@ -1,4 +1,3 @@
-import { sortedConcepts } from '../../data/concepts'
 import { profile } from '../../data/profile'
 import { sortedProjects } from '../../data/projects'
 import { useI18n } from '../../i18n/useI18n'
@@ -10,9 +9,9 @@ import { Reveal } from '../ui/Reveal'
 export function Intro() {
   const { t, l } = useI18n()
   const stats = [
-    [String(sortedProjects.length).padStart(2, '0'), t.nav.works],
-    [String(sortedConcepts.length).padStart(2, '0'), t.nav.concepts],
-    ['02', t.nav.language],
+    [String(sortedProjects.length).padStart(2, '0'), t.home.statProjects],
+    [String(new Set(sortedProjects.map((p) => p.category)).size).padStart(2, '0'), t.home.statCategories],
+    ['02', t.home.statLanguages],
   ] as const
 
   return (

@@ -3,7 +3,7 @@ export const en = {
   meta: {
     siteTitle: 'Mouna Elqaddar — Architecture',
     homeDescription:
-      'Architecture portfolio of Mouna Elqaddar, architecture student — university projects, personal concepts and spatial explorations.',
+      'Architecture portfolio of Mouna Elqaddar, architecture student — academic projects, drawings and spatial explorations.',
     worksTitle: 'Works',
     worksDescription: 'Archive of academic architecture projects by Mouna Elqaddar — design studios, workshops and competitions.',
     conceptsTitle: 'Concepts',
@@ -85,14 +85,12 @@ export const en = {
     heroCta: 'Selected works',
     introLabel: 'Introduction',
     introLink: 'More about Mouna',
+    statProjects: 'Academic projects',
+    statCategories: 'Categories',
+    statLanguages: 'Languages',
     disciplines: ['Architecture', 'Material', 'Space', 'Human experience'],
     worksLabel: 'Selected works',
     worksHeading: 'Selected\nWorks',
-    conceptsLabel: 'Personal concepts',
-    conceptsHeading: 'Beyond\nthe studio',
-    conceptsLead:
-      'Self-initiated explorations — abstract forms, spatial experiments and material studies developed independently of university coursework.',
-    conceptsCta: 'Explore concepts',
     closingLabel: 'Contact',
     closingHeading: 'Let’s talk\nspace.',
     closingLead: 'Open to conversations, collaborations, internships and exchanges about architecture.',

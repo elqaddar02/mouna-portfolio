@@ -11,7 +11,7 @@ export function Closing() {
   return (
     <section aria-labelledby="closing-title" className="relative overflow-hidden bg-orange text-ink">
       <div className="frame py-20 md:py-32">
-        <Label index={4}>{t.home.closingLabel}</Label>
+        <Label index={3}>{t.home.closingLabel}</Label>
         <Reveal>
           <h2 id="closing-title" className="text-mega mt-8 uppercase">
             <Lines text={t.home.closingHeading} />

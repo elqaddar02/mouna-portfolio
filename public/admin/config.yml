@@ -9,8 +9,8 @@
   },
   "site_url": "https://mouna-portfolio.pages.dev",
   "display_url": "https://mouna-portfolio.pages.dev",
-  "app_title": "M/E. — Éditeur du portfolio",
-  "logo_url": "/favicon.svg",
+  "app_title": "M.ELQADD’ARTchitects — Éditeur du portfolio",
+  "logo_url": "/brand/icon-512.png",
   "media_folder": "/public/images/uploads",
   "public_folder": "/images/uploads",
   "media_libraries": {

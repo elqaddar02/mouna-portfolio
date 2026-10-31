@@ -1,4 +1,4 @@
-# M/E. — Mouna Elqaddar · Architecture Portfolio
+# M.ELQADD’ARTchitects — Mouna Elqaddar · Architecture Portfolio
 
 Bilingual (EN / FR) architecture portfolio, built as an editorial, light-brutalist publication, with a built-in content editor at `/admin`.
 
