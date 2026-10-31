@@ -207,6 +207,16 @@
   "meta": [
     {
       "label": {
+        "fr": "École",
+        "en": "School"
+      },
+      "value": {
+        "fr": "École Nationale d’Architecture et d’Urbanisme de Tunis (ENAU)",
+        "en": "National School of Architecture and Urbanism of Tunis (ENAU)"
+      }
+    },
+    {
+      "label": {
         "fr": "Atelier / Cours",
         "en": "Studio / Course"
       },
