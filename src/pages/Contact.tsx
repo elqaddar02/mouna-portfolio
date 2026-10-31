@@ -1,7 +1,7 @@
 import { ArrowUpRight, Check, Copy } from 'lucide-react'
 import { useState } from 'react'
 import { ArrowLink } from '../components/ui/ArrowLink'
-import { useContactRows } from '../components/ui/ContactLinks'
+import { Breakable, useContactRows } from '../components/ui/ContactLinks'
 import { Label } from '../components/ui/Label'
 import { Lines } from '../components/ui/MultilineHeading'
 import { profile } from '../data/profile'
@@ -58,10 +58,13 @@ export default function Contact() {
                 {row.value && row.href ? (
                   <a
                     href={row.href}
-                    className="group inline-flex items-center gap-3 text-headline hover:text-orange-deep"
+                    className="group inline-flex max-w-full items-center gap-3 text-headline hover:text-orange-deep max-md:text-[clamp(1.1rem,5.4vw,2rem)]"
                     {...(row.key !== 'email' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
                   >
-                    {row.value}
+                    {/* Long addresses (e-mail, profile URLs) may wrap instead of overflowing on phones. */}
+                    <span className="min-w-0 [overflow-wrap:anywhere]">
+                      <Breakable text={row.value} />
+                    </span>
                     <ArrowUpRight className="size-[0.7em] shrink-0 transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" aria-hidden="true" />
                   </a>
                 ) : row.value ? (

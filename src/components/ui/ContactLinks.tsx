@@ -1,6 +1,22 @@
+import { Fragment } from 'react'
 import { profile } from '../../data/profile'
 import { useI18n } from '../../i18n/useI18n'
 import { cn } from '../../lib/cn'
+
+/** Lets long addresses wrap only at natural points: before "@" and after "/". */
+export function Breakable({ text }: { text: string }) {
+  const parts = text.split(/(?=@)|(?<=\/)/)
+  return (
+    <>
+      {parts.map((p, i) => (
+        <Fragment key={i}>
+          {i > 0 && <wbr />}
+          {p}
+        </Fragment>
+      ))}
+    </>
+  )
+}
 
 export interface ContactRow {
   key: 'email' | 'linkedin' | 'instagram' | 'location'
@@ -35,7 +51,7 @@ export function ContactLinks({ compact = false }: { compact?: boolean }) {
                 className="underline decoration-2 underline-offset-4 hover:text-orange-deep"
                 {...(row.key !== 'email' ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
               >
-                {row.value}
+                <Breakable text={row.value} />
               </a>
             ) : row.value ? (
               row.value

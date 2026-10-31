@@ -27,12 +27,12 @@
     }
   },
   "shortDescription": {
-    "fr": "",
-    "en": ""
+    "fr": "Une bibliothèque nationale à Tunis, sur six niveaux au-dessus d’un parking : salles de lecture, rayonnages ouverts et fermés, auditorium, laboratoires de conservation et café en terrasse.",
+    "en": "A national library in Tunis, on six levels above a parking basement: reading rooms, open and closed stacks, an auditorium, conservation laboratories and a terrace café."
   },
   "fullDescription": {
-    "fr": "",
-    "en": ""
+    "fr": "Le projet s’organise sur un sous-sol de stationnement, un rez-de-chaussée et cinq étages. Il réunit un hall d’accueil avec catalogues électroniques, un espace enfants, un foyer et un café avec terrasse, un auditorium, des rayonnages fermés et des rayonnages ouverts de livres et de périodiques, des salles de lecture, des espaces polyvalents et multimédia, des laboratoires de recherche et de conservation, ainsi que l’administration.",
+    "en": "The project is organised over a parking basement, a ground floor and five upper floors. It brings together an entrance hall with electronic catalogues, a children’s area, a foyer and a café with a terrace, an auditorium, closed stacks and open stacks for books and periodicals, reading rooms, multipurpose and multimedia spaces, research and conservation laboratories, and the administration."
   },
   "architecturalConcept": {
     "fr": "",
@@ -48,6 +48,102 @@
   },
   "images": [
     {
+      "src": "/images/projects/project-002/plan-masse.webp",
+      "imageType": "site",
+      "alt": {
+        "fr": "Plan masse du projet dans son îlot urbain, avec les ombres portées",
+        "en": "Site plan of the project within its urban block, with cast shadows"
+      },
+      "caption": {
+        "fr": "Plan masse",
+        "en": "Site plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-sous-sol.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan du sous-sol : stationnement et locaux techniques",
+        "en": "Basement plan: parking and technical rooms"
+      },
+      "caption": {
+        "fr": "Plan du sous-sol — stationnement",
+        "en": "Basement plan — parking"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-rdc.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan du rez-de-chaussée : hall d’accueil, catalogues électroniques, espace enfants, accès visiteurs et parking",
+        "en": "Ground floor plan: entrance hall, electronic catalogues, children’s area, visitor and parking access"
+      },
+      "caption": {
+        "fr": "Plan du rez-de-chaussée",
+        "en": "Ground floor plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-etage-1.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan de l’étage 1 : foyer, café et terrasse, rayonnages fermés, auditorium",
+        "en": "First floor plan: foyer, café and terrace, closed stacks, auditorium"
+      },
+      "caption": {
+        "fr": "Plan de l’étage 1",
+        "en": "First floor plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-etage-2.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan de l’étage 2 : salle de lecture, espaces polyvalents et terrasse, stockage temporaire, régie de l’auditorium",
+        "en": "Second floor plan: reading room, multipurpose spaces and terrace, temporary storage, auditorium control room"
+      },
+      "caption": {
+        "fr": "Plan de l’étage 2",
+        "en": "Second floor plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-etage-3.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan de l’étage 3 : salle de lecture, rayonnages ouverts et fermés, laboratoires de recherche et de conservation",
+        "en": "Third floor plan: reading room, open and closed stacks, research and conservation laboratories"
+      },
+      "caption": {
+        "fr": "Plan de l’étage 3",
+        "en": "Third floor plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-etage-4.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan de l’étage 4 : salle de lecture, rayonnages ouverts et fermés, administration, salle de réunion",
+        "en": "Fourth floor plan: reading room, open and closed stacks, administration, meeting room"
+      },
+      "caption": {
+        "fr": "Plan de l’étage 4",
+        "en": "Fourth floor plan"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/plan-etage-5.webp",
+      "imageType": "plan",
+      "alt": {
+        "fr": "Plan de l’étage 5 : salle de lecture avec terrasse, espaces multimédia",
+        "en": "Fifth floor plan: reading room with terrace, multimedia spaces"
+      },
+      "caption": {
+        "fr": "Plan de l’étage 5",
+        "en": "Fifth floor plan"
+      }
+    },
+    {
       "src": "/images/projects/project-002/cover.webp",
       "imageType": "render",
       "alt": {
@@ -57,6 +153,42 @@
       "caption": {
         "fr": "Vue depuis la place",
         "en": "View from the square"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/render-night.webp",
+      "imageType": "render",
+      "alt": {
+        "fr": "Vue aérienne de nuit de la bibliothèque éclairée, entre les immeubles et une place plantée de palmiers",
+        "en": "Aerial night view of the lit library among the surrounding buildings and a square planted with palm trees"
+      },
+      "caption": {
+        "fr": "Vue aérienne de nuit",
+        "en": "Aerial view at night"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/interior-cafe-1.webp",
+      "imageType": "render",
+      "alt": {
+        "fr": "Intérieur du café baigné de lumière, filtrée par les lames de façade",
+        "en": "Interior of the café, with sunlight filtered by the façade fins"
+      },
+      "caption": {
+        "fr": "Café — espace en mezzanine",
+        "en": "Café — mezzanine"
+      }
+    },
+    {
+      "src": "/images/projects/project-002/interior-cafe-2.webp",
+      "imageType": "render",
+      "alt": {
+        "fr": "Salle du café avec suspensions en cuivre, comptoir et grandes baies vitrées",
+        "en": "Café room with copper pendant lights, a counter and large glazed openings"
+      },
+      "caption": {
+        "fr": "Café — salle principale",
+        "en": "Café — main room"
       }
     }
   ],
@@ -69,6 +201,26 @@
       "value": {
         "fr": "École Nationale d’Architecture et d’Urbanisme de Tunis (ENAU)",
         "en": "National School of Architecture and Urbanism of Tunis (ENAU)"
+      }
+    },
+    {
+      "label": {
+        "fr": "Programme",
+        "en": "Programme"
+      },
+      "value": {
+        "fr": "Salles de lecture, rayonnages ouverts et fermés, auditorium, laboratoires de recherche et de conservation, espace enfants, café, administration",
+        "en": "Reading rooms, open and closed stacks, auditorium, research and conservation laboratories, children’s area, café, administration"
+      }
+    },
+    {
+      "label": {
+        "fr": "Niveaux",
+        "en": "Levels"
+      },
+      "value": {
+        "fr": "Sous-sol (stationnement), rez-de-chaussée et 5 étages",
+        "en": "Basement (parking), ground floor and 5 upper floors"
       }
     }
   ]
