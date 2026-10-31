@@ -8,6 +8,8 @@ import Home from './pages/Home'
 const Works = lazy(() => import('./pages/Works'))
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail'))
 const Concepts = lazy(() => import('./pages/Concepts'))
+const About = lazy(() => import('./pages/About'))
+const Contact = lazy(() => import('./pages/Contact'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 export default function App() {
@@ -21,6 +23,8 @@ export default function App() {
               <Route path="works" element={<Works />} />
               <Route path="works/:slug" element={<ProjectDetail />} />
               <Route path="concepts" element={<Concepts />} />
+              <Route path="about" element={<About />} />
+              <Route path="contact" element={<Contact />} />
               <Route path="*" element={<NotFound />} />
             </Route>
           </Routes>
