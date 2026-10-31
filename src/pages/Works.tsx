@@ -1,11 +1,14 @@
 import { LayoutGrid, List, RotateCcw } from 'lucide-react'
-import { AnimatePresence, motion } from 'motion/react'
+import { AnimatePresence, motion, useReducedMotion } from 'motion/react'
 import { useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import { FilterGroup, type FilterOption } from '../components/projects/FilterGroup'
 import { ProjectCard } from '../components/projects/ProjectCard'
 import { ProjectIndex } from '../components/projects/ProjectIndex'
+import { CountUp } from '../components/ui/CountUp'
 import { Label } from '../components/ui/Label'
+import { ScrollProgress } from '../components/ui/ScrollProgress'
+import { SplitReveal } from '../components/ui/SplitReveal'
 import { sortedProjects } from '../data/projects'
 import type { Project } from '../data/types'
 import { useDocumentMeta } from '../hooks/useDocumentMeta'
@@ -19,17 +22,25 @@ const FIELD: Record<FilterKey, (p: Project) => string> = {
   format: (p) => p.format,
 }
 
-/** Grid rhythm — alternating wide/narrow spans and proportions. */
+/**
+ * Editorial grid rhythm: wide / narrow pairs, with the narrow card dropped
+ * lower so each project gets its own space; cycles for longer lists.
+ */
 const GRID = [
   { col: 'md:col-span-7', aspect: '3 / 2', kind: 'cover' },
-  { col: 'md:col-span-5', aspect: '4 / 5', kind: 'thumb' },
-  { col: 'md:col-span-5', aspect: '4 / 5', kind: 'thumb' },
-  { col: 'md:col-span-7 md:mt-24', aspect: '3 / 2', kind: 'cover' },
+  { col: 'md:col-span-4 md:col-start-9 md:mt-40', aspect: '4 / 5', kind: 'thumb' },
+  { col: 'md:col-span-6 md:col-start-3', aspect: '3 / 2', kind: 'cover' },
+  { col: 'md:col-span-5 md:col-start-8 md:mt-32', aspect: '4 / 5', kind: 'thumb' },
 ] as const
+
+const EASE = [0.22, 1, 0.36, 1] as const
 
 export default function Works() {
   const { t } = useI18n()
+  const reduce = useReducedMotion()
   const [params, setParams] = useSearchParams()
+  const rise = (delay: number) =>
+    reduce ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay, ease: EASE } }
   useDocumentMeta({ title: t.meta.worksTitle, description: t.meta.worksDescription })
 
   const active: Record<FilterKey, string | null> = {
@@ -75,27 +86,33 @@ export default function Works() {
 
   return (
     <>
+      <ScrollProgress />
       <header className="drafting-grid border-b-2 border-ink">
         <div className="frame grid-12 gap-y-6 pb-12 pt-10 md:pb-16 md:pt-16">
           <div className="col-span-4 md:col-span-12">
             <Label>{t.works.label}</Label>
           </div>
-          <h1 className="text-mega col-span-4 uppercase md:col-span-9">
-            {t.works.heading}
-            <span className="text-orange">.</span>
-          </h1>
-          <div className="col-span-4 flex flex-col justify-end md:col-span-3">
+          <SplitReveal
+            as="h1"
+            trigger="mount"
+            text={t.works.heading}
+            suffix={<span className="text-orange">.</span>}
+            className="text-mega col-span-4 uppercase md:col-span-9"
+          />
+          <motion.div className="col-span-4 flex flex-col justify-end md:col-span-3" {...rise(0.35)}>
             <p className="font-display text-[clamp(3rem,6vw,5.5rem)] font-bold leading-none tracking-tight">
-              {String(sortedProjects.length).padStart(2, '0')}
+              <CountUp value={sortedProjects.length} />
             </p>
             <p className="text-label mt-2 text-concrete-ink">{t.common.projects}</p>
-          </div>
-          <p className="col-span-4 max-w-xl text-lg md:col-span-6">{t.works.lead}</p>
+          </motion.div>
+          <motion.p className="col-span-4 max-w-xl text-lg md:col-span-6" {...rise(0.45)}>
+            {t.works.lead}
+          </motion.p>
         </div>
       </header>
 
       <section aria-label={t.works.filters} className="border-b-2 border-ink bg-paper">
-        <div className="frame space-y-4 py-6">
+        <motion.div className="frame space-y-4 py-6" {...rise(0.55)}>
           <FilterGroup
             label={t.works.filterCategory}
             allLabel={t.works.all}
@@ -110,7 +127,7 @@ export default function Works() {
             value={active.format}
             onChange={(v) => update('format', v)}
           />
-        </div>
+        </motion.div>
         <div className="frame flex flex-wrap items-center justify-between gap-4 border-t-2 border-ink py-3">
           <p className="text-label text-[0.72rem]" aria-live="polite">
             {fmt(t.works.results, { n: results.length, total: sortedProjects.length })}
@@ -159,7 +176,7 @@ export default function Works() {
         ) : view === 'index' ? (
           <ProjectIndex projects={results} />
         ) : (
-          <motion.ul layout className="grid-12 gap-y-16">
+          <motion.ul layout className="grid-12 gap-y-16 md:gap-y-28">
             <AnimatePresence mode="popLayout">
               {results.map((project, i) => {
                 const slot = GRID[i % GRID.length]!
@@ -167,10 +184,12 @@ export default function Works() {
                   <motion.li
                     key={project.id}
                     layout
-                    initial={{ opacity: 0, y: 24 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    // cards rise as they scroll into view; the right-hand card follows its neighbour
+                    initial={reduce ? false : { opacity: 0, y: 56 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: '0px 0px -10% 0px' }}
                     exit={{ opacity: 0, scale: 0.97 }}
-                    transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 0.8, delay: i % 2 ? 0.15 : 0, ease: EASE }}
                     className={cn('col-span-4', slot.col)}
                   >
                     <ProjectCard

@@ -45,9 +45,12 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
           </tr>
         </thead>
         <tbody>
-          {projects.map((p) => (
-            <tr
+          {projects.map((p, i) => (
+            <motion.tr
               key={p.id}
+              initial={reduce ? false : { opacity: 0, x: -24 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.08 * i, ease: [0.22, 1, 0.36, 1] }}
               className="group relative border-b border-ink/30 transition-colors hover:bg-ink hover:text-paper"
               onMouseEnter={(e) => onEnter(e, p)}
               onMouseLeave={() => setHovered(null)}
@@ -67,7 +70,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
                 <span className="text-label border-2 border-current px-2 py-0.5 text-[0.62rem]">{t.formats[p.format]}</span>
               </td>
               <td className="py-5 text-right font-mono text-sm">{p.year}</td>
-            </tr>
+            </motion.tr>
           ))}
         </tbody>
       </table>
