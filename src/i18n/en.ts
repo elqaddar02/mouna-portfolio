@@ -148,9 +148,7 @@ export const en = {
       languages: 'Languages',
       cv: 'Curriculum vitae',
     },
-    softwareEmpty: 'To be added',
     cvDownload: 'Download CV (PDF)',
-    cvUnavailable: 'CV available on request — download link to be added.',
   },
   contact: {
     label: 'Contact',

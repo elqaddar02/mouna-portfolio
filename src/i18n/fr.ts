@@ -150,9 +150,7 @@ export const fr: Dictionary = {
       languages: 'Langues',
       cv: 'Curriculum vitae',
     },
-    softwareEmpty: 'À compléter',
     cvDownload: 'Télécharger le CV (PDF)',
-    cvUnavailable: 'CV disponible sur demande — lien de téléchargement à ajouter.',
   },
   contact: {
     label: 'Contact',

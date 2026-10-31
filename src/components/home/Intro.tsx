@@ -25,7 +25,7 @@ export function Intro() {
 
       <Reveal className="col-span-4 md:col-span-9">
         {/* The biography appears once Mouna's real text replaces the template. */}
-        {!profile.placeholder && <p className="text-lead mb-10 max-w-4xl">{l(profile.shortBio)}</p>}
+        {!profile.placeholder && l(profile.shortBio) && <p className="text-lead mb-10 max-w-4xl">{l(profile.shortBio)}</p>}
 
         <ul className="flex flex-wrap gap-x-3 gap-y-2 font-mono text-sm uppercase tracking-wider">
           {t.home.disciplines.map((d, i) => (
