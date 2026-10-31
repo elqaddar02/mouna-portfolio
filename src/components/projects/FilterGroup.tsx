@@ -20,7 +20,7 @@ export function FilterGroup({ label, allLabel, options, value, onChange }: Filte
   const chip = (active: boolean) =>
     cn(
       'text-label shrink-0 whitespace-nowrap border-2 border-ink px-3 py-1.5 text-[0.7rem] transition-colors',
-      active ? 'bg-ink text-paper' : 'bg-paper hover:bg-orange',
+      active ? 'bg-ink text-paper' : 'bg-paper hover:bg-orange hover:text-paper',
     )
 
   return (

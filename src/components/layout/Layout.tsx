@@ -21,7 +21,7 @@ export function Layout() {
     <>
       <a
         href="#main"
-        className="text-label fixed left-3 top-3 z-[60] -translate-y-24 bg-orange px-4 py-3 text-ink focus:translate-y-0"
+        className="text-label fixed left-3 top-3 z-[60] -translate-y-24 bg-orange px-4 py-3 text-paper focus:translate-y-0"
       >
         {t.nav.skip}
       </a>

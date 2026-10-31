@@ -6,16 +6,18 @@ import { cn } from '../../lib/cn'
 interface ArrowLinkProps {
   to: string
   children: ReactNode
-  variant?: 'solid' | 'outline' | 'text' | 'inverse'
+  variant?: 'solid' | 'outline' | 'text' | 'inverse' | 'outlineInverse'
   external?: boolean
   download?: boolean
   className?: string
 }
 
 const styles = {
-  solid: 'border-2 border-ink bg-ink text-paper hover:bg-orange hover:text-ink hover:border-ink px-5 py-3.5',
+  solid: 'border-2 border-ink bg-ink text-paper hover:bg-orange hover:text-paper hover:border-ink px-5 py-3.5',
   outline: 'border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-paper px-5 py-3.5',
-  inverse: 'border-2 border-paper bg-paper text-ink hover:bg-orange hover:border-orange px-5 py-3.5',
+  inverse: 'border-2 border-paper bg-paper text-ink hover:bg-ink hover:text-paper hover:border-ink px-5 py-3.5',
+  /** Outline for dark or brown backgrounds. */
+  outlineInverse: 'border-2 border-paper bg-transparent text-paper hover:bg-paper hover:text-ink px-5 py-3.5',
   text: 'border-b-2 border-current pb-1 hover:text-orange-deep',
 }
 

@@ -27,7 +27,7 @@ body { width: 1200px; height: 630px; padding: 56px 64px; display: flex; flex-dir
   background-image: linear-gradient(to right, rgb(23 23 23 / .06) 1px, transparent 1px), linear-gradient(to bottom, rgb(23 23 23 / .06) 1px, transparent 1px); background-size: 48px 48px; }
 .top { display: flex; justify-content: space-between; border-bottom: 3px solid #171717; padding-bottom: 14px; }
 h1 { font-size: 150px; line-height: .84; letter-spacing: -.055em; font-weight: 700; margin-top: 64px; }
-.dot { color: #F15A24; }
+.dot { color: #8A5232; }
 .bottom { margin-top: auto; display: flex; justify-content: space-between; align-items: end; }
 .tag { font-size: 34px; font-weight: 600; letter-spacing: -.02em; line-height: 1.05; text-transform: uppercase; }
 .logo { height: 150px; display: block; }

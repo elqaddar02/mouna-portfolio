@@ -101,7 +101,7 @@ function LightboxDialog({ images, index, onIndexChange, onClose, captionPrefix }
   const prefix = captionPrefix?.(image)
   const caption = image.caption ? l(image.caption) : l(image.alt)
   const btn =
-    'grid size-11 shrink-0 place-items-center border-2 border-paper text-paper transition-colors hover:bg-orange hover:border-orange hover:text-ink'
+    'grid size-11 shrink-0 place-items-center border-2 border-paper text-paper transition-colors hover:bg-orange hover:border-orange hover:text-paper'
 
   return (
     <motion.div
@@ -160,7 +160,7 @@ function LightboxDialog({ images, index, onIndexChange, onClose, captionPrefix }
 
       <div className="frame flex shrink-0 items-center justify-between gap-4 border-t border-paper/20 py-4">
         <p className="min-w-0 text-sm text-paper/90">
-          {prefix && <span className="text-label mr-3 text-orange">{prefix}</span>}
+          {prefix && <span className="text-label mr-3 text-orange-light">{prefix}</span>}
           {caption}
         </p>
         {count > 1 && (

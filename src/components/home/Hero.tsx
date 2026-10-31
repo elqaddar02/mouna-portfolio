@@ -89,7 +89,7 @@ export function Hero() {
   }
 
   const ctrl =
-    'grid size-11 place-items-center border-2 border-ink bg-paper text-ink transition-colors hover:bg-orange focus-visible:outline-offset-2'
+    'grid size-11 place-items-center border-2 border-ink bg-paper text-ink transition-colors hover:bg-orange hover:text-paper focus-visible:outline-offset-2'
 
   return (
     <section aria-labelledby="hero-title" className="border-b-2 border-ink">
@@ -284,7 +284,7 @@ export function Hero() {
                 type="button"
                 onClick={() => setPaused((p) => !p)}
                 aria-label={paused ? t.home.sliderPlay : t.home.sliderPause}
-                className="grid size-9 shrink-0 place-items-center self-center border-2 border-ink hover:bg-orange"
+                className="grid size-9 shrink-0 place-items-center self-center border-2 border-ink hover:bg-orange hover:text-paper"
               >
                 {paused ? <Play className="size-4" aria-hidden="true" /> : <Pause className="size-4" aria-hidden="true" />}
               </button>

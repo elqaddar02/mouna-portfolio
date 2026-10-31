@@ -62,7 +62,7 @@ export function ProjectIndex({ projects }: { projects: Project[] }) {
                   className="flex items-center gap-3 font-display text-[clamp(1.25rem,2.6vw,2.25rem)] font-semibold leading-none tracking-tight after:absolute after:inset-0 after:content-['']"
                 >
                   {l(p.title)}
-                  <ArrowRight className="size-5 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:text-orange group-hover:opacity-100" aria-hidden="true" />
+                  <ArrowRight className="size-5 -translate-x-2 opacity-0 transition-all group-hover:translate-x-0 group-hover:text-orange-light group-hover:opacity-100" aria-hidden="true" />
                 </Link>
               </td>
               <td className="hidden py-5 pr-4 text-sm md:table-cell">{t.categories[p.category]}</td>

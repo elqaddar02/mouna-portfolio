@@ -37,7 +37,7 @@ export function ProjectCard({ project, aspect, imageKind = 'cover', className, h
           </span>
           <span
             aria-hidden="true"
-            className="text-label absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between border-t-2 border-ink bg-orange px-3 py-2.5 text-[0.75rem] text-ink transition-transform duration-500 ease-arch group-hover:translate-y-0 group-focus-visible:translate-y-0"
+            className="text-label absolute inset-x-0 bottom-0 flex translate-y-full items-center justify-between border-t-2 border-ink bg-orange px-3 py-2.5 text-[0.75rem] text-paper transition-transform duration-500 ease-arch group-hover:translate-y-0 group-focus-visible:translate-y-0"
           >
             {t.common.viewProject}
             <ArrowRight className="size-4" />

@@ -157,7 +157,7 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
         <button
           type="button"
           onClick={onClose}
-          className="text-label border-2 border-paper px-3 py-1.5 text-[0.72rem] hover:bg-orange hover:text-ink hover:border-orange"
+          className="text-label border-2 border-paper px-3 py-1.5 text-[0.72rem] hover:bg-orange hover:text-paper hover:border-orange"
           aria-label={t.nav.closeMenu}
         >
           {t.nav.close}
@@ -179,8 +179,8 @@ function MobileMenu({ onClose }: { onClose: () => void }) {
                 end={item.to === '/'}
                 className={({ isActive }) =>
                   cn(
-                    'flex items-baseline gap-4 py-3 font-display text-[clamp(2.6rem,12vw,5rem)] font-bold uppercase leading-none tracking-[-0.04em] transition-colors hover:text-orange',
-                    isActive && 'text-orange',
+                    'flex items-baseline gap-4 py-3 font-display text-[clamp(2.6rem,12vw,5rem)] font-bold uppercase leading-none tracking-[-0.04em] transition-colors hover:text-orange-light',
+                    isActive && 'text-orange-light',
                   )
                 }
               >

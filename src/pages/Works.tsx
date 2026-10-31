@@ -153,7 +153,7 @@ export default function Works() {
                   onClick={() => update('view', mode === 'index' ? 'index' : null)}
                   className={cn(
                     'text-label flex items-center gap-1.5 px-2.5 py-1.5 text-[0.68rem]',
-                    view === mode ? 'bg-ink text-paper' : 'hover:bg-orange',
+                    view === mode ? 'bg-ink text-paper' : 'hover:bg-orange hover:text-paper',
                   )}
                 >
                   <Icon className="size-3.5" aria-hidden="true" />

@@ -13,7 +13,7 @@ export function Marquee() {
           <span className="px-6 font-display text-[clamp(1.6rem,3.4vw,3rem)] font-bold uppercase leading-none tracking-tight md:px-10">
             {item}
           </span>
-          <span aria-hidden="true" className="size-3 shrink-0 bg-orange md:size-4" />
+          <span aria-hidden="true" className="size-3 shrink-0 bg-orange-light md:size-4" />
         </li>
       ))}
     </ul>

@@ -5,9 +5,12 @@
   --color-paper: #f1efe8;
   --color-paper-2: #e7e4db;
   --color-ink: #171717;
-  --color-orange: #f15a24;
-  /* Accent for text on paper: 4.8:1 contrast (bright orange is 2.9:1 there). */
-  --color-orange-deep: #b93f14;
+  /* Accent: walnut brown. Paper text on it 5.5:1; on paper as text 5.5:1. */
+  --color-orange: #8a5232;
+  /* Darker brown for small accent text on paper (7.4:1). */
+  --color-orange-deep: #6f4128;
+  /* Light brown for accents on ink backgrounds (6.4:1). */
+  --color-orange-light: #c49067;
   --color-concrete: #b8b5ad;
   /* Darker concrete for small text on paper (≥ 4.5:1 contrast). */
   --color-concrete-ink: #5f5c56;
@@ -136,7 +139,7 @@
   }
   ::selection {
     background: var(--color-orange);
-    color: var(--color-ink);
+    color: var(--color-paper);
   }
   h1,
   h2,

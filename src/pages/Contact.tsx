@@ -29,7 +29,7 @@ export default function Contact() {
 
   return (
     <>
-      <header className="bg-orange">
+      <header className="bg-orange text-paper">
         <div className="frame grid-12 gap-y-8 pb-14 pt-10 md:pb-20 md:pt-16">
           <div className="col-span-4 md:col-span-12">
             <Label>{t.contact.label}</Label>
@@ -40,11 +40,11 @@ export default function Contact() {
           <p className="text-lead col-span-4 max-w-2xl md:col-span-7">{t.contact.lead}</p>
           <div className="col-span-4 flex items-end md:col-span-5 md:justify-end">
             {email ? (
-              <ArrowLink to={`mailto:${email}`} variant="solid">
+              <ArrowLink to={`mailto:${email}`} variant="inverse">
                 {t.contact.writeCta}
               </ArrowLink>
             ) : (
-              <p className="text-label border-2 border-ink p-4 text-[0.72rem]">{t.contact.ctaPending}</p>
+              <p className="text-label border-2 border-paper p-4 text-[0.72rem]">{t.contact.ctaPending}</p>
             )}
           </div>
         </div>

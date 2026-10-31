@@ -24,8 +24,8 @@ export function LanguageSwitcher({ className, inverse = false }: { className?: s
                   ? 'bg-paper text-ink'
                   : 'bg-ink text-paper'
                 : inverse
-                  ? 'text-paper hover:bg-orange hover:text-ink'
-                  : 'text-ink hover:bg-orange',
+                  ? 'text-paper hover:bg-orange'
+                  : 'text-ink hover:bg-orange hover:text-paper',
             )}
           >
             {code.toUpperCase()}
