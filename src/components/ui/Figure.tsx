@@ -9,8 +9,9 @@ interface FigureProps {
   image: ArchImage
   className?: string
   imgClassName?: string
-  /** CSS aspect-ratio for the frame; defaults to the image's own ratio. */
-  aspect?: string
+  /** CSS aspect-ratio for the frame; defaults to the image's own ratio. Pass null to size the frame with `frameClassName` instead. */
+  aspect?: string | null
+  frameClassName?: string
   /** Load immediately with high priority (above-the-fold images only). */
   priority?: boolean
   sizes?: string
@@ -31,6 +32,7 @@ export function Figure({
   className,
   imgClassName,
   aspect,
+  frameClassName,
   priority = false,
   sizes = '(min-width: 768px) 60vw, 100vw',
   showCaption = false,
@@ -41,7 +43,8 @@ export function Figure({
   const { l, t } = useI18n()
   const reduce = useReducedMotion()
   const animate = reveal && !reduce && !priority
-  const frameStyle: CSSProperties = { aspectRatio: aspect ?? image.aspectRatio.replace(':', ' / ') }
+  const frameStyle: CSSProperties | undefined =
+    aspect === null ? undefined : { aspectRatio: aspect ?? image.aspectRatio.replace(':', ' / ') }
 
   const img = (
     <img
@@ -74,7 +77,7 @@ export function Figure({
 
   return (
     <figure className={cn('group/fig', className)}>
-      <div className="relative overflow-hidden bg-paper-2" style={frameStyle}>
+      <div className={cn('relative overflow-hidden bg-paper-2', frameClassName)} style={frameStyle}>
         {onOpen ? (
           <button
             type="button"

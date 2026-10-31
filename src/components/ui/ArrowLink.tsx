@@ -37,7 +37,7 @@ export function ArrowLink({ to, children, variant = 'outline', external, downloa
       />
     </>
   )
-  if (external || download || /^(https?:|mailto:|tel:)/.test(to)) {
+  if (external || download || /^(https?:|mailto:|tel:|#)/.test(to)) {
     return (
       <a
         href={to}
