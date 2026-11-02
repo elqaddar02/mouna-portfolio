@@ -67,12 +67,12 @@
   "cvVideo": {
     "file": "/videos/856.mp4",
     "url": "",
-    "poster": "/images/profile/cv-video-poster.webp",
+    "poster": "/images/profile/video-cv-poster.webp",
     "caption": {
       "fr": "",
       "en": ""
     },
-    "placeholder": true
+    "placeholder": false
   },
   "cvUrl": ""
 }
