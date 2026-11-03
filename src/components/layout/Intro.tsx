@@ -6,23 +6,15 @@ import { useI18n } from '../../i18n/useI18n'
 import { BRAND } from './Logo'
 
 const EASE = [0.76, 0, 0.24, 1] as const
-const SEEN_KEY = 'me-portfolio.intro-seen'
 /** The counter never finishes sooner than this, nor waits longer for images. */
 const MIN_MS = 1900
 const MAX_MS = 4000
 
-/** First visit of the session, with motion allowed, and not an automated browser. */
+/** Every full page load (and reload), unless the visitor prefers reduced motion or it is an automated browser. */
 export function shouldShowIntro() {
   if (typeof window === 'undefined') return false
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return false
-  if (navigator.webdriver) return false
-  try {
-    if (sessionStorage.getItem(SEEN_KEY)) return false
-    sessionStorage.setItem(SEEN_KEY, '1')
-  } catch {
-    /* storage blocked: show it, it simply will not be remembered */
-  }
-  return true
+  return !navigator.webdriver
 }
 
 /** Loads the homepage slideshow images while the intro plays. */
